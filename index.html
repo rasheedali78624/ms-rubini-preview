@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ms Rubini's Classroom | Science &amp; SPM Biology Tuition</title>
+<meta name="description" content="Science and SPM Biology tuition with Ms Rubini. Form 1 to Form 5, in Klang, Petaling Jaya and online.">
+<meta name="theme-color" content="#0A1B3F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  /* ============ EDIT THESE THREE LINES ============ */
+  window.SITE = {
+    whatsapp: "",                                   // e.g. "60123456789" (no + or spaces). Empty = WhatsApp opens and asks who to send to.
+    instagram: "https://www.instagram.com/scibioyours_/",
+    defaultMessage: "Hi Ms Rubini! I came across your website and would like to ask about your tuition classes."
+  };
+  document.documentElement.classList.add("js");
+</script>
+<style>
+  :root{
+    --navy:#0A1B3F; --ink:#101D35; --blue:#1D4ED8; --blue-2:#3B82F6; --sky:#DCEBFF; --mist:#F3F7FF;
+    --sun:#FFD166; --slate:#55657F; --line:#D5E1F5; --white:#fff; --wa:#0E7A43;
+    --display:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;
+    --body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --hand:"Caveat","Bradley Hand",cursive;
+    --r:22px; --pad:20px; --max:1120px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:16px;overflow-x:hidden;padding-bottom:76px}
+  img,svg{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em;text-wrap:balance}
+  h2{font-size:clamp(2rem,7vw,3.2rem);font-weight:700}
+  h3{font-size:1.35rem;font-weight:700;letter-spacing:-.01em}
+  p{margin:0}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  section{padding:72px 0}
+  .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+  .lead{color:var(--slate);font-size:1.06rem;max-width:56ch;margin-top:16px}
+  .hl{background:linear-gradient(transparent 58%,var(--sun) 58%,var(--sun) 92%,transparent 92%);padding:0 .08em}
+  .hand{font-family:var(--hand);font-size:1.35rem;line-height:1.1}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s}
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 8px 22px -10px rgba(29,78,216,.8)}
+  .btn-primary:hover{background:#173FB4;transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--line);color:var(--navy);background:#fff}
+  .btn-ghost:hover{border-color:var(--blue);transform:translateY(-2px)}
+  .btn-light{background:#fff;color:var(--navy)}
+  .btn-light:hover{transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+  :focus-visible{outline:3px solid var(--blue-2);outline-offset:3px;border-radius:8px}
+
+  /* preview ribbon */
+  .ribbon{background:var(--navy);color:#C9D8F5;font-size:.8rem;text-align:center;padding:8px var(--pad)}
+  .ribbon b{color:var(--sun);font-weight:700}
+
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.12rem;letter-spacing:-.02em;color:var(--navy)}
+  .brand-mark{width:36px;height:36px;border-radius:11px;background:var(--blue);display:grid;place-items:center;transform:rotate(-6deg)}
+  .brand-mark svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2}
+  .nav-links{display:none;gap:28px;list-style:none;margin:0;padding:0}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--slate);transition:color .2s}
+  .nav-links a:hover{color:var(--blue)}
+  .nav .btn{display:none;min-height:44px;padding:0 18px;font-size:.92rem}
+  .burger{width:46px;height:46px;border:0;background:var(--mist);border-radius:14px;display:grid;place-items:center;cursor:pointer}
+  .burger span,.burger span::before,.burger span::after{content:"";display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;transition:transform .25s,opacity .2s}
+  .burger span{position:relative}
+  .burger span::before{position:absolute;top:-6px}
+  .burger span::after{position:absolute;top:6px}
+  .burger[aria-expanded="true"] span{background:transparent}
+  .burger[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+  .drawer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease;background:#fff;border-bottom:1px solid transparent}
+  .drawer.open{grid-template-rows:1fr;border-color:var(--line)}
+  .drawer>div{overflow:hidden}
+  .drawer ul{list-style:none;margin:0;padding:8px var(--pad) 18px}
+  .drawer a{display:block;padding:14px 4px;font-weight:600;font-size:1.05rem;text-decoration:none;border-bottom:1px solid var(--mist)}
+
+  /* hero */
+  .hero{position:relative;padding:44px 0 64px;background:
+      linear-gradient(#fff0,#fff 92%),
+      linear-gradient(var(--line) 1px,transparent 1px) 0 0/28px 28px,
+      linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/28px 28px,
+      var(--mist)}
+  .hero-grid{display:grid;gap:44px;align-items:center}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:.82rem;font-weight:600;color:var(--navy)}
+  .pill i{width:8px;height:8px;border-radius:50%;background:var(--blue-2);box-shadow:0 0 0 4px var(--sky)}
+  .hero h1{font-size:clamp(2.7rem,11.5vw,5rem);font-weight:800;margin-top:20px;color:var(--navy)}
+  .hero .lead{font-size:1.12rem}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .cta-row .btn{flex:1 1 220px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding:0;list-style:none}
+  .chips li{font-size:.85rem;font-weight:600;background:var(--sky);color:var(--navy);padding:6px 12px;border-radius:999px}
+
+  .art{position:relative;max-width:380px;margin:0 auto;width:100%;aspect-ratio:1/1.08}
+  .photo{position:absolute;inset:6% 10% 8% 10%;border-radius:32px;background:linear-gradient(160deg,#2F6BF0,#12338F);transform:rotate(-3deg);box-shadow:0 30px 60px -30px rgba(10,27,63,.7);display:grid;place-items:center;color:#CFE0FF;text-align:center;overflow:hidden}
+  .photo::before{content:"";position:absolute;inset:14px;border:2px dashed rgba(255,255,255,.45);border-radius:22px}
+  .photo svg{width:84px;height:84px;margin:0 auto 10px;opacity:.9}
+  .photo span{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .note{position:absolute;background:var(--sun);color:var(--navy);padding:10px 16px;border-radius:4px 14px 4px 14px;box-shadow:0 10px 20px -12px rgba(10,27,63,.6)}
+  .note.n1{right:-2%;top:10%;transform:rotate(6deg)}
+  .note.n2{left:-2%;bottom:14%;transform:rotate(-5deg);background:#fff;border:1px solid var(--line)}
+  .doodle{position:absolute;stroke:var(--blue);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .d-dna{width:13%;left:1%;top:6%}
+  .d-atom{width:22%;right:0;bottom:2%}
+  .d-leaf{width:13%;right:16%;top:-3%;stroke:var(--navy)}
+  .d-cell{width:18%;left:8%;bottom:-3%;stroke:var(--navy)}
+  @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -9px}}
+  .float{animation:bob 6s ease-in-out infinite}
+  .float.b{animation-duration:7.5s;animation-delay:-2s}
+  .float.c{animation-duration:9s;animation-delay:-4s}
+
+  /* three words */
+  .words{background:var(--navy);color:#fff;padding:56px 0}
+  .words-grid{display:grid;gap:14px}
+  .word{border:1px solid rgba(255,255,255,.14);border-radius:var(--r);padding:24px;background:rgba(255,255,255,.04)}
+  .word b{font-family:var(--display);font-size:1.9rem;font-weight:800;letter-spacing:-.02em;display:block;line-height:1.1}
+  .word b em{font-style:normal;color:var(--sun)}
+  .word p{color:#B9C8E8;margin-top:8px;font-size:.98rem}
+
+  /* placeholders */
+  .ph{border:2px dashed #A9C1EC;border-radius:14px;padding:14px 16px;color:var(--slate);font-size:.93rem;background:repeating-linear-gradient(135deg,#fff,#fff 10px,var(--mist) 10px,var(--mist) 20px)}
+  .ph b{display:block;color:var(--navy);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+
+  /* about */
+  .about-grid{display:grid;gap:36px;align-items:center}
+  .portrait{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(170deg,var(--sky),#B9D3FF);display:grid;place-items:center;text-align:center;color:var(--blue);position:relative;max-width:420px;width:100%;margin:0 auto}
+  .portrait::before{content:"";position:absolute;inset:16px;border:2px dashed rgba(29,78,216,.45);border-radius:18px}
+  .portrait svg{width:72px;height:72px;margin:0 auto 10px}
+  .portrait span{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .quote{font-family:var(--display);font-size:clamp(1.35rem,4.6vw,1.75rem);font-weight:500;line-height:1.25;letter-spacing:-.01em;border-left:5px solid var(--sun);padding-left:18px;margin:26px 0}
+  .ph-stack{display:grid;gap:10px}
+
+  /* classes */
+  .alt{background:var(--mist)}
+  .cards{display:grid;gap:16px;margin-top:36px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s,border-color .25s}
+  .card:hover{transform:translateY(-5px);box-shadow:0 24px 40px -28px rgba(10,27,63,.5);border-color:#B5CBF3}
+  .icon{width:56px;height:56px;border-radius:16px;background:var(--sky);display:grid;place-items:center}
+  .icon svg{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .level{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+  .card p{color:var(--slate);font-size:.97rem}
+  .card ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
+  .card li{font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--navy)}
+  .link{margin-top:auto;padding-top:8px;font-weight:700;color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+  .link:hover span{transform:translateX(4px)}
+  .link span{transition:transform .2s}
+  .where{display:grid;gap:12px;margin-top:16px}
+  .where div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;gap:14px;align-items:center}
+  .where svg{width:26px;height:26px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .where b{display:block;font-family:var(--display);font-size:1.1rem}
+  .where small{color:var(--slate);font-size:.88rem}
+
+  /* enquiry builder */
+  .builder{background:var(--navy);color:#fff;border-radius:30px;padding:30px 22px;display:grid;gap:28px;position:relative;overflow:hidden}
+  .builder h2{font-size:clamp(1.8rem,6.4vw,2.6rem)}
+  .builder .lead{color:#B9C8E8}
+  fieldset{border:0;padding:0;margin:0 0 18px}
+  legend{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9DB4E6;margin-bottom:10px;padding:0}
+  .opts{display:flex;flex-wrap:wrap;gap:8px}
+  .opts label{position:relative;cursor:pointer}
+  .opts input{position:absolute;opacity:0;inset:0;cursor:pointer}
+  .opts span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.28);font-weight:600;font-size:.93rem;transition:background .2s,color .2s,border-color .2s}
+  .opts input:checked+span{background:var(--sun);border-color:var(--sun);color:var(--navy)}
+  .opts input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+  .bubble{background:#E7FFDB;color:#10301C;border-radius:16px 16px 4px 16px;padding:16px 18px;font-size:.98rem;position:relative;min-height:96px}
+  .bubble small{display:block;text-align:right;color:#4E6B57;font-size:.72rem;margin-top:8px}
+  .phone{background:#0E2552;border-radius:22px;padding:18px;border:1px solid rgba(255,255,255,.12)}
+  .phone-top{font-size:.8rem;color:#9DB4E6;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .phone-top i{width:8px;height:8px;border-radius:50%;background:#4ADE80}
+  .phone .btn{width:100%;margin-top:14px;background:var(--wa);color:#fff}
+  .phone .btn:hover{background:#0B6436;transform:translateY(-2px)}
+
+  /* results */
+  .res-grid{display:grid;gap:16px;margin-top:36px}
+  .tcard{border:1px solid var(--line);border-radius:var(--r);padding:26px;background:#fff;position:relative}
+  .tcard::before{content:"\201C";font-family:var(--display);font-size:5rem;line-height:.8;color:var(--sky);position:absolute;top:18px;right:22px}
+  .tcard .tag{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .consent{margin-top:22px;display:flex;gap:12px;align-items:flex-start;color:var(--slate);font-size:.92rem;background:var(--mist);border-radius:16px;padding:16px 18px}
+  .consent svg{width:22px;height:22px;flex:none;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:2px}
+
+  /* seminar */
+  .seminar{border-radius:30px;background:linear-gradient(135deg,#1D4ED8,#12338F);color:#fff;padding:32px 24px;display:grid;gap:26px;position:relative;overflow:hidden}
+  .seminar::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;border:38px solid rgba(255,255,255,.07)}
+  .seminar .eyebrow{color:var(--sun)}
+  .seminar p{color:#D5E2FF}
+  .facts{display:grid;gap:10px;position:relative;z-index:1}
+  .facts div{background:rgba(255,255,255,.1);border:1.5px dashed rgba(255,255,255,.4);border-radius:14px;padding:12px 16px;font-size:.93rem}
+  .facts b{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sun)}
+
+  /* faq */
+  .faq{max-width:780px;margin:36px auto 0}
+  details{border-bottom:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 2px;font-family:var(--display);font-weight:700;font-size:1.15rem;min-height:56px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"";flex:none;width:34px;height:34px;border-radius:50%;background:var(--sky) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D4ED8' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .3s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{color:var(--slate);padding:0 2px 22px;max-width:62ch}
+  details[open] p{animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+  /* final cta + footer */
+  .final{background:var(--navy);color:#fff;text-align:center;padding:84px 0;position:relative;overflow:hidden}
+  .final::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/28px 28px}
+  .final .wrap{position:relative}
+  .final h2{font-size:clamp(2.2rem,8.5vw,3.8rem);font-weight:800}
+  .final p{color:#B9C8E8;max-width:48ch;margin:18px auto 30px;font-size:1.06rem}
+  .final .ig{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:#C9D8F5;font-weight:600;min-height:44px}
+  .final .ig svg{width:20px;height:20px}
+  footer{background:#06132E;color:#93A6CF;padding:36px 0;font-size:.9rem}
+  .foot{display:grid;gap:20px}
+  .foot .brand{color:#fff}
+  .foot ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 20px;margin:0;padding:0}
+  .foot a{text-decoration:none;display:inline-block;padding:6px 0}
+  .foot a:hover{color:#fff}
+
+  /* sticky whatsapp */
+  .wa-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--wa);color:#fff;border-radius:18px;min-height:56px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;text-decoration:none;box-shadow:0 14px 30px -10px rgba(6,60,32,.7);padding:8px 16px;text-align:center;font-size:.86rem;white-space:nowrap}
+  .wa-bar svg{width:24px;height:24px;flex:none}
+  .wa-fab{display:none}
+
+  /* reveal */
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+  .js .rv.in{opacity:1;transform:none}
+
+  @media (min-width:720px){
+    :root{--pad:32px}
+    section{padding:104px 0}
+    .words-grid{grid-template-columns:repeat(3,1fr)}
+    .cards{grid-template-columns:repeat(3,1fr)}
+    .where{grid-template-columns:repeat(3,1fr)}
+    .res-grid{grid-template-columns:repeat(3,1fr)}
+    .about-grid{grid-template-columns:.85fr 1fr;gap:64px}
+    .builder{grid-template-columns:1.1fr .9fr;padding:52px;align-items:center}
+    .seminar{grid-template-columns:1.2fr .8fr;padding:56px;align-items:center}
+    .cta-row .btn{flex:0 0 auto}
+    .foot{grid-template-columns:1fr auto;align-items:center}
+  }
+  @media (min-width:960px){
+    body{padding-bottom:0}
+    .hero{padding:72px 0 96px}
+    .hero-grid{grid-template-columns:1.15fr .85fr}
+    .nav-links,.nav .btn{display:flex}
+    .burger,.drawer,.wa-bar{display:none}
+    .wa-fab{display:grid;place-items:center;position:fixed;right:24px;bottom:24px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#fff;box-shadow:0 14px 30px -10px rgba(6,60,32,.7);transition:transform .2s}
+    .wa-fab:hover{transform:scale(1.08)}
+    .wa-fab svg{width:30px;height:30px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .js .rv{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.36A9.93 9.93 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.13 15.08l-.3-.18-3.07.8.82-2.98-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 3.9c-.2 0-.5.07-.76.36-.26.28-1 .97-1 2.37s1.02 2.75 1.17 2.94c.14.19 2 3.05 4.85 4.27 2.4 1.03 2.88.82 3.4.77.52-.05 1.68-.69 1.92-1.35.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.62.07-.28-.14-1.2-.44-2.28-1.4a8.5 8.5 0 0 1-1.58-1.97c-.16-.28-.02-.44.13-.58.13-.13.28-.33.43-.5.14-.16.19-.28.28-.47.1-.19.05-.36-.02-.5-.07-.14-.63-1.56-.88-2.13-.22-.52-.45-.53-.64-.53l-.54-.01Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-atom" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="20" ry="8"/><ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(120 24 24)"/><circle cx="24" cy="24" r="2.5" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-dna" viewBox="0 0 48 96"><path d="M12 4c0 22 24 22 24 44S12 70 12 92"/><path d="M36 4c0 22-24 22-24 44s24 22 24 44"/><path d="M14 12h20M17 38h14M13 48h22M17 58h14M14 84h20"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M5 43C5 20 20 5 43 5c0 23-15 38-38 38Z"/><path d="M5 43 31 17M17 31v-9M24 24h9"/></symbol>
+  <symbol id="i-cell" viewBox="0 0 48 48"><path d="M24 4c11 0 20 7 20 19s-8 21-20 21S4 36 4 24 13 4 24 4Z"/><circle cx="27" cy="25" r="7"/><circle cx="14" cy="18" r="1.6" fill="currentColor" stroke="none"/><circle cx="16" cy="33" r="1.6" fill="currentColor" stroke="none"/><circle cx="34" cy="13" r="1.6" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 48 48"><path d="M18 5h12M20 5v13L8 38a4 4 0 0 0 3.5 6h25A4 4 0 0 0 40 38L28 18V5"/><path d="M13 31h22"/></symbol>
+  <symbol id="i-user" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8-13 16-13s14 4 16 13"/></g></symbol>
+</svg>
+
+<div class="ribbon"><b>Website preview</b> · Dashed boxes and draft wording will be replaced with Ms Rubini's own details and photos.</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Ms Rubini's Classroom, home">
+      <span class="brand-mark"><svg><use href="#i-atom"/></svg></span>
+      Ms Rubini's Classroom
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#seminars">Seminars</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn btn-primary" data-wa href="#"><svg><use href="#i-wa"/></svg>WhatsApp enquiry</a>
+    <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Mobile">
+    <div><ul>
+      <li><a href="#about">About Ms Rubini</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#enquire">Quick enquiry</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#seminars">Seminars</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill rv"><i></i>Klang · Petaling Jaya · Online</span>
+        <h1 class="rv" style="--d:.08s">Science that finally <span class="hl">makes sense.</span></h1>
+        <p class="lead rv" style="--d:.16s">Science and SPM Biology tuition with Ms Rubini, for Form 1 to Form 5 students who want to understand the subject and score in it.</p>
+        <div class="cta-row rv" style="--d:.24s">
+          <a class="btn btn-primary" data-wa href="#"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+          <a class="btn btn-ghost" href="#classes">See the classes</a>
+        </div>
+        <ul class="chips rv" style="--d:.32s" aria-label="Subjects">
+          <li>Form 1–3 Science</li><li>Form 4–5 Science (SPM)</li><li>SPM Biology</li>
+        </ul>
+      </div>
+
+      <div class="art rv" style="--d:.2s" aria-hidden="true">
+        <svg class="doodle d-dna float"><use href="#i-dna"/></svg>
+        <svg class="doodle d-leaf float b" viewBox="0 0 48 48"><use href="#i-leaf"/></svg>
+        <div class="photo"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+        <svg class="doodle d-atom float c" viewBox="0 0 48 48"><use href="#i-atom"/></svg>
+        <svg class="doodle d-cell float b" viewBox="0 0 48 48"><use href="#i-cell"/></svg>
+        <div class="note n1 hand float">Bio? Boleh! ✓</div>
+        <div class="note n2 hand float c">Form 1 → SPM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE WORDS -->
+  <div class="words">
+    <div class="wrap words-grid">
+      <div class="word rv"><b>Fun<em>.</em></b><p>Lessons students look forward to, not ones they sit through.</p></div>
+      <div class="word rv" style="--d:.1s"><b>Results-focused<em>.</em></b><p>Every class is built around what the exam actually asks for.</p></div>
+      <div class="word rv" style="--d:.2s"><b>Motivating<em>.</em></b><p>Students leave knowing what to do next, and believing they can.</p></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="portrait rv"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+      <div>
+        <p class="eyebrow rv">Meet your teacher</p>
+        <h2 class="rv">Hello, I'm <span class="hl">Ms Rubini.</span></h2>
+        <p class="quote rv">Every student learns differently. My job is to make Science clear, lively and worth showing up for.</p>
+        <div class="ph-stack">
+          <div class="ph rv"><b>About me</b>A short introduction in Ms Rubini's own words.</div>
+          <div class="ph rv" style="--d:.08s"><b>Teaching experience</b>Years of teaching and where, to be provided.</div>
+          <div class="ph rv" style="--d:.16s"><b>Qualifications</b>To be added.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES -->
+  <section id="classes" class="alt">
+    <div class="wrap">
+      <p class="eyebrow rv">Classes</p>
+      <h2 class="rv">Pick the class that fits <span class="hl">your form.</span></h2>
+      <p class="lead rv">Small groups, one-to-one or online. Tap a class to ask about the timetable and fees.</p>
+
+      <div class="cards">
+        <article class="card rv">
+          <div class="icon"><svg><use href="#i-flask"/></svg></div>
+          <span class="level">Form 1 – 3</span>
+          <h3>Lower Secondary Science</h3>
+          <p>Building strong basics early, so Form 4 doesn't come as a shock.</p>
+          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 1–3 Science classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+        </article>
+        <article class="card rv" style="--d:.1s">
+          <div class="icon"><svg><use href="#i-atom"/></svg></div>
+          <span class="level">Form 4 – 5</span>
+          <h3>SPM Science</h3>
+          <p>The full SPM Science syllabus, with regular practice on exam-style questions.</p>
+          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 4–5 Science (SPM) classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+        </article>
+        <article class="card rv" style="--d:.2s">
+          <div class="icon"><svg><use href="#i-dna"/></svg></div>
+          <span class="level">Form 4 – 5</span>
+          <h3>SPM Biology</h3>
+          <p>From cells to ecosystems, taught so the diagrams and essays stop being scary.</p>
+          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about SPM Biology classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+        </article>
+      </div>
+
+      <div class="where">
+        <div class="rv"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>Klang</b><small>Physical classes</small></span></div>
+        <div class="rv" style="--d:.08s"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>Petaling Jaya</b><small>Physical classes</small></span></div>
+        <div class="rv" style="--d:.16s"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span><b>Online</b><small>Join from anywhere in Malaysia</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK ENQUIRY -->
+  <section id="enquire">
+    <div class="wrap">
+      <div class="builder rv">
+        <div>
+          <p class="eyebrow" style="color:var(--sun)">Quick enquiry</p>
+          <h2>Tell me what you need. I'll write the message.</h2>
+          <p class="lead" style="margin-bottom:26px">Three taps, then send. Ms Rubini gets everything she needs to reply with the right timetable and fees.</p>
+          <form id="builder">
+            <fieldset><legend>I am a</legend><div class="opts">
+              <label><input type="radio" name="who" value="parent" checked><span>Parent</span></label>
+              <label><input type="radio" name="who" value="student"><span>Student</span></label>
+            </div></fieldset>
+            <fieldset><legend>Class</legend><div class="opts">
+              <label><input type="radio" name="cls" value="Form 1–3 Science"><span>Form 1–3 Science</span></label>
+              <label><input type="radio" name="cls" value="Form 4–5 Science (SPM)"><span>Form 4–5 Science</span></label>
+              <label><input type="radio" name="cls" value="SPM Biology" checked><span>SPM Biology</span></label>
+            </div></fieldset>
+            <fieldset><legend>Format</legend><div class="opts">
+              <label><input type="radio" name="fmt" value="a small group class" checked><span>Small group</span></label>
+              <label><input type="radio" name="fmt" value="one-to-one tuition"><span>One-to-one</span></label>
+            </div></fieldset>
+            <fieldset style="margin-bottom:0"><legend>Where</legend><div class="opts">
+              <label><input type="radio" name="loc" value="in Klang" checked><span>Klang</span></label>
+              <label><input type="radio" name="loc" value="in Petaling Jaya"><span>Petaling Jaya</span></label>
+              <label><input type="radio" name="loc" value="online"><span>Online</span></label>
+            </div></fieldset>
+          </form>
+        </div>
+        <div class="phone">
+          <div class="phone-top"><i></i>Your message to Ms Rubini</div>
+          <div class="bubble"><span id="preview" aria-live="polite"></span><small>Ready to send ✓✓</small></div>
+          <a class="btn" id="send" href="#"><svg><use href="#i-wa"/></svg>Send on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="alt">
+    <div class="wrap">
+      <p class="eyebrow rv">Results &amp; kind words</p>
+      <h2 class="rv">Every step forward <span class="hl">gets celebrated.</span></h2>
+      <p class="lead rv">Real results and real messages from students and parents will sit here.</p>
+      <div class="res-grid">
+        <div class="tcard rv"><p class="tag">Exam results</p><div class="ph"><b>To be supplied</b>SPM and school exam results, with names and IC numbers hidden.</div></div>
+        <div class="tcard rv" style="--d:.1s"><p class="tag">From a parent</p><div class="ph"><b>Awaiting approval</b>A WhatsApp message or short quote from a parent.</div></div>
+        <div class="tcard rv" style="--d:.2s"><p class="tag">From a student</p><div class="ph"><b>Awaiting approval</b>A short video or quote from a student.</div></div>
+      </div>
+      <div class="consent rv"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.600-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><p>Results and testimonials are only published with the family's permission, and personal details are always kept private.</p></div>
+    </div>
+  </section>
+
+  <!-- SEMINARS -->
+  <section id="seminars">
+    <div class="wrap">
+      <div class="seminar rv">
+        <div style="position:relative;z-index:1">
+          <p class="eyebrow">Revision seminars</p>
+          <h2>One big push <span style="color:var(--sun)">before the exam.</span></h2>
+          <p style="margin:16px 0 26px;max-width:46ch">Intensive revision sessions for SPM Science and Biology. Join the list and you'll hear first when the next seminar opens.</p>
+          <a class="btn btn-light" data-wa data-msg="Hi Ms Rubini! Please let me know when your next revision seminar opens for registration." href="#"><svg><use href="#i-wa"/></svg>Register your interest</a>
+        </div>
+        <div class="facts">
+          <div><b>Next seminar</b>Title to be confirmed</div>
+          <div><b>Date &amp; time</b>To be confirmed</div>
+          <div><b>Venue</b>To be confirmed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div style="text-align:center">
+        <p class="eyebrow rv">Before you join</p>
+        <h2 class="rv">Good questions. <span class="hl">Clear answers.</span></h2>
+      </div>
+      <div class="faq rv">
+        <details open><summary>Which subjects and levels do you teach?</summary><p>Form 1 to Form 3 Science, Form 4 and Form 5 Science for SPM, and SPM Biology.</p></details>
+        <details><summary>How much are the fees?</summary><p>Fees depend on the level and the type of class. Send a WhatsApp message and Ms Rubini will share the current fees for the class you want.</p></details>
+        <details><summary>Where are the classes held?</summary><p>Physical classes run in Klang and Petaling Jaya. The exact venue for your class is shared when you enquire.</p></details>
+        <details><summary>Can I join online?</summary><p>Yes. There are online group classes and online one-to-one sessions, so students outside Klang, PJ and KL can join too.</p></details>
+        <details><summary>What is the timetable?</summary><p>Class times differ by level and location. Message Ms Rubini on WhatsApp for the latest slots.</p></details>
+        <details><summary>How do I sign up?</summary><p>Tap any WhatsApp button on this page. Tell Ms Rubini the student's form and subject, and she will take it from there.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="final" id="contact">
+    <div class="wrap">
+      <h2 class="rv">Ready when <span style="color:var(--sun)">you are.</span></h2>
+      <p class="rv">Questions about classes, fees or the next seminar? Ms Rubini would love to hear from you.</p>
+      <a class="btn btn-light rv" data-wa href="#"><svg><use href="#i-wa"/></svg>Chat with Ms Rubini on WhatsApp</a><br>
+      <a class="ig rv" data-ig href="#" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@scibioyours_ on Instagram</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark"><svg><use href="#i-atom"/></svg></span>Ms Rubini's Classroom</a>
+      <p style="margin-top:10px">Science &amp; SPM Biology tuition · Klang, Petaling Jaya and online</p>
+      <p style="margin-top:6px">© <span id="yr"></span> Ms Rubini's Classroom</p>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li><li><a href="#classes">Classes</a></li><li><a href="#results">Results</a></li><li><a href="#seminars">Seminars</a></li><li><a href="#faq">FAQ</a></li>
+      <li><a data-wa href="#">WhatsApp</a></li><li><a data-ig href="#" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+
+<a class="wa-bar" data-wa href="#"><svg><use href="#i-wa"/></svg>Interested in tuition? Chat with Ms Rubini</a>
+<a class="wa-fab" data-wa href="#" aria-label="Chat with Ms Rubini on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  var S = window.SITE;
+  function wa(msg){
+    var base = S.whatsapp ? "https://wa.me/" + S.whatsapp : "https://wa.me/";
+    return base + "?text=" + encodeURIComponent(msg || S.defaultMessage);
+  }
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = wa(a.dataset.msg); a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll("[data-ig]").forEach(function(a){ a.href = S.instagram; });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // mobile menu
+  var burger = document.querySelector(".burger"), drawer = document.getElementById("drawer");
+  function setMenu(open){ drawer.classList.toggle("open", open); burger.setAttribute("aria-expanded", open); }
+  burger.addEventListener("click", function(){ setMenu(!drawer.classList.contains("open")); });
+  drawer.addEventListener("click", function(e){ if(e.target.tagName === "A") setMenu(false); });
+
+  // enquiry builder
+  var form = document.getElementById("builder"), preview = document.getElementById("preview"), send = document.getElementById("send");
+  function build(){
+    var f = new FormData(form), who = f.get("who"), cls = f.get("cls"), fmt = f.get("fmt"), loc = f.get("loc");
+    var opener = who === "parent" ? "I'm a parent looking for " + cls + " tuition for my child" : "I'm a student looking for " + cls + " tuition";
+    var msg = "Hi Ms Rubini! " + opener + ". I'm interested in " + fmt + " " + loc + ". Could you share the timetable and fees?";
+    preview.textContent = msg; send.href = wa(msg); send.target = "_blank"; send.rel = "noopener";
+  }
+  form.addEventListener("change", build); build();
+
+  // reveal on scroll
+  var els = Array.prototype.slice.call(document.querySelectorAll(".rv")), queued = false;
+  function check(){
+    queued = false;
+    var limit = window.innerHeight * 0.94;
+    els = els.filter(function(e){
+      if(e.getBoundingClientRect().top < limit){ e.classList.add("in"); return false; }
+      return true;
+    });
+    if(!els.length){ removeEventListener("scroll", onScroll); removeEventListener("resize", onScroll); }
+  }
+  function onScroll(){ if(!queued){ queued = true; setTimeout(check, 60); } }
+  addEventListener("scroll", onScroll, {passive:true});
+  addEventListener("resize", onScroll);
+  check();
+})();
+</script>
+</body>
+</html>
