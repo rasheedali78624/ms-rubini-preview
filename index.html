@@ -272,6 +272,9 @@
   .js .hero .rv.in .hl{background-size:100% 100%}
   figure{margin:0}
   html{overflow-x:clip}
+  .frame.has-photo{background:linear-gradient(165deg,#EEF4FF,#C5DAFF)}
+  .portrait2 .pic.has-photo{background:linear-gradient(170deg,#EEF4FF,#C9DCFF)}
+  .has-photo img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 0;mix-blend-mode:multiply}
   .hero{overflow:hidden}
   .voice .who{flex-wrap:wrap}
   .voice .who>span:nth-child(2){flex:1;min-width:150px}
@@ -292,8 +295,8 @@
   .tag-card small{display:block;font-weight:500;color:var(--slate);font-size:.74rem}
   .tag-card .ic{width:36px;height:36px;border-radius:11px;background:var(--sky);display:grid;place-items:center;flex:none}
   .tag-card .ic svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-  .tag-card.t1{left:-2%;bottom:15%}
-  .tag-card.t2{right:-3%;top:34%}
+  .tag-card.t1{left:-2%;bottom:9%}
+  .tag-card.t2{right:-3%;top:57%}
   .art2 .note{right:3%;top:3%;left:auto;bottom:auto;transform:rotate(6deg)}
   .badge{position:absolute;left:5%;top:11%;width:64px;height:64px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 14px 26px -14px rgba(10,27,63,.8)}
   .badge svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
@@ -458,7 +461,7 @@
 </svg>
 
 <div class="progress" aria-hidden="true"></div>
-<div class="ribbon"><b>Website preview</b> · Dashed boxes and draft wording will be replaced with Ms Rubini's own details and photos.</div>
+<div class="ribbon"><b>Website preview</b> · Draft wording and items marked "to add" will be replaced with Ms Rubini's own details.</div>
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -510,7 +513,7 @@
         <div class="blob"></div>
         <div class="ring"><i></i></div>
         <div class="frame-back"></div>
-        <div class="frame"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+        <div class="frame has-photo"><img src="rubini.jpg" alt="" width="1005" height="1100"></div>
         <div class="badge float b"><svg><use href="#i-micro"/></svg></div>
         <svg class="doodle d-atom float c" viewBox="0 0 48 48"><use href="#i-atom"/></svg>
         <div class="note hand float">Bio? Boleh! ✓</div>
@@ -538,7 +541,7 @@
   <section id="about" class="about2">
     <div class="wrap grid">
       <figure class="portrait2 rv">
-        <div class="pic"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+        <div class="pic has-photo"><img src="rubini.jpg" alt="Ms Rubini" width="1005" height="1100" loading="lazy"></div>
         <figcaption>Ms Rubini<small>Science &amp; Biology teacher</small></figcaption>
       </figure>
       <div>
