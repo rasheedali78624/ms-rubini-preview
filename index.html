@@ -6,6 +6,7 @@
 <title>Ms Rubini's Classroom | Science &amp; SPM Biology Tuition</title>
 <meta name="description" content="Science and SPM Biology tuition with Ms Rubini. Form 1 to Form 5, in Klang, Petaling Jaya and online.">
 <meta name="theme-color" content="#0A1B3F">
+<meta name="robots" content="noindex, nofollow"><!-- preview only: remove at launch -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +15,7 @@
   window.SITE = {
     whatsapp: "",                                   // e.g. "60123456789" (no + or spaces). Empty = WhatsApp opens and asks who to send to.
     instagram: "https://www.instagram.com/scibioyours_/",
+    seminarForm: "",                                // optional Google Form link for seminar sign-ups. Empty = WhatsApp.
     defaultMessage: "Hi Ms Rubini! I came across your website and would like to ask about your tuition classes."
   };
   document.documentElement.classList.add("js");
@@ -257,6 +259,182 @@
     *,*::before,*::after{animation:none!important;transition:none!important}
     .js .rv{opacity:1;transform:none}
   }
+  /* ================= v2 polish ================= */
+  .progress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--sun);transform-origin:0 50%;transform:scaleX(0);z-index:70}
+  .nav-links a{position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--blue);transform:scaleX(0);transition:transform .25s;border-radius:2px}
+  .nav-links a:hover::after,.nav-links a.on::after{transform:scaleX(1)}
+  .nav-links a.on{color:var(--blue)}
+  .btn{position:relative;overflow:hidden}
+  .btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+  .btn:hover::after{left:120%}
+  .js .hero .hl{background-repeat:no-repeat;background-size:0 100%;transition:background-size .9s cubic-bezier(.2,.7,.2,1) .55s}
+  .js .hero .rv.in .hl{background-size:100% 100%}
+  figure{margin:0}
+  html{overflow-x:clip}
+  .hero{overflow:hidden}
+  .voice .who{flex-wrap:wrap}
+  .voice .who>span:nth-child(2){flex:1;min-width:150px}
+
+  /* hero art */
+  .art2{position:relative;max-width:420px;width:100%;margin:8px auto 0;aspect-ratio:1/1.12}
+  .art2 .blob{position:absolute;inset:10% 0 4% 6%;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,var(--sky) 70%)}
+  .art2 .ring{position:absolute;inset:3% -3% -1% 1%;border:2px dashed #9DBDF5;border-radius:50%;animation:spin 60s linear infinite}
+  .art2 .ring i{position:absolute;top:9%;left:13%;width:16px;height:16px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 5px rgba(255,209,102,.35)}
+  @keyframes spin{to{rotate:360deg}}
+  .frame-back{position:absolute;inset:9% 15% 5% 21%;border-radius:999px 999px 30px 30px;background:var(--sun);transform:rotate(5deg)}
+  .frame{position:absolute;inset:7% 18%;border-radius:999px 999px 30px 30px;background:linear-gradient(165deg,#3B7BF7,#12338F);border:8px solid #fff;box-shadow:0 34px 60px -28px rgba(10,27,63,.75);display:grid;place-items:center;text-align:center;color:#D6E4FF;overflow:hidden}
+  .frame::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 115%,rgba(255,255,255,.3),transparent 55%),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px) 0 0/22px 22px}
+  .frame div{position:relative}
+  .frame svg{width:96px;height:96px;margin:0 auto 10px}
+  .frame span{font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .tag-card{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px 14px 10px 10px;display:flex;align-items:center;gap:10px;box-shadow:0 16px 30px -18px rgba(10,27,63,.55);font-weight:700;font-size:.85rem;color:var(--navy);line-height:1.25}
+  .tag-card small{display:block;font-weight:500;color:var(--slate);font-size:.74rem}
+  .tag-card .ic{width:36px;height:36px;border-radius:11px;background:var(--sky);display:grid;place-items:center;flex:none}
+  .tag-card .ic svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  .tag-card.t1{left:-2%;bottom:15%}
+  .tag-card.t2{right:-3%;top:34%}
+  .art2 .note{right:3%;top:3%;left:auto;bottom:auto;transform:rotate(6deg)}
+  .badge{position:absolute;left:5%;top:11%;width:64px;height:64px;border-radius:50%;background:var(--navy);display:grid;place-items:center;box-shadow:0 14px 26px -14px rgba(10,27,63,.8)}
+  .badge svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+  .art2 .d-atom{width:19%;right:3%;bottom:1%}
+
+  /* ticker */
+  .ticker{background:var(--blue);color:#fff;overflow:hidden;padding:14px 0;white-space:nowrap}
+  .ticker div{display:inline-flex;animation:slide 40s linear infinite;font-family:var(--display);font-weight:700;font-size:1.12rem}
+  .ticker span{padding-right:26px;display:inline-flex;gap:26px;align-items:center}
+  .ticker span::after{content:"\2726";color:var(--sun);font-size:.8em}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .word{transition:border-color .3s,transform .3s}
+  .word:hover{border-color:var(--sun);transform:translateY(-4px)}
+
+  /* about */
+  .about2 .grid{display:grid;gap:48px;align-items:center}
+  .portrait2{position:relative;max-width:400px;width:calc(100% - 14px);margin:0 auto}
+  .portrait2::before{content:"";position:absolute;inset:18px -14px -14px 18px;border-radius:28px;background:var(--sun)}
+  .portrait2 .pic{position:relative;aspect-ratio:4/5;border-radius:28px;background:linear-gradient(170deg,#CFE1FF,#8FB5FA);display:grid;place-items:center;text-align:center;color:var(--blue);overflow:hidden}
+  .portrait2 .pic::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.35) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px) 0 0/24px 24px}
+  .portrait2 .pic div{position:relative}
+  .portrait2 .pic svg{width:84px;height:84px;margin:0 auto 10px}
+  .portrait2 .pic span{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .portrait2 figcaption{position:absolute;left:-10px;bottom:28px;background:var(--navy);color:#fff;padding:12px 18px;border-radius:14px;font-weight:700;font-size:.92rem;line-height:1.3;box-shadow:0 16px 30px -16px rgba(10,27,63,.8)}
+  .portrait2 figcaption small{display:block;color:#B9C8E8;font-weight:500;font-size:.78rem}
+  .quote2{font-family:var(--display);font-size:clamp(1.5rem,5.4vw,2.1rem);font-weight:500;line-height:1.2;letter-spacing:-.015em;margin:22px 0 20px;position:relative;padding-top:40px}
+  .quote2::before{content:"\201C";position:absolute;top:-6px;left:-4px;font-size:5.5rem;line-height:1;color:var(--blue);font-weight:800}
+  .intro-ph{color:var(--slate);font-style:italic}
+  .todo{display:inline-block;font-style:normal;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--sky);color:var(--blue);border-radius:999px;padding:3px 10px;vertical-align:middle;white-space:nowrap}
+  .facts2{margin:26px 0 0;border-top:1px solid var(--line)}
+  .facts2 div{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .facts2 dt{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate)}
+  .facts2 dd{margin:0;font-weight:600;color:var(--navy)}
+  .sign{font-family:var(--hand);font-size:2.1rem;color:var(--blue);margin-top:16px;transform:rotate(-3deg);display:inline-block}
+
+  /* class cards */
+  .ccards{display:grid;gap:18px;margin-top:36px}
+  .ccard{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+  .ccard:hover{transform:translateY(-8px);box-shadow:0 30px 50px -30px rgba(10,27,63,.55)}
+  .ctop{position:relative;height:168px;overflow:hidden;color:var(--blue)}
+  .c1 .ctop{background:var(--sky)}
+  .c2 .ctop{background:linear-gradient(135deg,#3B7BF7,#1D4ED8);color:#fff}
+  .c3 .ctop{background:var(--navy);color:var(--sun)}
+  .ctop .num{position:absolute;left:20px;top:10px;font-family:var(--display);font-weight:800;font-size:4.2rem;line-height:1;opacity:.2}
+  .ctop svg{position:absolute;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .ctop .big{width:112px;height:112px;right:26px;top:28px}
+  .c3 .ctop .big{height:136px;top:16px}
+  .ctop .s1{width:40px;height:40px;right:158px;bottom:18px;opacity:.75}
+  .ctop .s2{width:30px;height:30px;right:150px;top:24px;opacity:.6}
+  .ccard:hover .big{transform:rotate(-8deg) scale(1.08)}
+  .ccard:hover .s1{transform:translateY(-6px) rotate(10deg)}
+  .ccard:hover .s2{transform:translateY(5px) rotate(-12deg)}
+  .cbody{padding:22px 24px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .cbody p{color:var(--slate);font-size:.97rem}
+  .cbody ul{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+  .cbody li{font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--navy)}
+
+  /* results */
+  .res2{display:grid;gap:16px;margin-top:36px}
+  .wall{background:var(--navy);color:#fff;border-radius:28px;padding:28px 24px 34px;position:relative;overflow:hidden}
+  .wall::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/28px 28px}
+  .wall>*{position:relative}
+  .wall h3{font-size:1.6rem}
+  .wall p{color:#B9C8E8;margin-top:8px;font-size:.95rem;max-width:40ch}
+  .slips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+  .slip{background:#fff;border-radius:14px;padding:14px 12px;color:var(--navy);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .slip:nth-child(1){transform:rotate(-4deg)}
+  .slip:nth-child(2){transform:translateY(-8px) rotate(2deg)}
+  .slip:nth-child(3){transform:rotate(5deg)}
+  .wall:hover .slip{transform:none}
+  .slip svg{width:26px;height:26px;stroke:var(--blue);fill:var(--sun);stroke-width:2.4;stroke-linejoin:round;margin-bottom:10px}
+  .slip i{display:block;height:7px;border-radius:4px;background:var(--sky);margin-top:7px}
+  .slip i:nth-of-type(2){width:70%}
+  .slip i:nth-of-type(3){width:45%}
+  .slip b{display:block;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-top:12px}
+  .voices{display:grid;gap:16px}
+  .voice{background:#fff;border:1px solid var(--line);border-radius:28px;padding:24px;transition:transform .3s,box-shadow .3s}
+  .voice:hover{transform:translateY(-4px);box-shadow:0 24px 40px -30px rgba(10,27,63,.5)}
+  .voice .who{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .voice .av{width:44px;height:44px;border-radius:50%;background:var(--sky);display:grid;place-items:center;color:var(--blue);flex:none}
+  .voice .av svg{width:24px;height:24px}
+  .voice .who b{display:block;font-family:var(--display);font-size:1.08rem;line-height:1.2}
+  .voice .who small{color:var(--slate);font-size:.8rem}
+  .voice .todo{margin-left:auto}
+  .msg{background:var(--mist);border-radius:4px 18px 18px 18px;padding:18px}
+  .msg i{display:block;height:8px;border-radius:4px;background:#C9DBF8;margin-bottom:9px}
+  .msg i:nth-child(2){width:86%}
+  .msg i:nth-child(3){width:58%;margin-bottom:0}
+
+  /* seminar */
+  .seminar2{border-radius:32px;background:linear-gradient(135deg,#1D4ED8,#0F2C80);color:#fff;padding:34px 24px 44px;display:grid;gap:40px;position:relative;overflow:hidden;align-items:center}
+  .seminar2::after{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;border:38px solid rgba(255,255,255,.07)}
+  .seminar2>*{position:relative;z-index:1}
+  .seminar2 .eyebrow{color:var(--sun)}
+  .seminar2 .desc{color:#D5E2FF;margin:16px 0 22px;max-width:46ch}
+  .sfacts{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:10px}
+  .sfacts li{display:flex;gap:12px;align-items:center;font-weight:600;font-size:.95rem;line-height:1.3}
+  .sfacts svg{width:40px;height:40px;padding:9px;border-radius:12px;background:rgba(255,255,255,.12);stroke:var(--sun);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .sfacts small{display:block;color:#AFC4F5;font-weight:600;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+  .poster{max-width:280px;width:100%;margin:0 auto;aspect-ratio:3/4;background:#fff;border-radius:20px;padding:12px;transform:rotate(-4deg);box-shadow:0 40px 60px -30px rgba(0,0,0,.6);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+  .poster:hover{transform:rotate(0) scale(1.02)}
+  .poster::after{content:"";position:absolute;top:-12px;left:50%;width:90px;height:26px;background:rgba(255,209,102,.92);transform:translateX(-50%) rotate(-3deg);border-radius:3px}
+  .pin{height:100%;border-radius:12px;background:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/22px 22px,var(--navy);padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;overflow:hidden}
+  .pin b{font-family:var(--display);font-weight:800;font-size:2.1rem;line-height:.95;letter-spacing:-.02em}
+  .pin b em{font-style:normal;color:var(--sun);display:block}
+  .pin svg{width:74px;height:74px;stroke:var(--sun);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;align-self:flex-end}
+  .pin small{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:1.5px dashed rgba(255,255,255,.5);border-radius:999px;padding:6px 12px;align-self:flex-start}
+
+  /* instagram */
+  .ig-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:30px;padding:14px 16px;border:1px solid var(--line);border-radius:22px;background:#fff}
+  .ig-id{display:flex;align-items:center;gap:12px;font-weight:700;line-height:1.3}
+  .ig-id .halo{width:52px;height:52px;border-radius:50%;padding:3px;background:conic-gradient(var(--blue),var(--sun),var(--blue-2),var(--blue));flex:none}
+  .ig-id .halo span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--navy);border:2px solid #fff}
+  .ig-id .halo svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4}
+  .ig-id small{display:block;color:var(--slate);font-weight:500;font-size:.82rem}
+  .ig-head .btn{min-height:46px;flex:1 1 200px}
+  .ig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+  .tile{aspect-ratio:1;border-radius:20px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;text-decoration:none;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+  .tile:hover{transform:scale(1.03) rotate(-1deg)}
+  .tile small{font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+  .tile b{font-family:var(--display);font-weight:800;font-size:clamp(1.2rem,5.2vw,1.8rem);line-height:1;letter-spacing:-.02em;position:relative}
+  .tile svg{position:absolute;right:-6%;top:14%;width:56%;height:56%;stroke:currentColor;fill:none;stroke-width:1.6;opacity:.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s}
+  .tile:hover svg{transform:rotate(10deg) scale(1.1)}
+  .tl-navy{background:var(--navy);color:#fff}
+  .tl-blue{background:var(--blue);color:#fff}
+  .tl-sky{background:var(--sky);color:var(--navy)}
+  .tl-sun{background:var(--sun);color:var(--navy)}
+  .tl-grad{background:linear-gradient(140deg,#3B82F6,#12338F);color:#fff}
+  .tl-white{background:#fff;border:1.5px solid var(--line);color:var(--blue)}
+  .ig-note{color:var(--slate);font-size:.82rem;margin-top:14px;text-align:center}
+
+  @media (min-width:720px){
+    .about2 .grid{grid-template-columns:.8fr 1fr;gap:80px}
+    .ccards{grid-template-columns:repeat(3,1fr)}
+    .res2{grid-template-columns:1.1fr .9fr}
+    .wall{padding:44px 40px}
+    .seminar2{grid-template-columns:1.25fr .75fr;padding:60px;gap:56px}
+    .ig-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+    .tile{padding:26px}
+    .ig-head .btn{flex:0 0 auto}
+  }
 </style>
 </head>
 <body>
@@ -270,8 +448,16 @@
   <symbol id="i-cell" viewBox="0 0 48 48"><path d="M24 4c11 0 20 7 20 19s-8 21-20 21S4 36 4 24 13 4 24 4Z"/><circle cx="27" cy="25" r="7"/><circle cx="14" cy="18" r="1.6" fill="currentColor" stroke="none"/><circle cx="16" cy="33" r="1.6" fill="currentColor" stroke="none"/><circle cx="34" cy="13" r="1.6" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-flask" viewBox="0 0 48 48"><path d="M18 5h12M20 5v13L8 38a4 4 0 0 0 3.5 6h25A4 4 0 0 0 40 38L28 18V5"/><path d="M13 31h22"/></symbol>
   <symbol id="i-user" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="17" r="8"/><path d="M8 42c2-9 8-13 16-13s14 4 16 13"/></g></symbol>
+  <symbol id="i-micro" viewBox="0 0 48 48"><path d="M10 42h28M30 42c7-4 9-13 3-20M19 8l7 3-6 15-7-3zM21 5l6 2.300M12 33h15"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 48 48"><path d="M17 30a11 11 0 1 1 14 0c-1 1-2 3-2 5H19c0-2-1-4-2-5ZM20 40h8M21 44h6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 48 48"><path d="M27 4 11 27h11l-2 17 17-24H26z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="33" rx="5"/><path d="M6 19h36M16 5v8M32 5v8"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 48 48"><path d="M24 6 44 40H4ZM24 19v10M24 34v.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 48 48"><path d="m24 5 5.600 12.200L43 18.700l-10 9 2.800 13.200L24 34.300l-11.800 6.600L15 27.700l-10-9 13.400-1.500z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
 </svg>
 
+<div class="progress" aria-hidden="true"></div>
 <div class="ribbon"><b>Website preview</b> · Dashed boxes and draft wording will be replaced with Ms Rubini's own details and photos.</div>
 
 <header class="nav">
@@ -320,17 +506,24 @@
         </ul>
       </div>
 
-      <div class="art rv" style="--d:.2s" aria-hidden="true">
-        <svg class="doodle d-dna float"><use href="#i-dna"/></svg>
-        <svg class="doodle d-leaf float b" viewBox="0 0 48 48"><use href="#i-leaf"/></svg>
-        <div class="photo"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+      <div class="art2 rv" style="--d:.2s" aria-hidden="true">
+        <div class="blob"></div>
+        <div class="ring"><i></i></div>
+        <div class="frame-back"></div>
+        <div class="frame"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+        <div class="badge float b"><svg><use href="#i-micro"/></svg></div>
         <svg class="doodle d-atom float c" viewBox="0 0 48 48"><use href="#i-atom"/></svg>
-        <svg class="doodle d-cell float b" viewBox="0 0 48 48"><use href="#i-cell"/></svg>
-        <div class="note n1 hand float">Bio? Boleh! ✓</div>
-        <div class="note n2 hand float c">Form 1 → SPM</div>
+        <div class="note hand float">Bio? Boleh! ✓</div>
+        <div class="tag-card t2 float c"><span class="ic"><svg><use href="#i-flask"/></svg></span><span>Science<small>Form 1 to Form 5</small></span></div>
+        <div class="tag-card t1 float b"><span class="ic"><svg viewBox="0 0 48 96"><use href="#i-dna"/></svg></span><span>SPM Biology<small>Form 4 and 5</small></span></div>
       </div>
     </div>
   </div>
+
+  <div class="ticker" aria-hidden="true"><div>
+    <span>Cells</span><span>Genetics</span><span>Forces &amp; motion</span><span>Chemical reactions</span><span>Ecosystems</span><span>Electricity</span><span>The human body</span><span>Photosynthesis</span>
+    <span>Cells</span><span>Genetics</span><span>Forces &amp; motion</span><span>Chemical reactions</span><span>Ecosystems</span><span>Electricity</span><span>The human body</span><span>Photosynthesis</span>
+  </div></div>
 
   <!-- THREE WORDS -->
   <div class="words">
@@ -342,18 +535,24 @@
   </div>
 
   <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap about-grid">
-      <div class="portrait rv"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+  <section id="about" class="about2">
+    <div class="wrap grid">
+      <figure class="portrait2 rv">
+        <div class="pic"><div><svg><use href="#i-user"/></svg><span>Your photo here</span></div></div>
+        <figcaption>Ms Rubini<small>Science &amp; Biology teacher</small></figcaption>
+      </figure>
       <div>
         <p class="eyebrow rv">Meet your teacher</p>
         <h2 class="rv">Hello, I'm <span class="hl">Ms Rubini.</span></h2>
-        <p class="quote rv">Every student learns differently. My job is to make Science clear, lively and worth showing up for.</p>
-        <div class="ph-stack">
-          <div class="ph rv"><b>About me</b>A short introduction in Ms Rubini's own words.</div>
-          <div class="ph rv" style="--d:.08s"><b>Teaching experience</b>Years of teaching and where, to be provided.</div>
-          <div class="ph rv" style="--d:.16s"><b>Qualifications</b>To be added.</div>
-        </div>
+        <p class="quote2 rv">Every student learns differently. My job is to make Science clear, lively and worth showing up for.</p>
+        <p class="intro-ph rv">A short introduction in Ms Rubini's own words goes here. <span class="todo">To add</span></p>
+        <dl class="facts2 rv">
+          <div><dt>Teaches</dt><dd>Form 1–5 Science and SPM Biology</dd></div>
+          <div><dt>Where</dt><dd>Klang, Petaling Jaya and online</dd></div>
+          <div><dt>Experience</dt><dd><span class="todo">To add</span></dd></div>
+          <div><dt>Qualifications</dt><dd><span class="todo">To add</span></dd></div>
+        </dl>
+        <span class="sign rv">Ms Rubini</span>
       </div>
     </div>
   </section>
@@ -365,30 +564,36 @@
       <h2 class="rv">Pick the class that fits <span class="hl">your form.</span></h2>
       <p class="lead rv">Small groups, one-to-one or online. Tap a class to ask about the timetable and fees.</p>
 
-      <div class="cards">
-        <article class="card rv">
-          <div class="icon"><svg><use href="#i-flask"/></svg></div>
-          <span class="level">Form 1 – 3</span>
-          <h3>Lower Secondary Science</h3>
-          <p>Building strong basics early, so Form 4 doesn't come as a shock.</p>
-          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
-          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 1–3 Science classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+      <div class="ccards">
+        <article class="ccard c1 rv">
+          <div class="ctop" aria-hidden="true"><span class="num">01</span><svg class="s2"><use href="#i-bulb"/></svg><svg class="s1"><use href="#i-bolt"/></svg><svg class="big"><use href="#i-flask"/></svg></div>
+          <div class="cbody">
+            <span class="level">Form 1 – 3</span>
+            <h3>Lower Secondary Science</h3>
+            <p>Building strong basics early, so Form 4 doesn't come as a shock.</p>
+            <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+            <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 1–3 Science classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+          </div>
         </article>
-        <article class="card rv" style="--d:.1s">
-          <div class="icon"><svg><use href="#i-atom"/></svg></div>
-          <span class="level">Form 4 – 5</span>
-          <h3>SPM Science</h3>
-          <p>The full SPM Science syllabus, with regular practice on exam-style questions.</p>
-          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
-          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 4–5 Science (SPM) classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+        <article class="ccard c2 rv" style="--d:.1s">
+          <div class="ctop" aria-hidden="true"><span class="num">02</span><svg class="s2"><use href="#i-bolt"/></svg><svg class="s1"><use href="#i-micro"/></svg><svg class="big"><use href="#i-atom"/></svg></div>
+          <div class="cbody">
+            <span class="level">Form 4 – 5</span>
+            <h3>SPM Science</h3>
+            <p>The full SPM Science syllabus, with regular practice on exam-style questions.</p>
+            <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+            <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about Form 4–5 Science (SPM) classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+          </div>
         </article>
-        <article class="card rv" style="--d:.2s">
-          <div class="icon"><svg><use href="#i-dna"/></svg></div>
-          <span class="level">Form 4 – 5</span>
-          <h3>SPM Biology</h3>
-          <p>From cells to ecosystems, taught so the diagrams and essays stop being scary.</p>
-          <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
-          <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about SPM Biology classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+        <article class="ccard c3 rv" style="--d:.2s">
+          <div class="ctop" aria-hidden="true"><span class="num">03</span><svg class="s2"><use href="#i-leaf"/></svg><svg class="s1"><use href="#i-cell"/></svg><svg class="big" viewBox="0 0 48 96"><use href="#i-dna"/></svg></div>
+          <div class="cbody">
+            <span class="level">Form 4 – 5</span>
+            <h3>SPM Biology</h3>
+            <p>From cells to ecosystems, taught so the diagrams and essays stop being scary.</p>
+            <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+            <a class="link" data-wa data-msg="Hi Ms Rubini! I'd like to ask about SPM Biology classes. Could you share the timetable and fees?" href="#">Ask about this class <span>→</span></a>
+          </div>
         </article>
       </div>
 
@@ -444,31 +649,75 @@
       <p class="eyebrow rv">Results &amp; kind words</p>
       <h2 class="rv">Every step forward <span class="hl">gets celebrated.</span></h2>
       <p class="lead rv">Real results and real messages from students and parents will sit here.</p>
-      <div class="res-grid">
-        <div class="tcard rv"><p class="tag">Exam results</p><div class="ph"><b>To be supplied</b>SPM and school exam results, with names and IC numbers hidden.</div></div>
-        <div class="tcard rv" style="--d:.1s"><p class="tag">From a parent</p><div class="ph"><b>Awaiting approval</b>A WhatsApp message or short quote from a parent.</div></div>
-        <div class="tcard rv" style="--d:.2s"><p class="tag">From a student</p><div class="ph"><b>Awaiting approval</b>A short video or quote from a student.</div></div>
+      <div class="res2">
+        <div class="wall rv">
+          <h3>The results wall</h3>
+          <p>Result slips from Ms Rubini's students, with names and IC numbers hidden.</p>
+          <div class="slips" aria-hidden="true">
+            <div class="slip"><svg viewBox="0 0 48 48"><use href="#i-star"/></svg><i></i><i></i><i></i><b>Result to add</b></div>
+            <div class="slip"><svg viewBox="0 0 48 48"><use href="#i-star"/></svg><i></i><i></i><i></i><b>Result to add</b></div>
+            <div class="slip"><svg viewBox="0 0 48 48"><use href="#i-star"/></svg><i></i><i></i><i></i><b>Result to add</b></div>
+          </div>
+        </div>
+        <div class="voices">
+          <div class="voice rv" style="--d:.1s">
+            <div class="who"><span class="av"><svg><use href="#i-user"/></svg></span><span><b>From a parent</b><small>WhatsApp message or short quote</small></span><span class="todo">Awaiting approval</span></div>
+            <div class="msg" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+          <div class="voice rv" style="--d:.2s">
+            <div class="who"><span class="av"><svg><use href="#i-user"/></svg></span><span><b>From a student</b><small>Short video or quote</small></span><span class="todo">Awaiting approval</span></div>
+            <div class="msg" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+        </div>
       </div>
-      <div class="consent rv"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.4 8 8 9 4.600-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><p>Results and testimonials are only published with the family's permission, and personal details are always kept private.</p></div>
+      <div class="consent rv"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.400 8 8 9 4.600-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><p>Results and testimonials are only published with the family's permission, and personal details are always kept private.</p></div>
     </div>
   </section>
 
   <!-- SEMINARS -->
   <section id="seminars">
     <div class="wrap">
-      <div class="seminar rv">
-        <div style="position:relative;z-index:1">
+      <div class="seminar2 rv">
+        <div>
           <p class="eyebrow">Revision seminars</p>
           <h2>One big push <span style="color:var(--sun)">before the exam.</span></h2>
-          <p style="margin:16px 0 26px;max-width:46ch">Intensive revision sessions for SPM Science and Biology. Join the list and you'll hear first when the next seminar opens.</p>
-          <a class="btn btn-light" data-wa data-msg="Hi Ms Rubini! Please let me know when your next revision seminar opens for registration." href="#"><svg><use href="#i-wa"/></svg>Register your interest</a>
+          <p class="desc">Intensive revision sessions for SPM Science and Biology. Join the list and you'll hear first when the next seminar opens.</p>
+          <ul class="sfacts">
+            <li><svg viewBox="0 0 48 48"><use href="#i-cal"/></svg><span><small>Date &amp; time</small>To be confirmed</span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-pin"/></svg><span><small>Venue</small>To be confirmed</span></li>
+          </ul>
+          <a class="btn btn-light" data-wa data-seminar data-msg="Hi Ms Rubini! Please let me know when your next revision seminar opens for registration." href="#"><svg><use href="#i-wa"/></svg>Register your interest</a>
         </div>
-        <div class="facts">
-          <div><b>Next seminar</b>Title to be confirmed</div>
-          <div><b>Date &amp; time</b>To be confirmed</div>
-          <div><b>Venue</b>To be confirmed</div>
+        <div class="poster" aria-hidden="true">
+          <div class="pin">
+            <small>Seminar poster goes here</small>
+            <b>SPM<em>Revision</em>Seminar</b>
+            <svg viewBox="0 0 48 48"><use href="#i-atom"/></svg>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section id="instagram" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow rv">On Instagram</p>
+      <h2 class="rv">Learning doesn't <span class="hl">stop here.</span></h2>
+      <p class="lead rv">Follow Ms Rubini for Science tips, revision help and class updates.</p>
+      <div class="ig-head rv">
+        <span class="ig-id"><span class="halo"><span><svg><use href="#i-atom"/></svg></span></span><span>@scibioyours_<small>Science &amp; SPM Biology with Ms Rubini</small></span></span>
+        <a class="btn btn-primary" data-ig href="#" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Follow @scibioyours_</a>
+      </div>
+      <div class="ig-grid">
+        <a class="tile tl-navy rv" data-ig href="#" target="_blank" rel="noopener"><small>Tips</small><svg viewBox="0 0 48 48"><use href="#i-bulb"/></svg><b>Science revision tips</b></a>
+        <a class="tile tl-sun rv" style="--d:.06s" data-ig href="#" target="_blank" rel="noopener"><small>Explained</small><svg viewBox="0 0 48 96"><use href="#i-dna"/></svg><b>SPM Biology, explained</b></a>
+        <a class="tile tl-blue rv" style="--d:.12s" data-ig href="#" target="_blank" rel="noopener"><small>Watch out</small><svg viewBox="0 0 48 48"><use href="#i-warn"/></svg><b>Common exam mistakes</b></a>
+        <a class="tile tl-sky rv" data-ig href="#" target="_blank" rel="noopener"><small>Did you know</small><svg viewBox="0 0 48 48"><use href="#i-atom"/></svg><b>Science facts</b></a>
+        <a class="tile tl-grad rv" style="--d:.06s" data-ig href="#" target="_blank" rel="noopener"><small>Motivation</small><svg viewBox="0 0 48 48"><use href="#i-star"/></svg><b>You can do this</b></a>
+        <a class="tile tl-white rv" style="--d:.12s" data-ig href="#" target="_blank" rel="noopener"><small>Coming up</small><svg viewBox="0 0 48 48"><use href="#i-cal"/></svg><b>Next revision session</b></a>
+      </div>
+      <p class="ig-note rv">Sample post designs. Her real Instagram posts can be shown here.</p>
     </div>
   </section>
 
@@ -529,6 +778,7 @@
     a.href = wa(a.dataset.msg); a.target = "_blank"; a.rel = "noopener";
   });
   document.querySelectorAll("[data-ig]").forEach(function(a){ a.href = S.instagram; });
+  if(S.seminarForm) document.querySelectorAll("[data-seminar]").forEach(function(a){ a.href = S.seminarForm; });
   document.getElementById("yr").textContent = new Date().getFullYear();
 
   // mobile menu
@@ -546,6 +796,17 @@
     preview.textContent = msg; send.href = wa(msg); send.target = "_blank"; send.rel = "noopener";
   }
   form.addEventListener("change", build); build();
+
+  // scroll progress + active nav link
+  var bar = document.querySelector(".progress"), links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var secs = links.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  function ui(){
+    var max = document.documentElement.scrollHeight - innerHeight, cur = -1;
+    bar.style.transform = "scaleX(" + (max > 0 ? Math.min(1, scrollY / max) : 0) + ")";
+    secs.forEach(function(s, i){ if(s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = i; });
+    links.forEach(function(a, i){ a.classList.toggle("on", i === cur); });
+  }
+  addEventListener("scroll", ui, {passive:true}); ui();
 
   // reveal on scroll
   var els = Array.prototype.slice.call(document.querySelectorAll(".rv")), queued = false;
