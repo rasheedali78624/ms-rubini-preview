@@ -1,0 +1,1855 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ms Rubini's Classroom | Science &amp; SPM Biology Tuition in Klang, PJ and Online</title>
+<meta name="description" content="Science and SPM Biology tuition with Ms Rubini for Form 1 to Form 5 students. Small group, one-to-one and online classes in Klang, Petaling Jaya and online.">
+<meta name="robots" content="noindex, nofollow"><!-- PREVIEW ONLY: delete this line when the site launches -->
+<meta name="theme-color" content="#07152F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ms Rubini's Classroom | Science & SPM Biology">
+<meta property="og:description" content="Biology is the story of life. Science and SPM Biology tuition in Klang, Petaling Jaya and online.">
+<meta property="og:image" content="https://rasheedali78624.github.io/ms-rubini-preview/rubini.jpg"><!-- update to the live domain at launch -->
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script>
+  /* =====================================================================
+     SITE SETTINGS — edit these lines only
+     ===================================================================== */
+  window.SITE = {
+    // Ms Rubini's WhatsApp number, digits only with country code, e.g. "60123456789".
+    // LEFT EMPTY ON PURPOSE until she approves publishing it. While empty, buttons open
+    // WhatsApp with the message ready and let the visitor pick who to send it to.
+    whatsapp: "",
+    instagram: "https://www.instagram.com/scibioyours_/",
+    defaultMessage: "Hi Ms Rubini! I came across your website and would like to ask about your classes."
+  };
+  /* Page content that is only shown once it is real and approved. */
+  window.CONTENT = {
+    about: {
+      quote: "I believe Biology should be understood, explored and experienced — not simply memorised.",
+      intro: "Ms Rubini teaches Science and SPM Biology to secondary school students in Klang, Petaling Jaya and online. Her classes are built to be fun, results-focused and motivating, so students understand the ideas behind the answers."
+    },
+    // Add real, permission-approved items only. While both lists are empty, the Results section is hidden.
+    // results: [{ title: "SPM Biology · A+", detail: "Form 5, 2026", photo: "", alt: "" }]
+    results: [],
+    // testimonials: [{ quote: "…", who: "Parent of a Form 4 student" }]
+    testimonials: [],
+    // seminar: { title: "", date: "", time: "", venue: "", topics: [""], registerUrl: "" }
+    // While null, the page invites visitors to ask about the next seminar instead.
+    seminar: null
+  };
+  document.documentElement.classList.add("js");
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<style>
+  :root{
+    --night:#07152F; --ocean:#0A2550; --cobalt:#245BDB; --electric:#438CFF; --cyan:#68D9EA; --ice:#EAF5FF; --soft:#F6FAFF;
+    --ink:#0B1630; --muted:#4F6286; --line:rgba(10,37,80,.13); --line-d:rgba(234,245,255,.16); --wa:#0E7A43;
+    --display:"Space Grotesk",system-ui,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+    --pad:20px; --max:1240px; --ease:cubic-bezier(.2,.7,.2,1);
+    --sat:env(safe-area-inset-top,0px); --sab:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;background:var(--night)}
+  body{margin:0;font-family:var(--body);color:var(--ink);background:var(--soft);line-height:1.6;font-size:16.5px;-webkit-font-smoothing:antialiased}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.035em;line-height:1;margin:0;text-wrap:balance}
+  h2{font-size:clamp(2.3rem,9vw,5.2rem)}
+  h3{font-size:1.4rem;letter-spacing:-.02em}
+  p{margin:0}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  .c{position:relative;z-index:2}
+  .mono{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+  .kick{display:flex;align-items:center;gap:12px;color:var(--cobalt);margin-bottom:18px}
+  .kick::before{content:"";width:28px;height:1px;background:currentColor}
+  .on-dark .kick{color:var(--cyan)}
+  .lead{font-size:1.06rem;color:var(--muted);max-width:52ch;margin-top:18px}
+  .on-dark .lead{color:#A9BEDF}
+  .on-dark{color:#EAF5FF}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* WebGL canvas: one renderer draws every 3D scene into its own window */
+  #gl{position:fixed;top:0;left:0;z-index:1;pointer-events:none;opacity:0;transition:opacity 1s ease}
+  #gl.on{opacity:1}
+  .view{position:absolute;inset:0;outline:none}
+  .view:focus-visible{box-shadow:inset 0 0 0 2px var(--cyan)}
+  .layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+
+  /* 3D labels */
+  .lbl{position:absolute;left:0;top:0;opacity:0;transition:opacity .45s;will-change:transform}
+  .lbl.show{opacity:1}
+  .lbl i{position:absolute;left:-5px;top:-5px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(104,217,234,.22)}
+  .lbl::after{content:"";position:absolute;left:0;top:-30px;width:1px;height:26px;background:linear-gradient(rgba(104,217,234,.9),rgba(104,217,234,.2))}
+  .lbl b{position:absolute;left:-1px;top:-58px;white-space:nowrap;font:500 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#EAF5FF;padding:7px 10px;border:1px solid rgba(104,217,234,.55);background:rgba(7,21,47,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-radius:3px}
+  .lbl.flip b{left:auto;right:-1px}
+  .lbl.light b{background:rgba(255,255,255,.92);color:var(--ink);border-color:rgba(36,91,219,.45)}
+  .lbl.light i{background:var(--cobalt);box-shadow:0 0 0 5px rgba(36,91,219,.18)}
+  .lbl.light::after{background:linear-gradient(rgba(36,91,219,.9),rgba(36,91,219,.2))}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:5px;font:500 .78rem var(--mono);letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+  .btn svg{width:18px;height:18px;flex:none}
+  .btn .ar{transition:transform .25s var(--ease)}
+  .btn:hover .ar{transform:translateX(4px)}
+  .btn-p{background:var(--cobalt);color:#fff}
+  .btn-p:hover{background:var(--electric)}
+  .btn-o{border-color:rgba(234,245,255,.38);color:#EAF5FF}
+  .btn-o:hover{border-color:#EAF5FF;background:rgba(234,245,255,.07)}
+  .btn-ink{border-color:rgba(11,22,48,.28);color:var(--ink)}
+  .btn-ink:hover{border-color:var(--ink)}
+  .btn-wa{background:var(--wa);color:#fff}
+  .btn-wa:hover{background:#0B6436}
+  .btn-ice{background:#EAF5FF;color:var(--night)}
+  .btn-ice:hover{background:#fff}
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+  /* header */
+  .prog{position:fixed;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--cobalt),var(--cyan));transform-origin:0 50%;transform:scaleX(0);z-index:56}
+  .hd{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:var(--sat);color:#EAF5FF;border-bottom:1px solid transparent;transition:background .35s,color .35s,border-color .35s}
+  .hd.solid{background:rgba(7,21,47,.74);-webkit-backdrop-filter:blur(14px) saturate(1.3);backdrop-filter:blur(14px) saturate(1.3);border-color:var(--line-d)}
+  .hd.light{color:var(--ink)}
+  .hd.light.solid{background:rgba(246,250,255,.84);border-color:var(--line)}
+  .hd-in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font:700 1.02rem var(--display);letter-spacing:-.02em;text-decoration:none;color:inherit}
+  .logo svg{width:30px;height:30px}
+  .nav-l{display:none;list-style:none;margin:0;padding:0;gap:26px}
+  .nav-l a{text-decoration:none;font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.75;transition:opacity .2s}
+  .nav-l a:hover,.nav-l a.on{opacity:1}
+  .hd .btn{display:none;min-height:42px;padding:0 16px}
+  .menu-btn{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 4px 0 12px;border:0;background:none;color:inherit;font:500 .75rem var(--mono);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+  .menu-btn i,.menu-btn i::before{display:block;width:22px;height:1.5px;background:currentColor;transition:transform .3s var(--ease)}
+  .menu-btn i{position:relative;top:-3px}
+  .menu-btn i::before{content:"";position:absolute;top:6px}
+  .menu-btn[aria-expanded="true"] i{transform:translateY(3px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] i::before{transform:translateY(-6px) rotate(-90deg)}
+  .menu{position:fixed;inset:0;z-index:48;background:var(--night);color:#EAF5FF;padding:calc(88px + var(--sat)) var(--pad) calc(24px + var(--sab));display:flex;flex-direction:column;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+  .menu.open{opacity:1;visibility:visible}
+  .menu ol{list-style:none;margin:0;padding:0}
+  .menu a.ml{display:flex;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid var(--line-d);font:600 clamp(1.6rem,7.4vw,2.4rem)/1.1 var(--display);letter-spacing:-.03em;text-decoration:none;transform:translateY(14px);opacity:0;transition:transform .5s var(--ease),opacity .5s}
+  .menu.open a.ml{transform:none;opacity:1}
+  .menu a.ml span{font:500 .75rem var(--mono);color:var(--cyan);letter-spacing:.08em}
+  .menu .btn{margin-top:28px}
+
+  .chap{position:fixed;right:26px;bottom:30px;z-index:40;display:none;list-style:none;margin:0;padding:0;transition:opacity .4s}
+  .chap.hide{opacity:0;pointer-events:none}
+  .chap a{display:flex;align-items:center;gap:10px;padding:4px 0;text-decoration:none;color:#8197BC;font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:color .3s}
+  .chap a::before{content:"";width:14px;height:1px;background:currentColor;transition:width .35s var(--ease)}
+  .chap a.on{color:var(--electric)}
+  .chap a.on::before{width:30px}
+
+  .wa-pill{position:fixed;right:14px;bottom:calc(14px + var(--sab));z-index:44;display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 18px 0 14px;border-radius:999px;background:var(--wa);color:#fff;font:500 .75rem var(--mono);letter-spacing:.07em;text-transform:uppercase;text-decoration:none;box-shadow:0 12px 26px -10px rgba(0,0,0,.55);transition:transform .35s var(--ease),opacity .35s}
+  .wa-pill svg{width:20px;height:20px}
+  .wa-pill.hide{transform:translateY(calc(100% + 30px));opacity:0;pointer-events:none}
+
+  /* ================= HERO ================= */
+  .hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;color:#EAF5FF;padding-bottom:84px;background:
+    radial-gradient(70% 55% at 80% 70%,rgba(36,91,219,.42),transparent 70%),
+    radial-gradient(50% 40% at 10% 10%,rgba(67,140,255,.18),transparent 70%),
+    linear-gradient(180deg,#061128,#07152F 50%,#0A2550)}
+  .scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(6,17,40,.88) 0,rgba(6,17,40,.7) 45%,rgba(6,17,40,.35) 72%,rgba(6,17,40,.12) 90%)}
+  .hero-c{padding-top:calc(104px + var(--sat))}
+  .hero .kick{color:var(--cyan)}
+  .hero h1{font-size:clamp(2.7rem,12.4vw,7.4rem);font-weight:700;text-transform:uppercase;letter-spacing:-.05em;line-height:.88}
+  .hero h1 .ln{display:block;overflow:hidden;padding:.02em 0 .05em}
+  .hero h1 .ln>span{display:inline-block}
+  .js .hero h1 .ln>span{transform:translateY(108%);transition:transform 1.1s var(--ease)}
+  .js .hero h1 .ln:nth-child(2)>span{transition-delay:.08s}
+  .js .hero h1 .ln:nth-child(3)>span{transition-delay:.16s}
+  .js .hero.in h1 .ln>span{transform:none}
+  .hero-sub{font:500 clamp(1.15rem,4.8vw,1.65rem)/1.25 var(--display);letter-spacing:-.02em;color:#fff;margin-top:22px;max-width:26ch}
+  .hero-p{color:#A9BEDF;margin-top:12px;max-width:42ch;font-size:1rem}
+  .js .hero .fade{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s var(--ease)}
+  .js .hero.in .fade{opacity:1;transform:none}
+  .js .hero.in .f1{transition-delay:.35s}.js .hero.in .f2{transition-delay:.45s}.js .hero.in .f3{transition-delay:.55s}.js .hero.in .f4{transition-delay:.65s}.js .hero.in .f5{transition-delay:.8s}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .hero-cta .btn{flex:1 1 auto}
+  .wa-link{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:#BFD3F2;font-size:.92rem;text-decoration:none;border-bottom:1px solid rgba(191,211,242,.3);padding-bottom:2px}
+  .wa-link:hover{color:#fff;border-color:#fff}
+  .wa-link svg{width:16px;height:16px;color:#4ADE80}
+  .subjects{display:flex;flex-wrap:wrap;gap:8px 18px;margin:24px 0 0;padding:0;list-style:none;color:#C9DAF4}
+  .subjects li{display:flex;align-items:center;gap:8px}
+  .subjects li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan)}
+  .teacher-w{margin-top:24px}
+  .teacher{display:inline-flex;align-items:center;gap:12px;padding:6px 18px 6px 6px;border:1px solid var(--line-d);border-radius:999px;background:rgba(7,21,47,.6);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);text-decoration:none;color:#EAF5FF;transition:border-color .3s}
+  .teacher:hover{border-color:var(--cyan)}
+  .teacher img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 14%;background:#EAF5FF}
+  .teacher span{font-size:.92rem;line-height:1.25;font-weight:500}
+  .teacher small{display:block;font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:2px}
+  .cue{position:absolute;right:var(--pad);bottom:calc(22px + var(--sab));z-index:2;display:flex;align-items:center;gap:12px;color:#9FB5D9}
+  .cue i{position:relative;display:block;width:1px;height:34px;background:rgba(159,181,217,.3);overflow:hidden}
+  .cue i::after{content:"";position:absolute;left:0;top:-40%;width:1px;height:40%;background:var(--cyan);animation:cue 2.2s var(--ease) infinite}
+  @keyframes cue{to{top:100%}}
+
+  /* ================= STORY CHAPTERS ================= */
+  .story{position:relative;background:radial-gradient(60% 50% at 50% 60%,rgba(36,91,219,.22),transparent 70%),var(--night)}
+  .story.deep{background:radial-gradient(60% 55% at 60% 50%,rgba(67,140,255,.2),transparent 70%),linear-gradient(180deg,#07152F,#0A2550)}
+  .track{position:relative;height:185vh}
+  .sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;z-index:2}
+  .story-head{position:relative;z-index:3;padding-top:calc(84px + var(--sat));pointer-events:none}
+  .story-head h2{font-size:clamp(2rem,8.4vw,4rem);max-width:14ch;color:#fff;text-shadow:0 2px 24px rgba(7,21,47,.85)}
+  .steps{position:relative;margin-top:14px;max-width:36ch;min-height:4.6em}
+  .steps p{position:absolute;left:0;top:0;color:#C9D8EF;font-size:.98rem;text-shadow:0 1px 12px rgba(7,21,47,.95);opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s var(--ease)}
+  .steps p.on{opacity:1;transform:none}
+  .explorer{position:absolute;left:0;right:0;bottom:0;z-index:3;padding-bottom:calc(14px + var(--sab));pointer-events:none}
+  .explorer>*{pointer-events:auto}
+  .chips{display:flex;gap:6px;overflow-x:auto;padding:0 var(--pad) 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid var(--line-d);background:rgba(7,21,47,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#DCE8FA;font:500 .75rem var(--mono);letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+  .chip:hover{border-color:var(--cyan)}
+  .chip[aria-pressed="true"]{background:var(--cyan);border-color:var(--cyan);color:var(--night)}
+  .ocard{margin:0 var(--pad);padding:16px 18px 18px;background:rgba(7,21,47,.78);border:1px solid var(--line-d);border-radius:6px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#EAF5FF}
+  .ocard .mono{color:var(--cyan)}
+  .ocard h3{font-size:1.35rem;margin-top:6px}
+  .ocard p.t{font-size:.95rem;color:#C2D3EC;margin-top:6px}
+  .ocard p.f{font-size:.88rem;color:#9FB6DA;margin-top:10px;padding-top:10px;border-top:1px solid var(--line-d)}
+  .ocard p.f span{color:var(--cyan);margin-right:6px}
+  .ocard.swap h3,.ocard.swap p{animation:up .45s var(--ease)}
+  @keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .legend{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:0 var(--pad) calc(16px + var(--sab));pointer-events:none}
+  .legend ul{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;list-style:none;margin:0;padding:0;max-width:440px}
+  .legend li{display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid var(--line-d);border-radius:4px;background:rgba(7,21,47,.66);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#DCE8FA;font-size:.88rem}
+  .legend li b{font:600 1rem var(--mono);width:20px;height:20px;display:grid;place-items:center;border-radius:3px;color:var(--night)}
+  .legend p{margin-top:8px;color:#9FB6DA;font-size:.85rem}
+
+  /* ================= LIFE IN MOTION ================= */
+  .life{background:var(--soft);color:var(--ink)}
+  .life-intro{padding:110px 0 30px}
+  .life-intro h2{max-width:16ch}
+  .moment{position:relative}
+  .m-circ{background:radial-gradient(60% 60% at 30% 50%,rgba(36,91,219,.3),transparent 70%),var(--night);color:#EAF5FF}
+  .m-mito{background:var(--ice)}
+  .msticky{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:30px 0 70px}
+  .mtext,.mview{min-width:0}
+  .mview{position:relative;height:min(108vw,560px)}
+  .mtext{padding:0 var(--pad)}
+  .mtext .mono.k{color:var(--cobalt)}
+  .m-circ .mtext .mono.k{color:var(--cyan)}
+  .mtext h3{font-size:clamp(2rem,7.4vw,3.2rem);letter-spacing:-.035em;margin-top:10px}
+  .mtext .lead{margin-top:10px}
+  .stepper{list-style:none;margin:22px calc(var(--pad) * -1) 0;padding:0 var(--pad);display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+  .stepper::-webkit-scrollbar{display:none}
+  .stepper li{flex:1 0 auto;min-width:66px}
+  .stepper button{width:100%;min-height:58px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px;padding:10px 6px 8px 0;border:0;border-top:2px solid var(--line);background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;opacity:.5;transition:opacity .3s,border-color .3s}
+  .m-circ .stepper button{border-top-color:var(--line-d)}
+  .stepper button[aria-current="true"]{opacity:1;border-top-color:var(--cobalt)}
+  .m-circ .stepper button[aria-current="true"]{border-top-color:var(--cyan)}
+  .stepper .n{font:500 .7rem var(--mono);letter-spacing:.06em;color:var(--cobalt)}
+  .m-circ .stepper .n{color:var(--cyan)}
+  .stepper b{font:600 .8rem/1.15 var(--display);letter-spacing:-.01em;white-space:nowrap;padding-right:8px}
+  .mcap{margin-top:16px;min-height:5.2em;font-size:1.02rem;color:var(--muted)}
+  .m-circ .mcap{color:#C2D3EC}
+  .mcap.swap{animation:up .45s var(--ease)}
+  .eq{margin-top:16px;padding:14px 16px;border:1px solid var(--line);border-radius:4px;background:#fff;font:500 .82rem/1.6 var(--mono);color:var(--ink)}
+  .eq small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+  .note{margin-top:14px;font-size:.88rem;color:var(--muted)}
+  .m-circ .note{color:#9FB6DA}
+  .note b{color:var(--ink);font-weight:600}
+  .m-circ .note b{color:#EAF5FF}
+
+  /* ================= EVERYWHERE ================= */
+  .every{background:#fff;padding:110px 0 100px}
+  .every h2{max-width:17ch}
+  .spec-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px;margin-top:40px;scrollbar-width:none}
+  .spec-row::-webkit-scrollbar{display:none}
+  .spec{flex:0 0 80%;max-width:360px;scroll-snap-align:center;margin:0;border:1px solid var(--line);border-radius:4px;background:var(--soft);display:flex;flex-direction:column;overflow:hidden;transition:border-color .3s}
+  .spec:hover{border-color:rgba(36,91,219,.45)}
+  .sv{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 45%,#fff,var(--soft) 70%)}
+  .spec figcaption{position:relative;z-index:2;padding:16px 18px 20px;border-top:1px solid var(--line)}
+  .spec .mono{color:var(--cobalt)}
+  .spec b{display:block;font:600 1.2rem var(--display);letter-spacing:-.02em;margin:6px 0}
+  .spec p{font-size:.94rem;color:var(--muted)}
+  .swipe{padding:0 var(--pad);color:var(--muted)}
+
+  /* ================= LAB ================= */
+  .lab{background:radial-gradient(55% 50% at 35% 55%,rgba(36,91,219,.32),transparent 70%),linear-gradient(180deg,#0A2550,#07152F);padding:110px 0 90px;color:#EAF5FF}
+  .lab-grid{display:grid;gap:18px;margin-top:34px}
+  .tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:none;min-height:44px;padding:0 16px;border:1px solid var(--line-d);border-radius:4px;background:transparent;color:#C9DAF4;font:500 .75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+  .tab:hover{border-color:var(--cyan)}
+  .tab[aria-pressed="true"]{background:#EAF5FF;color:var(--night);border-color:#EAF5FF}
+  .stage{position:relative;height:min(108vw,600px);border:1px solid var(--line-d);border-radius:6px;margin-top:10px;background:radial-gradient(circle at 50% 45%,rgba(67,140,255,.14),transparent 65%)}
+  .stage .view{touch-action:pan-y;cursor:grab}
+  .stage .view:active{cursor:grabbing}
+  .hint{position:absolute;left:12px;top:12px;z-index:3;display:flex;align-items:center;gap:8px;padding:7px 11px;border-radius:3px;background:rgba(7,21,47,.7);color:#C9DAF4;pointer-events:none;font-size:.7rem}
+  .hint svg{width:16px;height:16px;color:var(--cyan)}
+  .info{border:1px solid var(--line-d);border-radius:6px;padding:20px;background:rgba(7,21,47,.45)}
+  .info .mono{color:var(--cyan)}
+  .info h3{font-size:1.6rem;margin:8px 0}
+  .info p.t{color:#C2D3EC}
+  .info p.f{margin-top:12px;padding-top:12px;border-top:1px solid var(--line-d);font-size:.9rem;color:#9FB6DA}
+  .info p.f span{color:var(--cyan);margin-right:6px}
+  .info.swap h3,.info.swap p{animation:up .45s var(--ease)}
+  .plist{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+  .plist .chip{min-height:40px}
+
+  /* ================= MEET ================= */
+  .meet{background:#fff;padding:110px 0}
+  .meet-grid{display:grid;gap:48px;align-items:center}
+  .meet h2{font-size:clamp(2.2rem,8.2vw,4.6rem);max-width:15ch}
+  .meet .big{font:600 clamp(1.4rem,5vw,2rem) var(--display);letter-spacing:-.03em;margin-top:26px;color:var(--cobalt)}
+  .photo{position:relative;max-width:460px;width:100%;margin:0 auto}
+  .photo .frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:3px;background:linear-gradient(170deg,#F4F9FF,#CFE1FF)}
+  .photo .frame::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.55) 1px,transparent 1px) 0 0/26px 26px,linear-gradient(90deg,rgba(255,255,255,.55) 1px,transparent 1px) 0 0/26px 26px}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 0;mix-blend-mode:multiply}
+  .js .photo img{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease) .1s}
+  .js .photo.in img{clip-path:inset(0 0 0 0)}
+  .photo .cap{display:flex;justify-content:space-between;margin-top:12px;color:var(--muted)}
+  .photo .fl{position:absolute;color:var(--cobalt);animation:float 7s ease-in-out infinite;pointer-events:none}
+  .photo .fl svg{width:100%;height:100%}
+  .photo .fl.a{width:74px;height:74px;right:-24px;top:8%}
+  .photo .fl.b{width:56px;height:56px;left:-20px;top:46%;animation-delay:-2.5s;color:var(--cyan)}
+  .photo .fl.c{width:64px;height:64px;right:14%;bottom:-26px;animation-delay:-4.5s}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-10px) rotate(8deg)}}
+  .quote{font:500 clamp(1.3rem,4.8vw,1.9rem)/1.3 var(--display);letter-spacing:-.02em;margin:24px 0 0;padding-left:20px;border-left:2px solid var(--cyan);color:var(--ink)}
+  .quote cite{display:block;margin-top:12px;font:500 .75rem var(--mono);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .meet .intro{margin-top:22px;color:var(--muted);max-width:52ch}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:30px 0 0;border-top:1px solid var(--line)}
+  .facts div{padding:14px 12px 14px 0;border-bottom:1px solid var(--line)}
+  .facts dt{color:var(--muted)}
+  .facts dd{margin:4px 0 0;font-weight:600}
+
+  /* ================= CLASSES ================= */
+  .classes{background:var(--ice);padding:110px 0}
+  .classes h2{max-width:14ch}
+  .plist2{margin-top:44px;border-top:1px solid var(--line)}
+  .prog-row{position:relative;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;padding:28px 0;border-bottom:1px solid var(--line)}
+  .prog-row .num{font:500 .8rem var(--mono);color:var(--cobalt);padding-top:6px}
+  .prog-row h3{font-size:clamp(1.7rem,6.4vw,2.7rem);letter-spacing:-.035em}
+  .prog-row .d{grid-column:2;color:var(--muted);max-width:46ch;margin-top:6px}
+  .prog-row ul{grid-column:2;display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:12px 0 0;padding:0}
+  .prog-row li{font:500 .72rem var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--line);border-radius:3px;background:#fff}
+  .prog-row .btn{grid-column:2;justify-self:start;margin-top:16px}
+  .prog-row .art{display:none}
+  .where{display:grid;gap:10px;margin-top:28px;color:var(--muted)}
+  .where b{color:var(--ink)}
+
+  /* ================= ENQUIRE ================= */
+  .enq{background:var(--night);color:#EAF5FF;padding:110px 0}
+  .enq-grid{display:grid;gap:30px;margin-top:36px}
+  .field{border:0;margin:0 0 22px;padding:0;min-width:0}
+  .field legend{font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#8FA8CF;margin-bottom:10px;padding:0}
+  .seg{display:flex;flex-wrap:wrap;gap:6px}
+  .seg label{position:relative}
+  .seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+  .seg span{display:inline-flex;align-items:center;justify-content:center;min-height:46px;min-width:46px;padding:0 15px;border:1px solid var(--line-d);border-radius:4px;font-size:.95rem;font-weight:500;transition:background .2s,color .2s,border-color .2s}
+  .seg input:checked+span{background:#EAF5FF;color:var(--night);border-color:#EAF5FF}
+  .seg input:disabled+span{opacity:.3;cursor:not-allowed}
+  .seg input:disabled{cursor:not-allowed}
+  .seg input:focus-visible+span{outline:2px solid var(--cyan);outline-offset:2px}
+  .fhint{margin-top:8px;font-size:.84rem;color:#8FA8CF}
+  .msg{border:1px solid var(--line-d);border-radius:6px;padding:20px;background:rgba(234,245,255,.04)}
+  .msg .mono{color:#8FA8CF}
+  .bubble{margin-top:12px;background:#DCF8C6;color:#0B2614;padding:14px 16px;border-radius:12px 12px 3px 12px;font-size:.98rem;line-height:1.5}
+  .msg .btn{width:100%;margin-top:14px}
+
+  /* ================= RESULTS (only when real content exists) ================= */
+  .results{background:#fff;padding:110px 0}
+  .res-list{display:grid;gap:12px;margin-top:36px}
+  .res-item{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--soft)}
+  .res-item img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .res-item div{padding:16px 18px}
+  .res-item b{font:600 1.25rem var(--display)}
+  .res-item p{color:var(--muted);margin-top:4px}
+  .tq{margin:0;padding:22px;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
+  .tq p{font:500 1.15rem/1.4 var(--display)}
+  .tq footer{margin-top:12px;color:var(--muted);font-size:.9rem}
+
+  /* ================= SEMINARS ================= */
+  .sem{background:linear-gradient(160deg,#245BDB,#0A2550 55%,#07152F);color:#EAF5FF;padding:110px 0;overflow:hidden}
+  .sem h2{font-size:clamp(2.4rem,10vw,5.6rem);text-transform:uppercase;letter-spacing:-.05em;line-height:.9}
+  .sem h2 .o{color:transparent;-webkit-text-stroke:1.5px rgba(234,245,255,.85)}
+  .sem-body{display:grid;gap:24px;margin-top:30px}
+  .meta{display:grid;gap:0;border-top:1px solid var(--line-d)}
+  .meta div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-d)}
+  .meta dt{color:#9FB6DA}
+  .meta dd{margin:0;font-weight:600}
+  .topics{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+  .topics li{padding:6px 10px;border:1px solid var(--line-d);border-radius:3px;font-size:.88rem}
+
+  /* ================= INSTAGRAM ================= */
+  .ig{background:var(--soft);padding:100px 0}
+  .ig-grid{display:grid;gap:26px;align-items:end}
+  .ig-handle{display:block;font:700 clamp(2.2rem,11vw,6.4rem)/.95 var(--display);letter-spacing:-.05em;text-decoration:none;color:var(--ink);word-break:break-word;transition:color .3s}
+  .ig-handle:hover{color:var(--cobalt)}
+  .ig-handle span{color:var(--cobalt)}
+
+  /* ================= FAQ ================= */
+  .faq{background:#fff;padding:110px 0}
+  .qa{margin-top:36px;border-top:1px solid var(--line);max-width:900px}
+  .qa h3{margin:0;font-size:inherit}
+  .qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;border:0;background:none;color:var(--ink);font:600 clamp(1.1rem,4.4vw,1.4rem)/1.25 var(--display);letter-spacing:-.02em;text-align:left;cursor:pointer}
+  .qa button i{position:relative;flex:none;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;transition:transform .4s var(--ease),background .3s}
+  .qa button i::before,.qa button i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+  .qa button i::after{transform:translate(-50%,-50%) rotate(90deg)}
+  .qa button[aria-expanded="true"] i{transform:rotate(45deg);background:var(--ice)}
+  .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+  .qa>div.open .ans{grid-template-rows:1fr}
+  .ans>div{overflow:hidden}
+  .ans p{padding:0 0 22px;color:var(--muted);max-width:60ch}
+  .qa>div{border-bottom:1px solid var(--line)}
+
+  /* ================= FINAL ================= */
+  .final{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(60% 60% at 70% 50%,rgba(36,91,219,.38),transparent 70%),var(--night);color:#EAF5FF;padding:100px 0}
+  .final h2{font-size:clamp(2.6rem,11.5vw,7rem);text-transform:uppercase;letter-spacing:-.05em;line-height:.9;max-width:11ch}
+  .final p{font:500 clamp(1.1rem,4.4vw,1.5rem) var(--display);color:#C2D3EC;margin-top:22px;max-width:30ch}
+  .final .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+  .final-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(7,21,47,.85),rgba(7,21,47,.35) 60%,transparent)}
+  footer.ft{background:#050F24;color:#8FA8CF;padding:44px 0 calc(90px + var(--sab));font-size:.92rem}
+  .ft-grid{display:grid;gap:24px}
+  .ft .logo{color:#EAF5FF}
+  .ft ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+  .ft a{text-decoration:none}
+  .ft a:hover{color:#fff}
+  .ft li a{display:inline-block;padding:8px 0}
+
+  /* reveal */
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s var(--ease);transition-delay:var(--d,0s)}
+  .js .rv.in{opacity:1;transform:none}
+
+  /* no WebGL fallback: a calm drawn cell instead of an empty space */
+  .no-webgl .view{background:
+    radial-gradient(circle at 44% 46%,#245BDB 0,#173f9e 9%,transparent 10%),
+    radial-gradient(circle at 50% 50%,transparent 0,transparent 31%,rgba(104,217,234,.55) 32%,rgba(67,140,255,.2) 34%,transparent 36%),
+    radial-gradient(circle at 50% 50%,rgba(67,140,255,.18),transparent 62%)}
+  .no-webgl .hint{display:none}
+
+  @media (max-height:700px) and (max-width:959px){
+    .ocard p.f{display:none}
+    .story-head h2{font-size:clamp(1.8rem,7.4vw,2.6rem)}
+    .steps{min-height:3.4em}
+    .steps p{font-size:.9rem}
+  }
+  @media (min-width:720px){
+    :root{--pad:36px}
+    .spec{flex-basis:46%}
+    .meet-grid{grid-template-columns:.9fr 1fr;gap:72px}
+    .facts{grid-template-columns:repeat(4,1fr)}
+    .enq-grid{grid-template-columns:1.2fr .8fr;align-items:start}
+    .res-list{grid-template-columns:repeat(3,1fr)}
+    .ig-grid{grid-template-columns:1.4fr .6fr}
+    .ft-grid{grid-template-columns:1fr auto;align-items:center}
+    .sem-body{grid-template-columns:1.2fr .8fr;align-items:end}
+    .where{grid-template-columns:repeat(2,1fr)}
+    .legend ul{grid-template-columns:repeat(4,auto);max-width:none;display:flex;flex-wrap:wrap}
+  }
+  @media (min-width:960px){
+    body{font-size:17px}
+    .hd .btn{display:inline-flex}
+    .wa-pill{display:none}
+    .scrim{background:linear-gradient(90deg,rgba(6,17,40,.9) 0,rgba(6,17,40,.6) 34%,rgba(6,17,40,0) 62%)}
+    .hero{display:flex;align-items:center;padding-bottom:0}
+    .hero-c{padding-top:calc(90px + var(--sat));padding-bottom:110px;width:100%}
+    .hero-cta .btn{flex:0 0 auto}
+    .teacher-w{position:absolute;right:var(--pad);bottom:48px;margin:0}
+    .teacher{padding:8px 22px 8px 8px}
+    .teacher img{width:64px;height:64px}
+    .cue{bottom:40px;right:auto;left:var(--pad)}
+    .track{height:260vh}
+    .story-head{padding-top:calc(110px + var(--sat))}
+    .explorer{left:auto;right:var(--pad);top:50%;bottom:auto;transform:translateY(-36%);width:390px;padding:0}
+    .chips{flex-wrap:wrap;overflow:visible;padding:0 0 12px}
+    .ocard{margin:0}
+    .legend{left:auto;right:var(--pad);bottom:48px;width:min(460px,40vw);padding:0}
+    .legend ul{display:grid;grid-template-columns:1fr 1fr}
+    .mtrack{height:250vh}
+    .msticky{position:sticky;top:0;height:100vh;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:center;padding:0;z-index:2}
+    .m-rev .msticky{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+    .m-rev .mview{order:2}
+    .mview{height:100vh}
+    .mtext{padding:0 var(--pad);max-width:540px}
+    .stepper{display:grid;margin:22px 0 0;padding:0;overflow:visible;gap:0;border-top:1px solid var(--line)}
+    .m-circ .stepper{border-top-color:var(--line-d)}
+    .stepper button{flex-direction:row;align-items:baseline;gap:16px;min-height:0;padding:13px 0;border-top:0;border-bottom:1px solid var(--line)}
+    .m-circ .stepper button{border-bottom-color:var(--line-d)}
+    .stepper button[aria-current="true"]{border-bottom-color:var(--cobalt)}
+    .m-circ .stepper button[aria-current="true"]{border-bottom-color:var(--cyan)}
+    .stepper b{font-size:1.1rem}
+    .spec-row{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;overflow:visible;max-width:var(--max);margin:52px auto 0;padding:0 var(--pad)}
+    .spec{max-width:none}
+    .spec:first-child{grid-row:span 2}
+    .spec:first-child .sv{aspect-ratio:auto;flex:1;min-height:420px}
+    .spec .sv{aspect-ratio:4/3}
+    .swipe{display:none}
+    .lab-grid{grid-template-columns:1.5fr .9fr;align-items:start}
+    .stage{height:620px}
+    .info{position:sticky;top:100px}
+    .prog-row{grid-template-columns:90px 1fr 220px;gap:0 24px;padding:40px 0;transition:background .4s}
+    .prog-row .d,.prog-row ul,.prog-row .btn{grid-column:2}
+    .prog-row .art{display:block;grid-column:3;grid-row:1/span 4;align-self:center;justify-self:end;width:150px;height:150px;color:var(--cobalt);opacity:.85;transition:transform .7s var(--ease)}
+    .prog-row:hover .art{transform:rotate(-8deg) scale(1.06)}
+    .prog-row:hover{background:linear-gradient(90deg,rgba(255,255,255,.6),transparent)}
+    .ft{padding-bottom:44px}
+    footer.ft{padding-bottom:44px}
+  }
+  @media (min-width:1100px){
+    .nav-l{display:flex}
+    .menu-btn{display:none}
+    .chap{display:block}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .js .rv,.js .hero .fade{opacity:1;transform:none}
+    .js .hero h1 .ln>span{transform:none}
+    .js .photo img{clip-path:none}
+  }
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.36A9.93 9.93 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.13 15.08l-.3-.18-3.07.8.82-2.98-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 3.9c-.2 0-.5.07-.76.36-.26.28-1 .97-1 2.37s1.02 2.75 1.17 2.94c.14.19 2 3.05 4.85 4.27 2.4 1.03 2.88.82 3.4.77.52-.05 1.68-.69 1.92-1.35.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33-.28-.14-1.68-.83-1.94-.92-.26-.1-.45-.14-.64.14-.19.28-.74.92-.9 1.11-.17.19-.33.21-.62.07-.28-.14-1.2-.44-2.28-1.4a8.5 8.5 0 0 1-1.58-1.97c-.16-.28-.02-.44.13-.58.13-.13.28-.33.43-.5.14-.16.19-.28.28-.47.1-.19.05-.36-.02-.5-.07-.14-.63-1.56-.88-2.13-.22-.52-.45-.53-.64-.53l-.54-.01Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></g></symbol>
+  <symbol id="i-ar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2.6"/><circle cx="13.5" cy="15" r="5.2" fill="#245BDB"/><circle cx="15" cy="13.6" r="1.8" fill="#68D9EA"/><ellipse cx="22" cy="21" rx="2.8" ry="1.3" transform="rotate(-30 22 21)" fill="#68D9EA"/></symbol>
+</svg>
+
+<div class="prog" aria-hidden="true"></div>
+
+<header class="hd">
+  <div class="wrap hd-in">
+    <a class="logo" href="#top" aria-label="Ms Rubini's Classroom, back to top"><svg><use href="#i-logo"/></svg>Ms Rubini's Classroom</a>
+    <nav aria-label="Main">
+      <ul class="nav-l">
+        <li><a href="#world">Explore</a></li>
+        <li><a href="#dna">DNA</a></li>
+        <li><a href="#life">Life</a></li>
+        <li><a href="#lab">Lab</a></li>
+        <li><a href="#meet">Ms Rubini</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Enquire</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu<i></i></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-label="Menu">
+  <ol>
+    <li><a class="ml" href="#world"><span>01</span>The microscopic world</a></li>
+    <li><a class="ml" href="#dna"><span>02</span>The language of life</a></li>
+    <li><a class="ml" href="#life"><span>03</span>Life in motion</a></li>
+    <li><a class="ml" href="#lab"><span>04</span>Biology lab</a></li>
+    <li><a class="ml" href="#meet"><span>05</span>Meet Ms Rubini</a></li>
+    <li><a class="ml" href="#classes"><span>06</span>Classes</a></li>
+    <li><a class="ml" href="#enquire"><span>07</span>Enquire</a></li>
+    <li><a class="ml" href="#faq"><span>08</span>FAQ</a></li>
+  </ol>
+  <a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>WhatsApp Ms Rubini</a>
+</div>
+
+<nav class="chap hide" aria-label="Chapters">
+  <a href="#world">01 Microscopic world</a>
+  <a href="#dna">02 Language of life</a>
+  <a href="#life">03 Life in motion</a>
+  <a href="#everywhere">04 Everywhere</a>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" data-theme="dark">
+  <div class="view" data-view="hero" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="layer hero-layer" aria-hidden="true">
+    <div class="lbl" data-part="nucleus"><i></i><b>Nucleus</b></div>
+    <div class="lbl" data-part="mito"><i></i><b>Mitochondrion</b></div>
+    <div class="lbl" data-part="membrane"><i></i><b>Cell membrane</b></div>
+  </div>
+  <div class="wrap c hero-c">
+    <p class="mono kick fade f1">Science &amp; Biology tuition · Klang · PJ · Online</p>
+    <h1><span class="ln"><span>Biology is</span></span><span class="ln"><span>the story</span></span><span class="ln"><span>of life.</span></span></h1>
+    <p class="hero-sub fade f2">See it. Understand it. Experience the science behind everything.</p>
+    <p class="hero-p fade f3">Making Science and Biology easier to understand, more exciting to explore and more enjoyable to learn with Ms Rubini.</p>
+    <div class="hero-cta fade f4">
+      <a class="btn btn-p" href="#world">Explore Biology <svg class="ar"><use href="#i-ar"/></svg></a>
+      <a class="btn btn-o" href="#meet">Discover Ms Rubini</a>
+    </div>
+    <a class="wa-link fade f4" data-wa href="#"><svg><use href="#i-wa"/></svg>Prefer to chat? Enquire on WhatsApp</a>
+    <ul class="subjects mono fade f5" aria-label="Subjects">
+      <li>Form 1–3 Science</li><li>Form 4–5 Science (SPM)</li><li>SPM Biology</li>
+    </ul>
+  </div>
+  <div class="teacher-w c fade f5">
+    <a class="teacher" href="#meet"><img src="../rubini.jpg" alt="" width="64" height="64"><span><small>Your teacher</small>Ms Rubini</span></a>
+  </div>
+  <a class="cue mono" href="#world"><i></i>Scroll to explore</a>
+</section>
+
+<!-- ============ 01 MICROSCOPIC WORLD ============ -->
+<section class="story on-dark" id="world" data-theme="dark" data-chapter="0">
+  <div class="track">
+    <div class="sticky">
+      <div class="view" data-view="cell" data-fov="40" aria-label="3D animal cell. Choose a part below to explore it."></div>
+      <div class="layer" aria-hidden="true"><div class="lbl" data-sel><i></i><b></b></div></div>
+      <div class="wrap story-head">
+        <p class="mono kick">01 — Enter the microscopic world</p>
+        <h2>There's an entire world you cannot see.</h2>
+        <div class="steps" data-steps>
+          <p class="on">This is an animal cell. Your body is built from trillions of them.</p>
+          <p>Getting closer. The cell membrane wraps around everything inside.</p>
+          <p>You're inside. Tap any part to find out what it does.</p>
+        </div>
+      </div>
+      <div class="explorer">
+        <div class="chips" role="group" aria-label="Parts of the animal cell" data-chips="animal"></div>
+        <div class="ocard" aria-live="polite" data-card="animal">
+          <p class="mono">Explore the cell</p>
+          <h3>Tap a part</h3>
+          <p class="t">Choose a part of the cell above, or tap it on the model, to see what it does.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 DNA ============ -->
+<section class="story deep on-dark" id="dna" data-theme="dark" data-chapter="1">
+  <div class="track">
+    <div class="sticky">
+      <div class="view" data-view="dna" aria-hidden="true"></div>
+      <div class="layer" aria-hidden="true">
+        <div class="lbl" data-pair="0"><i></i><b></b></div>
+        <div class="lbl flip" data-pair="1"><i></i><b></b></div>
+      </div>
+      <div class="wrap story-head">
+        <p class="mono kick">02 — The language of life</p>
+        <h2>Every living thing has a story written in DNA.</h2>
+        <div class="steps" data-steps>
+          <p class="on">DNA is a double helix: two long strands twisted around each other.</p>
+          <p>Look closer. The two strands are joined by pairs of bases.</p>
+          <p>Unzip it, and each base fits only one partner. A pairs with T. G pairs with C.</p>
+          <p>The order of the bases is a code. It carries the instructions for building and running every living thing.</p>
+        </div>
+      </div>
+      <div class="legend">
+        <ul>
+          <li><b style="background:#FFB547">A</b>Adenine</li>
+          <li><b style="background:#68D9EA">T</b>Thymine</li>
+          <li><b style="background:#438CFF">G</b>Guanine</li>
+          <li><b style="background:#EAF5FF">C</b>Cytosine</li>
+        </ul>
+        <p>A always pairs with T, and G always pairs with C.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 LIFE IN MOTION ============ -->
+<section class="life" id="life" data-theme="light" data-chapter="2">
+  <div class="wrap life-intro">
+    <p class="mono kick rv">03 — Life in motion</p>
+    <h2 class="rv">Science isn't something that happens only in textbooks.</h2>
+    <p class="lead rv">Three processes happening in living things right now. Step through each one.</p>
+  </div>
+
+  <article class="moment m-photo" data-moment="photo" data-theme="light">
+    <div class="mtrack">
+      <div class="msticky">
+        <div class="mview">
+          <div class="view" data-view="photo" aria-hidden="true"></div>
+          <div class="layer" aria-hidden="true">
+            <div class="lbl light" data-k="0"><i></i><b>Light energy</b></div>
+            <div class="lbl light" data-k="1"><i></i><b>Water · H₂O</b></div>
+            <div class="lbl light flip" data-k="2"><i></i><b>Carbon dioxide · CO₂</b></div>
+            <div class="lbl light flip" data-k="3"><i></i><b>Oxygen · O₂</b></div>
+            <div class="lbl light" data-k="4"><i></i><b>Glucose</b></div>
+          </div>
+        </div>
+        <div class="mtext c">
+          <p class="mono k">Process 01</p>
+          <h3>Photosynthesis</h3>
+          <p class="lead">How plants make their own food from light.</p>
+          <ol class="stepper"></ol>
+          <p class="mcap" aria-live="polite"></p>
+          <p class="eq"><small>Word equation</small>carbon dioxide + water → glucose + oxygen<br><small style="margin-top:6px">In the presence of light and chlorophyll</small>6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="moment m-circ m-rev on-dark" data-moment="circ" data-theme="dark">
+    <div class="mtrack">
+      <div class="msticky">
+        <div class="mview">
+          <div class="view" data-view="circ" aria-hidden="true"></div>
+          <div class="layer" aria-hidden="true">
+            <div class="lbl" data-k="lungs"><i></i><b>Lungs</b></div>
+            <div class="lbl" data-k="body"><i></i><b>Body cells</b></div>
+            <div class="lbl flip" data-k="dyn"><i></i><b></b></div>
+          </div>
+        </div>
+        <div class="mtext c">
+          <p class="mono k">Process 02</p>
+          <h3>Human circulation</h3>
+          <p class="lead">How your heart moves blood around your body.</p>
+          <ol class="stepper"></ol>
+          <p class="mcap" aria-live="polite"></p>
+          <p class="note"><b>Double circulation:</b> blood passes through the heart twice in one complete loop. Blue shows deoxygenated blood and red shows oxygenated blood. Real blood is always red.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article class="moment m-mito" data-moment="mito" data-theme="light">
+    <div class="mtrack">
+      <div class="msticky">
+        <div class="mview">
+          <div class="view" data-view="mito" aria-hidden="true"></div>
+        </div>
+        <div class="mtext c">
+          <p class="mono k">Process 03</p>
+          <h3>Cell division (mitosis)</h3>
+          <p class="lead">How one cell becomes two identical cells.</p>
+          <ol class="stepper"></ol>
+          <p class="mcap" aria-live="polite"></p>
+          <p class="note"><b>The result:</b> two daughter cells, each with the same number of chromosomes as the parent cell.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============ 04 EVERYWHERE ============ -->
+<section class="every" id="everywhere" data-theme="light" data-chapter="3">
+  <div class="wrap">
+    <p class="mono kick rv">04 — Biology is everywhere</p>
+    <h2 class="rv">Once you understand Biology, you start seeing life differently.</h2>
+  </div>
+  <div class="spec-row">
+    <figure class="spec rv">
+      <div class="sv"><div class="view" data-view="spec" data-kind="cells" aria-hidden="true"></div></div>
+      <figcaption><span class="mono">Living organisms</span><b>Cells</b><p>Every living thing is made of cells. Bacteria are just one cell. You are made of trillions.</p></figcaption>
+    </figure>
+    <figure class="spec rv" style="--d:.08s">
+      <div class="sv"><div class="view" data-view="spec" data-kind="rbc" aria-hidden="true"></div></div>
+      <figcaption><span class="mono">Human body</span><b>Red blood cell</b><p>It has no nucleus, which leaves more room for haemoglobin to carry oxygen.</p></figcaption>
+    </figure>
+    <figure class="spec rv" style="--d:.16s">
+      <div class="sv"><div class="view" data-view="spec" data-kind="chloro" aria-hidden="true"></div></div>
+      <figcaption><span class="mono">Plants &amp; ecosystems</span><b>Chloroplast</b><p>It traps light for photosynthesis. Plants and algae release the oxygen animals breathe.</p></figcaption>
+    </figure>
+    <figure class="spec rv" style="--d:.08s">
+      <div class="sv"><div class="view" data-view="spec" data-kind="bact" aria-hidden="true"></div></div>
+      <figcaption><span class="mono">Microorganisms</span><b>Bacterium</b><p>Not all bacteria are harmful. Some of them turn milk into yoghurt.</p></figcaption>
+    </figure>
+    <figure class="spec rv" style="--d:.16s">
+      <div class="sv"><div class="view" data-view="spec" data-kind="chromo" aria-hidden="true"></div></div>
+      <figcaption><span class="mono">Genetics</span><b>Chromosome</b><p>You have 46 chromosomes: 23 from your mother and 23 from your father.</p></figcaption>
+    </figure>
+  </div>
+  <p class="swipe mono">Swipe to see more →</p>
+</section>
+
+<!-- ============ LAB ============ -->
+<section class="lab on-dark" id="lab" data-theme="dark">
+  <div class="wrap">
+    <p class="mono kick rv">Interactive lab</p>
+    <h2 class="rv">Explore it yourself.</h2>
+    <p class="lead rv">Pick a model. Drag sideways to turn it, then tap a part to find out what it does.</p>
+    <div class="lab-grid">
+      <div>
+        <div class="tabs" role="group" aria-label="Choose a model">
+          <button class="tab" type="button" data-model="animal" aria-pressed="true">Animal cell</button>
+          <button class="tab" type="button" data-model="plant" aria-pressed="false">Plant cell</button>
+          <button class="tab" type="button" data-model="heart" aria-pressed="false">Heart</button>
+          <button class="tab" type="button" data-model="dna" aria-pressed="false">DNA</button>
+        </div>
+        <div class="stage">
+          <div class="view" data-view="lab" data-fov="38" tabindex="0" aria-label="3D model. Use the left and right arrow keys to turn it."></div>
+          <div class="layer" aria-hidden="true"><div class="lbl" data-sel><i></i><b></b></div></div>
+          <p class="hint mono"><svg><use href="#i-drag"/></svg>Drag to turn · Tap a part</p>
+        </div>
+      </div>
+      <aside class="info" aria-live="polite">
+        <p class="mono" data-info="model">Animal cell</p>
+        <h3 data-info="name">Tap a part</h3>
+        <p class="t" data-info="text">Tap the model, or choose a part below.</p>
+        <p class="f" data-info="fact" hidden></p>
+        <div class="plist" role="group" aria-label="Parts"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEET ============ -->
+<section class="meet" id="meet" data-theme="light">
+  <div class="wrap meet-grid">
+    <figure class="photo rv">
+      <div class="frame"><img src="../rubini.jpg" alt="Ms Rubini, Science and Biology teacher" width="1005" height="1100" loading="lazy"></div>
+      <span class="fl a" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M32 8l18 10v20L32 48 14 38V18z"/><circle cx="32" cy="8" r="3" fill="currentColor"/><circle cx="50" cy="18" r="3" fill="currentColor"/><circle cx="14" cy="38" r="3" fill="currentColor"/><path d="M32 48v10M50 18l8-5"/></svg></span>
+      <span class="fl b" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="24" cy="24" rx="20" ry="8"/><ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="20" ry="8" transform="rotate(120 24 24)"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg></span>
+      <span class="fl c" aria-hidden="true"><svg viewBox="0 0 48 96" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4c0 22 24 22 24 44S12 70 12 92M36 4c0 22-24 22-24 44s24 22 24 44M14 12h20M17 38h14M13 48h22M17 58h14M14 84h20"/></svg></span>
+      <figcaption class="cap mono"><span>Ms Rubini</span><span>Science &amp; Biology</span></figcaption>
+    </figure>
+    <div>
+      <p class="mono kick rv">The teacher</p>
+      <h2 class="rv">Behind every great discovery is a great teacher.</h2>
+      <p class="big rv">Meet Ms Rubini.</p>
+      <blockquote class="quote rv"><span data-about="quote"></span><cite>Ms Rubini</cite></blockquote>
+      <p class="intro rv" data-about="intro"></p>
+      <dl class="facts rv">
+        <div><dt>Teaches</dt><dd>Science &amp; Biology</dd></div>
+        <div><dt>Levels</dt><dd>Form 1 to Form 5</dd></div>
+        <div><dt>Where</dt><dd>Klang, PJ, online</dd></div>
+        <div><dt>Classes</dt><dd>Group &amp; one-to-one</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLASSES ============ -->
+<section class="classes" id="classes" data-theme="light">
+  <div class="wrap">
+    <p class="mono kick rv">Classes</p>
+    <h2 class="rv">Three ways to learn with Ms Rubini.</h2>
+    <div class="plist2">
+      <article class="prog-row rv">
+        <span class="num">01</span>
+        <h3>Form 1–3 Science</h3>
+        <p class="d">Make foundational Science interesting and easier to understand.</p>
+        <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+        <a class="btn btn-ink" data-wa data-msg="Hi Ms Rubini! I'd like to ask about your Form 1–3 Science classes. Could you share the timetable and fees?" href="#">Enquire about this class <svg class="ar"><use href="#i-ar"/></svg></a>
+        <svg class="art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M48 14h24M52 14v32L26 92a9 9 0 0 0 8 13h52a9 9 0 0 0 8-13L68 46V14"/><path d="M36 76c10-6 20 6 30 0s16-4 20 0"/><circle cx="56" cy="88" r="3"/><circle cx="68" cy="94" r="2"/><circle cx="62" cy="62" r="2.5"/></svg>
+      </article>
+      <article class="prog-row rv">
+        <span class="num">02</span>
+        <h3>Form 4–5 Science (SPM)</h3>
+        <p class="d">Help students understand scientific concepts and prepare for examinations.</p>
+        <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+        <a class="btn btn-ink" data-wa data-msg="Hi Ms Rubini! I'd like to ask about your Form 4–5 Science (SPM) classes. Could you share the timetable and fees?" href="#">Enquire about this class <svg class="ar"><use href="#i-ar"/></svg></a>
+        <svg class="art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><ellipse cx="60" cy="60" rx="48" ry="18"/><ellipse cx="60" cy="60" rx="48" ry="18" transform="rotate(60 60 60)"/><ellipse cx="60" cy="60" rx="48" ry="18" transform="rotate(120 60 60)"/><circle cx="60" cy="60" r="7"/><circle cx="108" cy="60" r="3" fill="currentColor"/><circle cx="36" cy="18" r="3" fill="currentColor"/></svg>
+      </article>
+      <article class="prog-row rv">
+        <span class="num">03</span>
+        <h3>SPM Biology</h3>
+        <p class="d">Focused Biology learning, concept visualisation, revision and examination preparation.</p>
+        <ul><li>Small group</li><li>One-to-one</li><li>Online</li></ul>
+        <a class="btn btn-ink" data-wa data-msg="Hi Ms Rubini! I'd like to ask about your SPM Biology classes. Could you share the timetable and fees?" href="#">Enquire about this class <svg class="ar"><use href="#i-ar"/></svg></a>
+        <svg class="art" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M44 8c0 26 32 26 32 52S44 86 44 112M76 8c0 26-32 26-32 52s32 26 32 52M47 18h26M52 34h16M45 52h30M52 68h16M47 86h26M52 102h16"/></svg>
+      </article>
+    </div>
+    <div class="where rv">
+      <p><b>Where:</b> Klang, Petaling Jaya and online, so students anywhere in Malaysia can join.</p>
+      <p><b>Fees, timetable and exact venue:</b> shared when you enquire on WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENQUIRE ============ -->
+<section class="enq on-dark" id="enquire" data-theme="dark">
+  <div class="wrap">
+    <p class="mono kick rv">Enquire</p>
+    <h2 class="rv">Ask Ms Rubini in under a minute.</h2>
+    <p class="lead rv">Choose what fits, and a WhatsApp message is written for you. Nothing is sent until you press send in WhatsApp.</p>
+    <div class="enq-grid">
+      <form id="enq" class="rv" onsubmit="return false">
+        <fieldset class="field"><legend>I am a</legend><div class="seg">
+          <label><input type="radio" name="who" value="parent" checked><span>Parent</span></label>
+          <label><input type="radio" name="who" value="student"><span>Student</span></label>
+        </div></fieldset>
+        <fieldset class="field"><legend>Class level</legend><div class="seg">
+          <label><input type="radio" name="level" value="1"><span>Form 1</span></label>
+          <label><input type="radio" name="level" value="2"><span>Form 2</span></label>
+          <label><input type="radio" name="level" value="3"><span>Form 3</span></label>
+          <label><input type="radio" name="level" value="4" checked><span>Form 4</span></label>
+          <label><input type="radio" name="level" value="5"><span>Form 5</span></label>
+        </div></fieldset>
+        <fieldset class="field"><legend>Subject</legend><div class="seg">
+          <label><input type="radio" name="subject" value="Science"><span>Science</span></label>
+          <label><input type="radio" name="subject" value="Biology" checked><span>Biology</span></label>
+        </div><p class="fhint" data-bio-hint hidden>SPM Biology is for Form 4 and Form 5.</p></fieldset>
+        <fieldset class="field"><legend>Class format</legend><div class="seg">
+          <label><input type="radio" name="format" value="small group" checked><span>Small group</span></label>
+          <label><input type="radio" name="format" value="one-to-one"><span>One-to-one</span></label>
+        </div></fieldset>
+        <fieldset class="field" style="margin-bottom:0"><legend>Preferred location</legend><div class="seg">
+          <label><input type="radio" name="loc" value="Klang" checked><span>Klang</span></label>
+          <label><input type="radio" name="loc" value="Petaling Jaya"><span>Petaling Jaya</span></label>
+          <label><input type="radio" name="loc" value="Online"><span>Online</span></label>
+        </div></fieldset>
+      </form>
+      <div class="msg rv" style="--d:.1s">
+        <p class="mono">Your message</p>
+        <p class="bubble" id="enq-msg" aria-live="polite"></p>
+        <a class="btn btn-wa" id="enq-send" href="#"><svg><use href="#i-wa"/></svg>Open in WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS (hidden automatically until real content is added) ============ -->
+<section class="results" id="results" data-theme="light">
+  <div class="wrap">
+    <p class="mono kick rv">Results &amp; kind words</p>
+    <h2 class="rv">Progress worth celebrating.</h2>
+    <div class="res-list"></div>
+  </div>
+</section>
+
+<!-- ============ SEMINARS ============ -->
+<section class="sem on-dark" id="seminars" data-theme="dark">
+  <div class="wrap" data-seminar-root></div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="ig" id="instagram" data-theme="light">
+  <div class="wrap ig-grid">
+    <div>
+      <p class="mono kick rv">On Instagram</p>
+      <a class="ig-handle rv" data-ig href="#"><span>@</span>scibioyours_</a>
+    </div>
+    <div class="rv">
+      <p class="lead" style="margin-top:0">Follow Ms Rubini's classroom on Instagram for updates.</p>
+      <a class="btn btn-ink" data-ig href="#" style="margin-top:18px"><svg><use href="#i-ig"/></svg>Follow on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq" data-theme="light">
+  <div class="wrap">
+    <p class="mono kick rv">FAQ</p>
+    <h2 class="rv">Good questions.</h2>
+    <div class="qa rv">
+      <div><h3><button type="button" aria-expanded="false">Which subjects and levels are available?<i></i></button></h3><div class="ans"><div><p>Form 1–3 Science, Form 4–5 Science (SPM) and SPM Biology.</p></div></div></div>
+      <div><h3><button type="button" aria-expanded="false">Where are classes conducted?<i></i></button></h3><div class="ans"><div><p>Physical classes run in Klang and Petaling Jaya, and there are online classes too. The exact venue is shared when you enquire.</p></div></div></div>
+      <div><h3><button type="button" aria-expanded="false">Are online classes available?<i></i></button></h3><div class="ans"><div><p>Yes. There are online group classes and online one-to-one classes, so students anywhere in Malaysia can join.</p></div></div></div>
+      <div><h3><button type="button" aria-expanded="false">What are the tuition fees?<i></i></button></h3><div class="ans"><div><p>Fees depend on the level and the type of class. Send a WhatsApp message and Ms Rubini will share the current fees for the class you want.</p></div></div></div>
+      <div><h3><button type="button" aria-expanded="false">What are the class schedules?<i></i></button></h3><div class="ans"><div><p>Timetables differ by level and location. Ask on WhatsApp for the latest available slots.</p></div></div></div>
+      <div><h3><button type="button" aria-expanded="false">How can I register?<i></i></button></h3><div class="ans"><div><p>Use the enquiry above or tap any WhatsApp button. Tell Ms Rubini the student's form and subject, and she will take it from there.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final on-dark" id="final" data-theme="dark">
+  <div class="view" data-view="final" aria-hidden="true"></div>
+  <div class="final-scrim" aria-hidden="true"></div>
+  <div class="wrap c">
+    <h2 class="rv">Let's make Biology come alive.</h2>
+    <p class="rv">Your journey into the fascinating world of Biology starts here.</p>
+    <div class="cta rv">
+      <a class="btn btn-ice" data-wa href="#"><svg><use href="#i-wa"/></svg>Enquire about classes</a>
+      <a class="btn btn-o" data-ig href="#"><svg><use href="#i-ig"/></svg>Follow Ms Rubini</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft-grid">
+    <div>
+      <a class="logo" href="#top"><svg><use href="#i-logo"/></svg>Ms Rubini's Classroom</a>
+      <p style="margin-top:10px">Science and SPM Biology tuition · Klang, Petaling Jaya and online</p>
+      <p style="margin-top:4px">© <span id="yr"></span> Ms Rubini's Classroom</p>
+    </div>
+    <ul>
+      <li><a href="#classes">Classes</a></li><li><a href="#enquire">Enquire</a></li><li><a href="#faq">FAQ</a></li>
+      <li><a data-wa href="#">WhatsApp</a></li><li><a data-ig href="#">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+
+<a class="wa-pill" data-wa href="#" aria-label="Enquire on WhatsApp"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+"use strict";
+var CFG = window.SITE, CONTENT = window.CONTENT;
+var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+var fine = matchMedia("(pointer: fine)").matches;
+function $(s, r){ return (r || document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function clamp(v, a, b){ return Math.max(a, Math.min(b, v)); }
+function lerp(a, b, t){ return a + (b - a) * t; }
+function sstep(a, b, x){ var t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); }
+function ease(t){ return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+function prog(el){ var r = el.getBoundingClientRect(), span = r.height - innerHeight; return span > 1 ? clamp(-r.top / span, 0, 1) : clamp((innerHeight - r.top) / (innerHeight + r.height), 0, 1); }
+
+/* ====================== DATA ====================== */
+var ANIMAL = [
+  {id:"nucleus", name:"Nucleus", text:"Controls everything the cell does. It holds DNA, the instructions for making proteins.", fact:"Stretched out, the DNA inside one of your cells would be about 2 metres long."},
+  {id:"membrane", name:"Cell membrane", text:"A thin, partially permeable layer around the cell. It controls which substances go in and out.", fact:"It is so thin that about 10,000 membranes stacked together would be as thick as a sheet of paper."},
+  {id:"cyto", name:"Cytoplasm", text:"The jelly-like fluid that fills the cell. Many of the cell's chemical reactions happen here.", fact:"Cytoplasm is mostly water."},
+  {id:"mito", name:"Mitochondria", text:"Where aerobic respiration happens, releasing energy from glucose for the cell to use.", fact:"Muscle cells are packed with mitochondria because they need so much energy."},
+  {id:"ribo", name:"Ribosomes", text:"Tiny structures where proteins are made. Some float freely, others sit on the rough ER.", fact:"A single cell can contain millions of ribosomes."},
+  {id:"er", name:"Rough endoplasmic reticulum", short:"Rough ER", text:"A network of membranes covered in ribosomes. It carries the proteins they make through the cell.", fact:"It is called rough because the ribosomes make it look bumpy under a microscope."},
+  {id:"golgi", name:"Golgi apparatus", short:"Golgi", text:"Modifies and packs proteins, then sends them where they are needed in small vesicles.", fact:"Cells that release lots of enzymes, like those in the pancreas, have a large Golgi apparatus."}
+];
+var PLANT = [
+  {id:"wall", name:"Cell wall", text:"A tough layer made of cellulose outside the membrane. It supports the cell and gives it a fixed shape.", fact:"Animal cells do not have a cell wall."},
+  {id:"membrane", name:"Cell membrane", text:"A partially permeable layer just inside the cell wall. It controls which substances go in and out.", fact:"In plant cells it is pressed against the cell wall."},
+  {id:"vacuole", name:"Vacuole", text:"A large sac filled with cell sap. When it is full of water, it pushes outwards and keeps the cell firm.", fact:"Plants wilt when their vacuoles lose water."},
+  {id:"nucleus", name:"Nucleus", text:"Controls the cell's activities and holds its DNA.", fact:"The large vacuole usually pushes the nucleus to one side of a plant cell."},
+  {id:"chloro", name:"Chloroplasts", text:"Contain chlorophyll, which absorbs light energy for photosynthesis.", fact:"Chlorophyll is why leaves look green."},
+  {id:"mito", name:"Mitochondria", text:"Where aerobic respiration releases energy from glucose. Plant cells need them too.", fact:"Plants respire all the time, day and night."},
+  {id:"cyto", name:"Cytoplasm", text:"The jelly-like fluid where many of the cell's chemical reactions happen.", fact:"In plant cells it is often a thin layer around the vacuole."}
+];
+var HEART = [
+  {id:"ra", name:"Right atrium", text:"Receives deoxygenated blood from the body through the vena cava.", fact:"In diagrams the heart's right side appears on your left, as if you are facing the person."},
+  {id:"rv", name:"Right ventricle", text:"Pumps deoxygenated blood to the lungs through the pulmonary artery.", fact:"Its wall is thinner than the left ventricle's, because the lungs are close by."},
+  {id:"la", name:"Left atrium", text:"Receives oxygenated blood from the lungs through the pulmonary vein.", fact:"The atria are the two upper chambers of the heart."},
+  {id:"lv", name:"Left ventricle", text:"Pumps oxygenated blood to the whole body through the aorta.", fact:"It has the thickest, most muscular wall of the four chambers."},
+  {id:"ao", name:"Aorta", text:"The largest artery. It carries oxygenated blood from the left ventricle to the body.", fact:"Arteries carry blood away from the heart."},
+  {id:"pa", name:"Pulmonary artery", text:"Carries deoxygenated blood from the right ventricle to the lungs.", fact:"It is the only artery that carries deoxygenated blood."},
+  {id:"pv", name:"Pulmonary vein", text:"Carries oxygenated blood from the lungs back to the left atrium.", fact:"It is the only vein that carries oxygenated blood."},
+  {id:"vc", name:"Vena cava", text:"Brings deoxygenated blood from the body back to the right atrium.", fact:"Veins carry blood towards the heart."},
+  {id:"lungs", name:"Lungs", text:"Blood picks up oxygen here and gets rid of carbon dioxide.", fact:"Gas exchange happens in tiny air sacs called alveoli."},
+  {id:"body", name:"Body cells", text:"Cells take oxygen from the blood for respiration and add carbon dioxide to it.", fact:"This is why blood returning to the heart is deoxygenated."}
+];
+var DNAP = [
+  {id:"A", name:"Adenine (A)", text:"A base that always pairs with thymine (T).", fact:"A and T are held together by two hydrogen bonds."},
+  {id:"T", name:"Thymine (T)", text:"A base that always pairs with adenine (A).", fact:"Because pairs always match, one strand can be used to copy the other."},
+  {id:"G", name:"Guanine (G)", text:"A base that always pairs with cytosine (C).", fact:"G and C are held together by three hydrogen bonds."},
+  {id:"C", name:"Cytosine (C)", text:"A base that always pairs with guanine (G).", fact:"The order of bases along the strand is the genetic code."},
+  {id:"backbone", name:"Sugar-phosphate backbone", text:"The two outside strands of the ladder, made of sugar and phosphate groups joined in a chain.", fact:"The bases stick inwards from the backbone like the rungs of a ladder."}
+];
+var STAGES = {
+  photo: [
+    {n:"Light", t:"Chlorophyll in the chloroplasts absorbs light energy from the Sun."},
+    {n:"Water", t:"Roots take in water, which travels up the stem to the leaves."},
+    {n:"Carbon dioxide", t:"Carbon dioxide from the air enters the leaf through tiny pores called stomata."},
+    {n:"Glucose + oxygen", t:"The leaf uses the light energy to make glucose, and releases oxygen into the air."}
+  ],
+  circ: [
+    {n:"To the lungs", t:"The right ventricle pumps deoxygenated blood to the lungs through the pulmonary artery."},
+    {n:"In the lungs", t:"In the lungs, blood picks up oxygen and gets rid of carbon dioxide."},
+    {n:"To the body", t:"Oxygenated blood returns to the left side of the heart. The left ventricle pumps it to the body through the aorta."},
+    {n:"Back again", t:"Body cells use the oxygen. Deoxygenated blood returns to the right atrium through the vena cava."}
+  ],
+  mito: [
+    {n:"Interphase", t:"The cell grows and copies its DNA. The chromosomes are long, thin threads that cannot be seen yet."},
+    {n:"Prophase", t:"Chromosomes condense and become visible. Each one is two identical sister chromatids joined at the centromere. The nuclear membrane breaks down."},
+    {n:"Metaphase", t:"Spindle fibres attach to the chromosomes and line them up across the middle of the cell."},
+    {n:"Anaphase", t:"The sister chromatids are pulled apart to opposite ends of the cell."},
+    {n:"Telophase", t:"A new nuclear membrane forms around each set of chromosomes, and the cytoplasm divides into two cells."}
+  ]
+};
+
+/* ====================== LINKS + CONTENT ====================== */
+function wa(msg){ var n = String(CFG.whatsapp || "").replace(/\D/g, ""); return "https://wa.me/" + n + "?text=" + encodeURIComponent(msg || CFG.defaultMessage); }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+$$("[data-about]").forEach(function(el){ el.textContent = CONTENT.about[el.dataset.about] || ""; });
+
+// Results: only real, approved content is ever shown
+(function(){
+  var sec = $("#results"), list = $(".res-list", sec), res = CONTENT.results || [], tes = CONTENT.testimonials || [];
+  if(!res.length && !tes.length){ sec.remove(); return; }
+  var html = "";
+  res.forEach(function(r){ html += '<article class="res-item rv">' + (r.photo ? '<img src="' + esc(r.photo) + '" alt="' + esc(r.alt || "") + '" loading="lazy">' : "") + "<div><b>" + esc(r.title) + "</b><p>" + esc(r.detail || "") + "</p></div></article>"; });
+  tes.forEach(function(q){ html += '<blockquote class="tq rv"><p>' + esc(q.quote) + "</p><footer>" + esc(q.who) + "</footer></blockquote>"; });
+  list.innerHTML = html;
+})();
+
+// Seminar: confirmed event, or an invitation to ask about the next one
+(function(){
+  var root = $("[data-seminar-root]"), s = CONTENT.seminar, html;
+  if(s && s.title){
+    var topics = (s.topics || []).filter(Boolean).map(function(t){ return "<li>" + esc(t) + "</li>"; }).join("");
+    var reg = s.registerUrl ? '<a class="btn btn-ice" href="' + esc(s.registerUrl) + '" target="_blank" rel="noopener">Register <svg class="ar"><use href="#i-ar"/></svg></a>'
+      : '<a class="btn btn-ice" data-wa data-msg="' + esc("Hi Ms Rubini! I'd like to register for the " + s.title + ".") + '" href="#"><svg><use href="#i-wa"/></svg>Register on WhatsApp</a>';
+    html = '<p class="mono kick rv">Revision seminar</p><h2 class="rv">' + esc(s.title) + '</h2><div class="sem-body"><dl class="meta rv">'
+      + (s.date ? "<div><dt>Date</dt><dd>" + esc(s.date) + "</dd></div>" : "") + (s.time ? "<div><dt>Time</dt><dd>" + esc(s.time) + "</dd></div>" : "")
+      + (s.venue ? "<div><dt>Venue</dt><dd>" + esc(s.venue) + "</dd></div>" : "") + (topics ? '<div><dt>Topics</dt><dd><ul class="topics">' + topics + "</ul></dd></div>" : "")
+      + '</dl><div class="rv">' + reg + "</div></div>";
+  } else {
+    html = '<p class="mono kick rv">Revision seminars</p><h2 class="rv">Big revision <span class="o">before</span> big exams.</h2><div class="sem-body"><p class="lead rv" style="margin-top:0">Ms Rubini runs revision seminars for Science and Biology. There is no seminar scheduled right now. Ask to be told first when the next one opens.</p><div class="rv"><a class="btn btn-ice" data-wa data-msg="Hi Ms Rubini! Please let me know when your next revision seminar opens." href="#"><svg><use href="#i-wa"/></svg>Ask about the next seminar</a></div></div>';
+  }
+  root.innerHTML = html;
+})();
+
+$$("[data-wa]").forEach(function(a){ a.href = wa(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
+$$("[data-ig]").forEach(function(a){ a.href = CFG.instagram; a.target = "_blank"; a.rel = "noopener"; });
+$("#yr").textContent = new Date().getFullYear();
+
+/* ====================== HEADER, MENU, PROGRESS ====================== */
+var hd = $(".hd"), menu = $("#menu"), mbtn = $(".menu-btn"), menuOpen = false;
+function setMenu(o){ menuOpen = o; menu.classList.toggle("open", o); mbtn.setAttribute("aria-expanded", o); mbtn.firstChild.nodeValue = o ? "Close" : "Menu"; document.documentElement.style.overflow = o ? "hidden" : ""; $$("a.ml", menu).forEach(function(a, i){ a.style.transitionDelay = o ? (i * 40 + 80) + "ms" : "0ms"; }); ui(); }
+mbtn.addEventListener("click", function(){ setMenu(!menuOpen); });
+menu.addEventListener("click", function(e){ if(e.target.closest("a")) setMenu(false); });
+addEventListener("keydown", function(e){ if(e.key === "Escape" && menuOpen){ setMenu(false); mbtn.focus(); } });
+
+var themed = $$("[data-theme]"), bar = $(".prog"), chap = $(".chap"), chapLinks = $$(".chap a"), navLinks = $$(".nav-l a"), pill = $(".wa-pill");
+var chapSecs = ["world","dna","life","everywhere"].map(function(id){ return document.getElementById(id); });
+function ui(){
+  var th = "dark";
+  themed.forEach(function(s){ var r = s.getBoundingClientRect(); if(r.top <= 40 && r.bottom > 40) th = s.dataset.theme; });
+  hd.classList.toggle("light", th === "light" && !menuOpen);
+  hd.classList.toggle("solid", scrollY > 24 && !menuOpen);
+  var max = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = "scaleX(" + (max > 0 ? clamp(scrollY / max, 0, 1) : 0) + ")";
+  var ci = -1; chapSecs.forEach(function(s, i){ var r = s.getBoundingClientRect(); if(r.top < innerHeight * .5 && r.bottom > innerHeight * .5) ci = i; });
+  chap.classList.toggle("hide", ci < 0);
+  chapLinks.forEach(function(a, i){ a.classList.toggle("on", i === ci); });
+  var mid = innerHeight * .4, cur = null;
+  navLinks.forEach(function(a){ var s = document.querySelector(a.getAttribute("href")); if(s){ var r = s.getBoundingClientRect(); if(r.top < mid && r.bottom > mid) cur = a; } });
+  navLinks.forEach(function(a){ a.classList.toggle("on", a === cur); });
+  var hidePill = menuOpen || ["world","dna","enquire","final"].some(function(id){ var s = document.getElementById(id); if(!s) return false; var r = s.getBoundingClientRect(); return r.top < innerHeight * .7 && r.bottom > innerHeight * .3; }) || scrollY < innerHeight * .5;
+  pill.classList.toggle("hide", hidePill);
+}
+addEventListener("scroll", ui, {passive:true}); addEventListener("resize", ui); ui();
+
+/* ====================== REVEALS ====================== */
+var hero = $(".hero");
+setTimeout(function(){ hero.classList.add("in"); }, 60);
+var rv = $$(".rv, .photo"), queued = false;
+function reveal(){ queued = false; var lim = innerHeight * .92; rv = rv.filter(function(e){ if(e.getBoundingClientRect().top < lim){ e.classList.add("in"); return false; } return true; }); }
+addEventListener("scroll", function(){ if(!queued){ queued = true; setTimeout(reveal, 50); } }, {passive:true});
+addEventListener("resize", reveal); setTimeout(reveal, 40);
+
+/* ====================== FAQ ====================== */
+$$(".qa button").forEach(function(b){ b.addEventListener("click", function(){ var open = b.getAttribute("aria-expanded") !== "true"; b.setAttribute("aria-expanded", open); b.closest(".qa > div").classList.toggle("open", open); }); });
+
+/* ====================== ENQUIRY BUILDER ====================== */
+(function(){
+  var f = $("#enq"), out = $("#enq-msg"), send = $("#enq-send"), bio = $('input[name=subject][value=Biology]', f), sci = $('input[name=subject][value=Science]', f), hint = $("[data-bio-hint]");
+  function upd(){
+    var lvl = +f.level.value;
+    bio.disabled = lvl <= 3; hint.hidden = lvl > 3;
+    if(lvl <= 3 && bio.checked) sci.checked = true;
+    var subj = lvl <= 3 ? "Form 1–3 Science" : (f.subject.value === "Biology" ? "SPM Biology" : "Form 4–5 Science (SPM)");
+    var where = f.loc.value === "Online" ? "online" : "in " + f.loc.value;
+    var opener = f.who.value === "parent" ? "I'm a parent. My child is in Form " + lvl + " and I'd like to ask about your " + subj + " classes" : "I'm a Form " + lvl + " student and I'd like to ask about your " + subj + " classes";
+    var msg = "Hi Ms Rubini! " + opener + " (" + f.format.value + ", " + where + "). Could you share the timetable and fees?";
+    out.textContent = msg; send.href = wa(msg); send.target = "_blank"; send.rel = "noopener";
+  }
+  f.addEventListener("change", upd); upd();
+})();
+
+/* ====================== EXPLORERS (work with or without 3D) ====================== */
+var Explorer = {};
+function makeExplorer(key, data, chipsEl, card, onSelect){
+  var cur = null, chips = [];
+  data.forEach(function(d){
+    var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = d.short || d.name; b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function(){ select(d.id, true); }); chipsEl.appendChild(b); chips.push(b);
+  });
+  function select(id, fromUi){
+    var i = data.findIndex(function(d){ return d.id === id; }); if(i < 0) return; cur = id; var d = data[i];
+    chips.forEach(function(c, j){ c.setAttribute("aria-pressed", j === i ? "true" : "false"); });
+    if(fromUi && chips[i].scrollIntoView && chipsEl.scrollWidth > chipsEl.clientWidth) chipsEl.scrollTo({left: chips[i].offsetLeft - 20, behavior: reduce ? "auto" : "smooth"});
+    card.render(d, i, data.length);
+    onSelect && onSelect(id);
+  }
+  return Explorer[key] = {select: select, get cur(){ return cur; }, data: data};
+}
+function pad2(n){ return (n < 10 ? "0" : "") + n; }
+function cardRenderer(el, label){
+  return {render: function(d, i, n){
+    el.innerHTML = '<p class="mono">' + (label ? label + " · " : "") + pad2(i + 1) + " / " + pad2(n) + "</p><h3>" + esc(d.name) + '</h3><p class="t">' + esc(d.text) + "</p>" + (d.fact ? '<p class="f"><span class="mono">Fact</span>' + esc(d.fact) + "</p>" : "");
+    el.classList.remove("swap"); void el.offsetWidth; el.classList.add("swap");
+  }};
+}
+var animalFocus = null;
+makeExplorer("animal", ANIMAL, $('[data-chips="animal"]'), cardRenderer($('[data-card="animal"]')), function(id){ animalFocus = id; });
+
+// lab panel
+var LAB = {animal:{label:"Animal cell", data:ANIMAL}, plant:{label:"Plant cell", data:PLANT}, heart:{label:"Heart", data:HEART}, dna:{label:"DNA", data:DNAP}};
+var labState = {model:"animal", part:null, onModel:null, onPart:null};
+var info = $(".info"), plist = $(".plist", info);
+function labRenderList(){
+  plist.innerHTML = "";
+  LAB[labState.model].data.forEach(function(d){
+    var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = d.short || d.name; b.dataset.id = d.id; b.setAttribute("aria-pressed", "false");
+    b.addEventListener("click", function(){ labSelect(d.id); }); plist.appendChild(b);
+  });
+}
+function labSelect(id, hitPoint){
+  var m = LAB[labState.model], d = m.data.find(function(x){ return x.id === id; }); if(!d) return;
+  labState.part = id;
+  $('[data-info="model"]').textContent = m.label; $('[data-info="name"]').textContent = d.name; $('[data-info="text"]').textContent = d.text;
+  var f = $('[data-info="fact"]'); f.hidden = !d.fact; f.innerHTML = d.fact ? '<span class="mono">Fact</span>' + esc(d.fact) : "";
+  $$(".chip", plist).forEach(function(c){ c.setAttribute("aria-pressed", c.dataset.id === id ? "true" : "false"); });
+  info.classList.remove("swap"); void info.offsetWidth; info.classList.add("swap");
+  labState.onPart && labState.onPart(id, hitPoint);
+}
+$$(".tab").forEach(function(t){ t.addEventListener("click", function(){
+  if(labState.model === t.dataset.model) return;
+  $$(".tab").forEach(function(x){ x.setAttribute("aria-pressed", x === t ? "true" : "false"); });
+  labState.model = t.dataset.model; labState.part = null; labRenderList();
+  $('[data-info="model"]').textContent = LAB[labState.model].label; $('[data-info="name"]').textContent = "Tap a part"; $('[data-info="text"]').textContent = "Tap the model, or choose a part below."; $('[data-info="fact"]').hidden = true;
+  labState.onModel && labState.onModel(labState.model);
+}); });
+labRenderList();
+
+// moments: stage controllers shared by the 3D scenes and the buttons
+var MOM = {};
+$$(".moment").forEach(function(art){
+  var key = art.dataset.moment, st = STAGES[key], ol = $(".stepper", art), cap = $(".mcap", art), track = $(".mtrack", art), btns = [];
+  st.forEach(function(s, i){ var li = document.createElement("li"), b = document.createElement("button"); b.type = "button"; b.innerHTML = '<span class="n">' + pad2(i + 1) + "</span><b>" + esc(s.n) + "</b>"; li.appendChild(b); ol.appendChild(li); btns.push(b); });
+  var c = {target:0, sf:0, user:false, acc:0};
+  var mq = matchMedia("(min-width: 960px)");
+  function sticky(){ return mq.matches; }
+  function set(i){ if(i === c.target && cap.textContent) return; c.target = i; btns.forEach(function(b, j){ b.setAttribute("aria-current", j === i ? "true" : "false"); }); cap.textContent = st[i].t; cap.classList.remove("swap"); void cap.offsetWidth; cap.classList.add("swap"); }
+  btns.forEach(function(b, i){ b.addEventListener("click", function(){
+    c.user = true;
+    if(sticky()){ var r = track.getBoundingClientRect(), top = scrollY + r.top, span = track.offsetHeight - innerHeight; scrollTo({top: top + span * (i + .5) / st.length, behavior: reduce ? "auto" : "smooth"}); }
+    set(i); if(!c.sim) c.sf = i;
+  }); });
+  cap.textContent = ""; set(0);
+  c.tick = function(dt){
+    c.sim = true;
+    if(sticky()){ var i = Math.min(st.length - 1, Math.floor(prog(track) * st.length * .9999)); if(i !== c.target) set(i); }
+    else if(!c.user && !reduce){ c.acc += dt; if(c.acc > 4.5){ c.acc = 0; set((c.target + 1) % st.length); } }
+    c.sf += (c.target - c.sf) * Math.min(1, dt * 2.4); if(Math.abs(c.target - c.sf) < .002) c.sf = c.target;
+    return c.sf;
+  };
+  addEventListener("scroll", function(){ if(sticky()){ var i = Math.min(st.length - 1, Math.floor(prog(track) * st.length * .9999)); if(i !== c.target) set(i); } }, {passive:true});
+  MOM[key] = c;
+});
+
+// story step captions
+function stepper(sec){ var ps = $$("[data-steps] p", sec), cur = 0; return function(i){ if(i === cur) return; ps[cur].classList.remove("on"); ps[i].classList.add("on"); cur = i; }; }
+var storyCell = stepper($("#world")), storyDna = stepper($("#dna"));
+addEventListener("scroll", function(){
+  var p1 = prog($("#world .track")); storyCell(p1 < .3 ? 0 : p1 < .58 ? 1 : 2);
+  var p2 = prog($("#dna .track")); storyDna(p2 < .25 ? 0 : p2 < .45 ? 1 : p2 < .78 ? 2 : 3);
+}, {passive:true});
+
+/* ====================== 3D ====================== */
+function webgl(){ try{ var c = document.createElement("canvas"); return !!(window.WebGLRenderingContext && (c.getContext("webgl") || c.getContext("experimental-webgl"))); }catch(e){ return false; } }
+function start3D(){
+  if(!window.THREE || !webgl()){ document.documentElement.classList.add("no-webgl"); return; }
+  try { init3D(); } catch(err){ console.error(err); document.documentElement.classList.add("no-webgl"); }
+}
+if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", start3D); else start3D();
+
+function init3D(){
+var T = THREE, V = function(x, y, z){ return new T.Vector3(x, y, z); }, ZERO = V(0, 0, 0), UP = V(0, 1, 0);
+var small = Math.min(innerWidth, innerHeight) < 700 || !fine;
+var canvas = $("#gl");
+var renderer = new T.WebGLRenderer({canvas: canvas, antialias: true, alpha: true, powerPreference: "high-performance"});
+var DPR = Math.min(window.devicePixelRatio || 1, small ? 1.6 : 2);
+renderer.setPixelRatio(DPR); renderer.setClearColor(0x000000, 0); renderer.autoClear = false;
+var W = 0, H = 0;
+function size(){ var w = document.documentElement.clientWidth, h = innerHeight; if(w !== W){ W = w; H = h; renderer.setSize(W, H); } else if(h > H){ H = h; renderer.setSize(W, H); } }
+
+function rng(seed){ return function(){ seed = seed * 16807 % 2147483647; return (seed - 1) / 2147483646; }; }
+function randDir(v, r){ do { v.set(r() * 2 - 1, r() * 2 - 1, r() * 2 - 1); } while(v.lengthSq() > 1 || v.lengthSq() < .01); return v.normalize(); }
+function inBall(v, rad, r){ do { v.set(r() * 2 - 1, r() * 2 - 1, r() * 2 - 1); } while(v.lengthSq() > 1); return v.multiplyScalar(rad); }
+function fitDist(hw, hh, fov, asp){ var t = Math.tan(fov * Math.PI / 360); return Math.max(hh / t, hw / (t * asp)); }
+
+/* ---------- materials ---------- */
+var BUILD = null;
+var PVS = "attribute float aSize;attribute float aShade;uniform float uScale;uniform float uMax;uniform float uNear;varying float vA;varying float vS;void main(){vec4 mv=modelViewMatrix*vec4(position,1.0);float d=-mv.z;gl_PointSize=min(aSize*uScale/max(d,0.001),uMax);vA=smoothstep(uNear*0.35,uNear,d);vS=aShade;gl_Position=projectionMatrix*mv;}";
+var PFS = "uniform vec3 uA;uniform vec3 uB;uniform float uOp;varying float vA;varying float vS;void main(){vec2 c=gl_PointCoord-0.5;float r=length(c);if(r>0.5)discard;float a=smoothstep(0.5,0.08,r);gl_FragColor=vec4(mix(uA,uB,vS),a*vA*uOp);}";
+function pointsMat(a, b, op, o){ o = o || {}; var m = new T.ShaderMaterial({uniforms:{uA:{value:new T.Color(a)},uB:{value:new T.Color(b)},uOp:{value:op},uScale:{value:600},uMax:{value:(o.max || 7) * DPR},uNear:{value:o.near || 1}}, vertexShader:PVS, fragmentShader:PFS, transparent:true, depthWrite:false, blending:o.add ? T.AdditiveBlending : T.NormalBlending}); m.userData.op0 = op; if(BUILD) BUILD.pm.push(m); return m; }
+function cloud(n, fn, s0, s1, a, b, op, o){
+  var pos = new Float32Array(n * 3), sz = new Float32Array(n), sh = new Float32Array(n), v = V(0, 0, 0);
+  for(var i = 0; i < n; i++){ fn(v, i); pos[i * 3] = v.x; pos[i * 3 + 1] = v.y; pos[i * 3 + 2] = v.z; sz[i] = s0 + Math.random() * (s1 - s0); sh[i] = Math.random(); }
+  var g = new T.BufferGeometry(); g.setAttribute("position", new T.BufferAttribute(pos, 3)); g.setAttribute("aSize", new T.BufferAttribute(sz, 1)); g.setAttribute("aShade", new T.BufferAttribute(sh, 1));
+  var p = new T.Points(g, pointsMat(a, b, op, o)); p.frustumCulled = false; return p;
+}
+var FVS = "varying vec3 vN;varying vec3 vV;void main(){vec4 mv=modelViewMatrix*vec4(position,1.0);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}";
+var FFS = "uniform vec3 c1;uniform vec3 c2;uniform float op;uniform float base;varying vec3 vN;varying vec3 vV;void main(){float f=pow(1.0-abs(dot(normalize(vN),normalize(vV))),2.2);gl_FragColor=vec4(mix(c1,c2,f),op*(base+(1.0-base)*f));}";
+function fres(c1, c2, op, base){ var m = new T.ShaderMaterial({uniforms:{c1:{value:new T.Color(c1)},c2:{value:new T.Color(c2)},op:{value:op},base:{value:base == null ? .06 : base}}, vertexShader:FVS, fragmentShader:FFS, transparent:true, depthWrite:false, side:T.DoubleSide}); m.userData.op0 = op; return m; }
+function pm(color, o){ var m = new T.MeshPhysicalMaterial(Object.assign({color:color, roughness:.36, metalness:0, clearcoat:.6, clearcoatRoughness:.35, emissive:new T.Color(color), emissiveIntensity:.14}, o || {})); m.userData.c0 = m.color.clone(); m.userData.e0 = m.emissiveIntensity; m.userData.op0 = m.opacity; return m; }
+function lights(s, o){ o = o || {}; s.add(new T.HemisphereLight(0xEAF5FF, 0x0A2550, o.h == null ? .9 : o.h)); var d = new T.DirectionalLight(0xffffff, o.d == null ? 1.1 : o.d); d.position.set(4, 6, 6); s.add(d); var p = new T.PointLight(0x68D9EA, o.p == null ? 1.2 : o.p, 50); p.position.set(-6, -3, 5); s.add(p); var b = new T.DirectionalLight(0x438CFF, .6); b.position.set(-3, 2, -6); s.add(b); }
+var GC = {}; function sph(r, w, h){ var k = r + "_" + w; return GC[k] || (GC[k] = new T.SphereGeometry(r, w, h || Math.round(w * .66))); }
+function capsule(r, h, seg){ var pts = [], i, a; for(i = 0; i <= 8; i++){ a = -Math.PI / 2 + i / 8 * Math.PI / 2; pts.push(new T.Vector2(Math.max(1e-4, r * Math.cos(a)), -h + r * Math.sin(a))); } for(i = 0; i <= 8; i++){ a = i / 8 * Math.PI / 2; pts.push(new T.Vector2(Math.max(1e-4, r * Math.cos(a)), h + r * Math.sin(a))); } return new T.LatheGeometry(pts, seg || 14); }
+
+/* ---------- focus / highlight system ---------- */
+var DIM = new T.Color(0x0E2550);
+function applyK(m, k, sel, t){
+  if(m.isShaderMaterial){ if(m.uniforms.op) m.uniforms.op.value = m.userData.op0 * (.1 + .9 * k); if(m.uniforms.uOp) m.uniforms.uOp.value = m.userData.op0 * (.1 + .9 * k); return; }
+  if(m.isLineBasicMaterial){ m.opacity = m.userData.op0 * (.15 + .85 * k); return; }
+  m.color.copy(m.userData.c0).lerp(DIM, (1 - k) * .8);
+  m.emissiveIntensity = m.userData.e0 * k + (sel ? .4 + .28 * Math.sin(t * 4) : 0);
+  if(m.userData.op0 < 1) m.opacity = m.userData.op0 * (.3 + .7 * k);
+}
+function Parts(){ this.map = {}; this.order = []; this.focus = null; this.pick = []; }
+Parts.prototype.add = function(id, mats, anchor, meshes){
+  var p = this.map[id]; if(!p){ p = this.map[id] = {id:id, mats:[], anchor:anchor || V(0, 0, 0), k:1}; this.order.push(id); }
+  mats.forEach(function(m){ if(p.mats.indexOf(m) < 0) p.mats.push(m); }); if(anchor) p.anchor = anchor;
+  var self = this; (meshes || []).forEach(function(o){ o.userData.part = id; self.pick.push(o); });
+};
+Parts.prototype.update = function(t, dt){
+  var a = Math.min(1, dt * 6), mk = new Map(), self = this;
+  this.order.forEach(function(id){ var p = self.map[id], tg = self.focus == null || self.focus === id ? 1 : 0; p.k += (tg - p.k) * a;
+    p.mats.forEach(function(m){ var e = mk.get(m), sel = self.focus === id; if(!e) mk.set(m, {k:p.k, sel:sel}); else { e.k = Math.max(e.k, p.k); e.sel = e.sel || sel; } }); });
+  mk.forEach(function(e, m){ applyK(m, e.k, e.sel, t); });
+};
+
+/* ---------- MODEL: animal cell ---------- */
+function buildAnimal(o){
+  o = o || {}; var q = o.q || 1, R = 3, g = new T.Group(), P = new Parts(), r = rng(o.seed || 11), v = V(0, 0, 0);
+  function blob(x, y, z){ return 1 + .05 * (Math.sin(x * 2.2 + .6) * Math.sin(y * 2.7 + 1.4) + .7 * Math.sin(z * 3.1 + 2.2) * Math.cos(x * 1.8 + .3)); }
+  var sg = new T.SphereGeometry(R, 72, 48), pa = sg.attributes.position;
+  for(var i = 0; i < pa.count; i++){ v.fromBufferAttribute(pa, i).normalize(); v.multiplyScalar(R * blob(v.x, v.y, v.z)); pa.setXYZ(i, v.x, v.y, v.z); }
+  sg.computeVertexNormals();
+  var shellM = fres(0x245BDB, 0x9FD8FF, .36, .03), shell = new T.Mesh(sg, shellM); shell.renderOrder = 5; g.add(shell);
+  var memPts = cloud(Math.round(5600 * q), function(p){ randDir(p, r); p.multiplyScalar(R * blob(p.x, p.y, p.z) * (1 + (r() - .5) * .025)); }, .02, .045, 0x438CFF, 0xEAF5FF, .95, {near:1.3, max:7});
+  memPts.renderOrder = 6; g.add(memPts);
+  P.add("membrane", [shellM, memPts.material], V(-.56, .68, .48).normalize().multiplyScalar(R * 1.02), [shell]);
+  var N0 = V(-.3, .15, -.1), G0 = V(1.62, -1.08, .86);
+  var cyto = cloud(Math.round(1500 * q), function(p){ do { inBall(p, R * .9, r); } while(p.distanceTo(N0) < 1.2); }, .012, .026, 0x68D9EA, 0xFFFFFF, .5, {near:.8, max:5});
+  g.add(cyto); P.add("cyto", [cyto.material], V(1.25, 1.35, 1.15));
+  // nucleus
+  var nuc = new T.Group(); nuc.position.copy(N0); g.add(nuc);
+  var nShM = fres(0x245BDB, 0x68D9EA, .95, .1), nSh = new T.Mesh(sph(1.08, 48), nShM); nSh.renderOrder = 3;
+  var nInM = pm(0x1F4FC9, {transparent:true, opacity:.6, depthWrite:false, roughness:.3}), nIn = new T.Mesh(sph(1.02, 48), nInM); nIn.renderOrder = 2;
+  var nlM = pm(0x0A2550, {emissive:new T.Color(0x245BDB), emissiveIntensity:.4}), nl = new T.Mesh(sph(.36, 32), nlM); nl.position.set(.22, .18, .32);
+  var pores = cloud(Math.round(380 * q), function(p){ randDir(p, r).multiplyScalar(1.1); }, .02, .035, 0x9FD8FF, 0xFFFFFF, .85, {max:5});
+  var chrom = cloud(Math.round(420 * q), function(p){ inBall(p, .9, r); }, .014, .03, 0x7FB2FF, 0xEAF5FF, .75, {max:5});
+  nuc.add(nl, nIn, nSh, pores, chrom);
+  P.add("nucleus", [nShM, nInM, nlM, pores.material, chrom.material], N0.clone().add(V(.1, 1.12, .2)), [nIn]);
+  // mitochondria
+  var mGeo = new T.SphereGeometry(1, 40, 24); mGeo.scale(.6, .26, .26);
+  var cr = []; for(i = 0; i <= 10; i++) cr.push(V(-.44 + .88 * i / 10, (i % 2 ? 1 : -1) * .15, 0));
+  var crGeo = new T.TubeGeometry(new T.CatmullRomCurve3(cr), 80, .022, 6, false);
+  var mOut = pm(0xF5A524, {transparent:true, opacity:.74, depthWrite:false, roughness:.25, clearcoat:.9, emissive:new T.Color(0xC77700), emissiveIntensity:.28});
+  var mIn = pm(0xB85A0A, {emissive:new T.Color(0x7a3a00), emissiveIntensity:.3});
+  var mitos = [], mo = [], want = q < .7 ? 5 : 7, tries = 0;
+  while(mitos.length < want && tries++ < 800){
+    randDir(v, r).multiplyScalar(1.9 + r() * .55);
+    if(v.distanceTo(N0) < 2.05 || v.distanceTo(G0) < 1.25) continue;
+    if(mitos.some(function(m){ return m.position.distanceTo(v) < 1.05; })) continue;
+    var m = new T.Group(); m.position.copy(v); m.rotation.set(r() * 3, r() * 3, r() * 3); m.userData.b = v.clone();
+    var ma = new T.Mesh(mGeo, mOut); ma.renderOrder = 2; m.add(new T.Mesh(crGeo, mIn), ma); g.add(m); mitos.push(m); mo.push(ma);
+  }
+  P.add("mito", [mOut, mIn], mitos.length ? mitos[0].position.clone().add(V(0, .3, 0)) : V(2, 0, 0), mo);
+  // rough ER + ribosomes on it
+  var erM = pm(0x68D9EA, {emissive:new T.Color(0x2fa7bd), emissiveIntensity:.3, roughness:.3});
+  var erRibo = pm(0xFFFFFF, {emissive:new T.Color(0xBFE6FF), emissiveIntensity:.45});
+  var rGeo = sph(.034, 8, 6), erG = new T.Group(); erG.position.copy(N0); erG.rotation.set(.3, .5, .2); g.add(erG);
+  var arc = 2.3, ers = [];
+  [1.32, 1.5, 1.68, 1.86].forEach(function(rad, k){
+    var tm = new T.Mesh(new T.TorusGeometry(rad, .055, 8, 72, arc), erM); tm.rotation.z = Math.PI - arc / 2; tm.rotation.x = (k - 1.5) * .12; erG.add(tm); ers.push(tm);
+    var pts = []; for(var th = .05; th < arc; th += .085) pts.push(th);
+    var im = new T.InstancedMesh(rGeo, erRibo, pts.length), d = new T.Object3D();
+    pts.forEach(function(th, j){ d.position.set((rad + .075) * Math.cos(th), (rad + .075) * Math.sin(th), (r() - .5) * .07); d.updateMatrix(); im.setMatrixAt(j, d.matrix); });
+    tm.add(im);
+  });
+  g.updateMatrixWorld(true);
+  var erA = ers[1].localToWorld(V(1.5 * Math.cos(arc / 2), 1.5 * Math.sin(arc / 2), 0));
+  P.add("er", [erM, erRibo], erA, ers);
+  // Golgi apparatus
+  var golM = pm(0xE3EEFF, {emissive:new T.Color(0x6F9BF5), emissiveIntensity:.38, roughness:.2, clearcoat:1});
+  var vesM = pm(0xBFE6FF, {emissive:new T.Color(0x68D9EA), emissiveIntensity:.35});
+  var gol = new T.Group(); gol.position.copy(G0); g.add(gol); gol.lookAt(N0);
+  var cg = new T.SphereGeometry(1, 40, 20); cg.scale(.62, .42, .07); var cp = cg.attributes.position;
+  for(i = 0; i < cp.count; i++) cp.setZ(i, cp.getZ(i) + .55 * cp.getX(i) * cp.getX(i) + .3 * cp.getY(i) * cp.getY(i));
+  cg.computeVertexNormals();
+  var cis = [];
+  for(var k = 0; k < 5; k++){ var cm = new T.Mesh(cg, golM); cm.position.z = -k * .17; cm.scale.setScalar(1 - Math.abs(k - 1.5) * .07); gol.add(cm); cis.push(cm); }
+  var ves = [];
+  for(i = 0; i < 7; i++){ var vm = new T.Mesh(sph(.06 + r() * .035, 12), vesM); vm.position.set((i % 2 ? 1 : -1) * (.72 + r() * .25), (r() - .5) * .6, -r() * .8); gol.add(vm); ves.push(vm); }
+  P.add("golgi", [golM, vesM], G0.clone().add(V(0, .45, 0)), cis.concat(ves));
+  // free ribosomes
+  var riboM = pm(0xFFFFFF, {emissive:new T.Color(0xDDEEFF), emissiveIntensity:.5});
+  var nr = Math.round(340 * q), ribo = new T.InstancedMesh(rGeo, riboM, nr), dd = new T.Object3D(), first = null;
+  for(i = 0; i < nr; i++){ do { inBall(v, R * .86, r); } while(v.distanceTo(N0) < 2.0 || v.distanceTo(G0) < .85); if(!first) first = v.clone(); dd.position.copy(v); dd.scale.setScalar(.8 + r() * .6); dd.updateMatrix(); ribo.setMatrixAt(i, dd.matrix); }
+  g.add(ribo);
+  P.add("ribo", [riboM, erRibo], first, [ribo]);
+  return {
+    group:g, parts:P, N0:N0, obstacles:mitos.map(function(m){ return m.userData.b; }).concat([G0]),
+    update:function(t, dt, focus){ P.focus = focus === undefined ? P.focus : focus; P.update(t, dt); cyto.rotation.y = t * .02; mitos.forEach(function(m, j){ m.position.y = m.userData.b.y + Math.sin(t * .7 + j) * .05; m.rotation.x += dt * .05; }); },
+    pick:function(ray){ var hits = ray.intersectObjects(P.pick, false); if(!hits.length) return null; var h = hits.find(function(x){ return x.object !== shell; }); if(h) return h.object.userData.part; h = hits[0]; var n = h.face.normal.clone().transformDirection(h.object.matrixWorld); return Math.abs(n.dot(ray.ray.direction)) < .5 ? "membrane" : "cyto"; }
+  };
+}
+
+/* ---------- MODEL: DNA ---------- */
+var BASECOL = {A:0xFFB547, T:0x68D9EA, G:0x438CFF, C:0xEAF5FF}, COMP = {A:"T", T:"A", G:"C", C:"G"}, BASENAME = {A:"Adenine", T:"Thymine", G:"Guanine", C:"Cytosine"};
+function buildDNA(o){
+  o = o || {}; var n = o.n || 24, R = 1, rise = .34, tw = 2 * Math.PI / 10.5, off = 2.36, g = new T.Group();
+  var seq = "ATGCGTACCGATTGCAGCTAGGCATCGATACGGCTA", d = new T.Object3D(), i, j;
+  var bbM = pm(0xffffff, {roughness:.28, clearcoat:.9, emissiveIntensity:.2}), baseM = pm(0xffffff, {roughness:.3, clearcoat:.7, emissiveIntensity:.24});
+  var sugar = new T.InstancedMesh(sph(.15, 20, 14), bbM, n * 2), link = new T.InstancedMesh(sph(.085, 12, 8), bbM, (n - 1) * 4), bases = new T.InstancedMesh(new T.CylinderGeometry(.07, .07, 1, 12, 1), baseM, n * 2);
+  var s1 = new T.Color(0xDCE9FF), s2 = new T.Color(0x8FB4FF);
+  for(i = 0; i < n; i++){ var b = seq[i % seq.length]; sugar.setColorAt(i * 2, s1); sugar.setColorAt(i * 2 + 1, s2); bases.setColorAt(i * 2, new T.Color(BASECOL[b])); bases.setColorAt(i * 2 + 1, new T.Color(BASECOL[COMP[b]])); }
+  for(i = 0; i < (n - 1) * 4; i++) link.setColorAt(i, i % 4 < 2 ? s1 : s2);
+  g.add(sugar, link, bases);
+  var P1 = [], P2 = [], M0 = [], T1 = [], T2 = [], L0 = [], t1 = V(0, 0, 0), t2 = V(0, 0, 0), dir = V(0, 0, 0), qq = new T.Quaternion();
+  for(i = 0; i < n; i++){ P1.push(V(0, 0, 0)); P2.push(V(0, 0, 0)); M0.push(V(0, 0, 0)); T1.push(V(0, 0, 0)); T2.push(V(0, 0, 0)); }
+  function layout(spin, unzip, sep){ sep = sep || 1.3;
+    for(i = 0; i < n; i++){
+      var th = i * tw + spin, y = (i - (n - 1) / 2) * rise;
+      P1[i].set(R * Math.sin(th), y, R * Math.cos(th)); P2[i].set(R * Math.sin(th + off), y, R * Math.cos(th + off));
+      M0[i].addVectors(P1[i], P2[i]).multiplyScalar(.5); L0[i] = P1[i].distanceTo(M0[i]) - .05;
+      var u = unzip ? unzip(i) : 0;
+      if(u > 0){ t1.subVectors(P1[i], M0[i]); t1.y = 0; t1.normalize(); t2.subVectors(P2[i], M0[i]); t2.y = 0; t2.normalize(); P1[i].addScaledVector(t1, u * sep); P2[i].addScaledVector(t2, u * sep); }
+      d.quaternion.identity(); d.scale.set(1, 1, 1);
+      d.position.copy(P1[i]); d.updateMatrix(); sugar.setMatrixAt(i * 2, d.matrix);
+      d.position.copy(P2[i]); d.updateMatrix(); sugar.setMatrixAt(i * 2 + 1, d.matrix);
+    }
+    var k = 0;
+    for(i = 0; i < n - 1; i++){ for(j = 1; j <= 2; j++){ d.position.lerpVectors(P1[i], P1[i + 1], j / 3); d.updateMatrix(); link.setMatrixAt(k++, d.matrix); d.position.lerpVectors(P2[i], P2[i + 1], j / 3); d.updateMatrix(); link.setMatrixAt(k++, d.matrix); } }
+    for(i = 0; i < n; i++){
+      [[P1[i], T1[i], i * 2], [P2[i], T2[i], i * 2 + 1]].forEach(function(e){
+        dir.subVectors(M0[i], e[0]).normalize(); e[1].copy(e[0]).addScaledVector(dir, L0[i] + .04);
+        d.position.copy(e[0]).addScaledVector(dir, L0[i] / 2 + .08); qq.setFromUnitVectors(UP, dir); d.quaternion.copy(qq); d.scale.set(1, L0[i] - .1, 1); d.updateMatrix(); bases.setMatrixAt(e[2], d.matrix);
+      });
+    }
+    sugar.instanceMatrix.needsUpdate = true; link.instanceMatrix.needsUpdate = true; bases.instanceMatrix.needsUpdate = true;
+  }
+  layout(0);
+  return {group:g, n:n, seq:seq, P1:P1, P2:P2, T1:T1, T2:T2, layout:layout,
+    base:function(i, h){ var b = seq[i % seq.length]; return h ? COMP[b] : b; },
+    pick:function(ray){ var hit = ray.intersectObjects([bases, sugar, link], false)[0]; if(!hit) return null; if(hit.object === bases){ var ii = Math.floor(hit.instanceId / 2); return {id:this.base(ii, hit.instanceId % 2), point:hit.point}; } return {id:"backbone", point:hit.point}; }};
+}
+
+/* ---------- MODEL: photosynthesis ---------- */
+function buildPhoto(q){
+  var g = new T.Group(), leaf = new T.Group(); g.add(leaf); leaf.rotation.set(-.3, .38, -.14); leaf.position.set(.3, -.15, 0);
+  var r = rng(5), i, v = V(0, 0, 0);
+  function wid(y){ var s = clamp((y + 1.9) / 4.05, 0, 1); return 1.3 * Math.sin(Math.PI * Math.pow(s, .8)) * (1 - .12 * s); }
+  function bend(x, y){ return -.24 * x * x + .06 * Math.sin(y * 2.2); }
+  var lg = new T.PlaneGeometry(2, 4.05, 26, 52); lg.translate(0, .125, 0); var lp = lg.attributes.position;
+  for(i = 0; i < lp.count; i++){ var x = lp.getX(i), y = lp.getY(i); x = x * wid(y); lp.setXYZ(i, x, y, bend(x, y)); }
+  lg.computeVertexNormals();
+  var leafM = pm(0x2E9E62, {side:T.DoubleSide, roughness:.55, clearcoat:.45, emissive:new T.Color(0x0E5A33), emissiveIntensity:.28});
+  leaf.add(new T.Mesh(lg, leafM));
+  var vein = pm(0xA8E6C1, {emissiveIntensity:.3});
+  function tube(pts, rad, mat){ return new T.Mesh(new T.TubeGeometry(new T.CatmullRomCurve3(pts), 40, rad, 6, false), mat); }
+  var mid = []; for(i = 0; i <= 16; i++){ var yy = -3.3 + 5.3 * i / 16; mid.push(V(0, yy, (yy > -1.9 ? bend(0, yy) : 0) + .02)); }
+  leaf.add(tube(mid, .035, vein));
+  for(i = 0; i < 6; i++){ var y0 = -1.3 + i * .55; [-1, 1].forEach(function(sd){ var y1 = y0 + .5, x1 = sd * wid(y1) * .82; leaf.add(tube([V(0, y0, bend(0, y0) + .02), V(x1 * .5, y0 + .3, bend(x1 * .5, y0 + .3) + .02), V(x1, y1, bend(x1, y1) + .02)], .012, vein)); }); }
+  function leafPt(){ var yy = -1.4 + r() * 3.0, x = (r() * 2 - 1) * wid(yy) * .78; return V(x, yy, bend(x, yy)); }
+  var chl = cloud(Math.round(300 * q), function(p){ p.copy(leafPt()); p.z += .03; }, .02, .04, 0x7CF0A8, 0xFFFFFF, 0, {max:5}); leaf.add(chl);
+  g.updateMatrixWorld(true);
+  // sun + light
+  var SUN = V(-3.4, 3.1, -.6);
+  var cv = document.createElement("canvas"); cv.width = cv.height = 128; var cx = cv.getContext("2d"), gr = cx.createRadialGradient(64, 64, 0, 64, 64, 64);
+  gr.addColorStop(0, "rgba(255,226,150,1)"); gr.addColorStop(.25, "rgba(255,209,102,.7)"); gr.addColorStop(1, "rgba(255,209,102,0)"); cx.fillStyle = gr; cx.fillRect(0, 0, 128, 128);
+  var haloM = new T.SpriteMaterial({map:new T.CanvasTexture(cv), transparent:true, depthWrite:false, blending:T.AdditiveBlending}), halo = new T.Sprite(haloM); halo.position.copy(SUN); halo.scale.setScalar(3); g.add(halo);
+  var sunM = new T.MeshBasicMaterial({color:0xFFD27A, transparent:true}), sun = new T.Mesh(sph(.42, 32), sunM); sun.position.copy(SUN); g.add(sun);
+  var rayM = new T.MeshBasicMaterial({color:0xFFE2A0, transparent:true, opacity:0, depthWrite:false, blending:T.AdditiveBlending}), phM = new T.MeshBasicMaterial({color:0xFFF1C9, transparent:true, opacity:0});
+  var rays = [];
+  for(i = 0; i < 6; i++){ var end = leaf.localToWorld(leafPt()), len = end.distanceTo(SUN), mid2 = SUN.clone().lerp(end, .5), cyl = new T.Mesh(new T.CylinderGeometry(.018, .05, len, 6, 1, true), rayM); cyl.position.copy(mid2); cyl.quaternion.setFromUnitVectors(UP, end.clone().sub(SUN).normalize()); g.add(cyl);
+    var phs = []; for(var j = 0; j < 3; j++){ var ph = new T.Mesh(sph(.05, 8), phM); g.add(ph); phs.push(ph); } rays.push({a:SUN, b:end, ph:phs, o:r()}); }
+  // molecules (CPK colours: oxygen red, hydrogen white, carbon dark grey)
+  function M(c){ return new T.MeshStandardMaterial({color:c, roughness:.35, transparent:true, opacity:0}); }
+  var mats = {wO:M(0xE5484D), wH:M(0xFFFFFF), cC:M(0x2B3445), cO:M(0xE5484D), oO:M(0xE5484D), gC:M(0x2B3445), gO:M(0xE5484D), gR:new T.MeshBasicMaterial({color:0xFFE9A8, transparent:true, opacity:0})};
+  function mol(parts){ var mg = new T.Group(); parts.forEach(function(p){ var m = new T.Mesh(sph(p[1], 14), p[0]); m.position.set(p[2], p[3], 0); mg.add(m); }); return mg; }
+  var sets = [[], [], [], []];
+  function path(pts){ return new T.CatmullRomCurve3(pts); }
+  for(i = 0; i < 9; i++){ var w = mol([[mats.wO, .085, 0, 0], [mats.wH, .05, .1, -.075], [mats.wH, .05, -.1, -.075]]); leaf.add(w); sets[1].push({m:w, c:path([V((r() - .5) * .3, -4.3, 0), V(0, -3.3, 0), V(0, -2.2, 0), leafPt().add(V(0, 0, .05))]), o:r(), s:.09}); }
+  for(i = 0; i < 9; i++){ var c2 = mol([[mats.cC, .08, 0, 0], [mats.cO, .075, .15, 0], [mats.cO, .075, -.15, 0]]); leaf.add(c2); sets[2].push({m:c2, c:path([V(3.2 + r(), -1.2 + r() * 2.4, -1.8 - r()), V(1.6, (r() - .5) * 2, -1.0), leafPt().add(V(0, 0, -.08))]), o:r(), s:.08}); }
+  for(i = 0; i < 8; i++){ var o2 = mol([[mats.oO, .075, .075, 0], [mats.oO, .075, -.075, 0]]); leaf.add(o2); sets[3].push({m:o2, c:path([leafPt().add(V(0, 0, .08)), V(1.4, 1.3 + r(), 1.0), V(2.8 + r(), 2.2 + r(), 1.6 + r())]), o:r(), s:.08}); }
+  var rings = [];
+  for(i = 0; i < 3; i++){ var rg = new T.Group(), lp2 = leafPt(); rg.position.copy(lp2).add(V(0, 0, .1)); for(var a = 0; a < 6; a++){ var at = new T.Mesh(sph(a === 5 ? .06 : .055, 12), a === 5 ? mats.gO : mats.gC); at.position.set(.14 * Math.cos(a * Math.PI / 3), .14 * Math.sin(a * Math.PI / 3), 0); rg.add(at); } rg.add(new T.Mesh(new T.TorusGeometry(.14, .012, 6, 24), mats.gR)); leaf.add(rg); rings.push(rg); }
+  var wts = [0, 0, 0, 0];
+  var anchors = [SUN.clone().lerp(rays[0].b, .55), V(0, -3.0, 0), V(2.0, -.2, -1.3), V(2.2, 2.0, 1.3), rings[0].position.clone()];
+  return {group:g, leaf:leaf, w:wts, anchors:anchors,
+    update:function(t, dt, sf){
+      for(var k = 0; k < 4; k++){ var tg = sf >= k - .5 ? 1 : 0; wts[k] += (tg - wts[k]) * Math.min(1, dt * 3); }
+      var L = wts[0];
+      haloM.opacity = .25 + .75 * L; sunM.opacity = .35 + .65 * L; rayM.opacity = .22 * L; phM.opacity = L; chl.material.uniforms.uOp.value = .9 * L;
+      rays.forEach(function(ry){ ry.ph.forEach(function(ph, j){ var s = (t * .45 + ry.o + j / 3) % 1; ph.position.lerpVectors(ry.a, ry.b, s); }); });
+      mats.wO.opacity = mats.wH.opacity = wts[1]; mats.cC.opacity = mats.cO.opacity = wts[2]; mats.oO.opacity = mats.gC.opacity = mats.gO.opacity = wts[3]; mats.gR.opacity = wts[3] * .8;
+      for(k = 1; k < 4; k++) sets[k].forEach(function(e, j){ var s = (t * e.s + e.o) % 1, a = sstep(0, .12, s) * (1 - sstep(.85, 1, s)); e.m.position.copy(e.c.getPoint(s)); e.m.scale.setScalar(Math.max(.001, a)); e.m.rotation.y = t + j; e.m.rotation.z = t * .6 + j; });
+      rings.forEach(function(rg, j){ rg.rotation.z = t * .4 + j; rg.scale.setScalar(.6 + .4 * wts[3] + .05 * Math.sin(t * 2 + j)); });
+      leaf.rotation.z = -.14 + Math.sin(t * .6) * .03;
+    }};
+}
+
+/* ---------- MODEL: double circulation ---------- */
+function buildCirc(q){
+  var g = new T.Group(), P = new Parts(), DEO = new T.Color(0x4C7BF0), OXY = new T.Color(0xE5484D), i;
+  var chambers = [];
+  function chamber(id, pos, sc, col){ var m = pm(col, {roughness:.3, clearcoat:.9, emissiveIntensity:.2}), me = new T.Mesh(sph(1, 40), m); me.position.copy(pos); me.scale.set(sc[0], sc[1], sc[2]); me.userData.b = me.scale.clone(); me.userData.v = id[1] === "v"; g.add(me); chambers.push(me); P.add(id, [m], pos.clone().add(V(0, sc[1] * .7, .35)), [me]); }
+  chamber("ra", V(-.6, .46, 0), [.46, .4, .42], 0x5B86F0); chamber("rv", V(-.47, -.42, .06), [.52, .56, .48], 0x3F6EE0);
+  chamber("la", V(.62, .46, -.04), [.46, .4, .42], 0xF06A6E); chamber("lv", V(.55, -.5, .04), [.62, .68, .55], 0xE0444A);
+  var hg = new T.SphereGeometry(1, 48, 32), hp = hg.attributes.position, v = V(0, 0, 0);
+  for(i = 0; i < hp.count; i++){ v.fromBufferAttribute(hp, i); if(v.y < 0) v.x *= 1 + v.y * .38; hp.setXYZ(i, v.x * 1.45, v.y * 1.42 - .05, v.z * .95); }
+  hg.computeVertexNormals(); var shell = new T.Mesh(hg, fres(0xE5484D, 0xFFC7CB, .28, .03)); shell.rotation.z = .2; g.add(shell);
+  var lungM = pm(0xF4A6B4, {transparent:true, opacity:.32, depthWrite:false, emissive:new T.Color(0xF4A6B4), emissiveIntensity:.25}), lung = new T.Mesh(sph(1, 40), lungM); lung.position.set(0, 2.65, -.3); lung.scale.set(2.05, .55, .7); g.add(lung);
+  var lungPts = cloud(Math.round(500 * q), function(p){ inBall(p, 1, Math.random); p.set(p.x * 2.0, p.y * .5 + 2.65, p.z * .65 - .3); }, .02, .04, 0xF4A6B4, 0xFFFFFF, .7, {max:5}); g.add(lungPts);
+  var bodyM = pm(0x9FB8E6, {transparent:true, opacity:.28, depthWrite:false, emissive:new T.Color(0x9FB8E6), emissiveIntensity:.25}), body = new T.Mesh(sph(1, 40), bodyM); body.position.set(0, -2.9, -.3); body.scale.set(2.05, .5, .7); g.add(body);
+  var bodyPts = cloud(Math.round(500 * q), function(p){ inBall(p, 1, Math.random); p.set(p.x * 2.0, p.y * .45 - 2.9, p.z * .65 - .3); }, .02, .04, 0x9FB8E6, 0xFFFFFF, .7, {max:5}); g.add(bodyPts);
+  P.add("lungs", [lungM, lungPts.material], V(1.75, 2.7, 0), [lung]); P.add("body", [bodyM, bodyPts.material], V(0, -3.4, 0), [body]);
+  var SEG = [
+    {id:"s1", st:0, r:.055, c:[DEO, DEO], p:[V(-.62, .44, .14), V(-.62, 0, .18), V(-.48, -.42, .14)]},
+    {id:"pa", st:0, r:.075, c:[DEO, DEO], p:[V(-.48, -.42, .14), V(-.95, -.15, .32), V(-1.25, .65, .25), V(-1.35, 1.6, 0), V(-1.1, 2.45, -.2)]},
+    {id:"s3", st:1, r:.045, c:[DEO, OXY], p:[V(-1.1, 2.45, -.2), V(-.5, 2.78, -.25), V(0, 2.55, -.2), V(.5, 2.78, -.25), V(1.1, 2.45, -.2)]},
+    {id:"pv", st:2, r:.075, c:[OXY, OXY], p:[V(1.1, 2.45, -.2), V(1.35, 1.6, 0), V(1.2, .9, .1), V(.62, .46, .14)]},
+    {id:"s5", st:2, r:.055, c:[OXY, OXY], p:[V(.62, .46, .14), V(.64, 0, .18), V(.55, -.5, .14)]},
+    {id:"ao", st:2, r:.085, c:[OXY, OXY], p:[V(.55, -.5, .14), V(.3, .35, .5), V(.75, 1.1, .35), V(1.55, .6, 0), V(1.62, -1.2, -.1), V(1.1, -2.65, -.2)]},
+    {id:"s7", st:3, r:.045, c:[OXY, DEO], p:[V(1.1, -2.65, -.2), V(.5, -3.08, -.25), V(0, -2.85, -.2), V(-.5, -3.08, -.25), V(-1.1, -2.65, -.2)]},
+    {id:"vc", st:3, r:.085, c:[DEO, DEO], p:[V(-1.1, -2.65, -.2), V(-1.62, -1.2, -.1), V(-1.48, .2, 0), V(-1.18, .78, .06), V(-.62, .44, .14)]}
+  ];
+  var total = 0;
+  SEG.forEach(function(s){
+    s.curve = new T.CatmullRomCurve3(s.p); s.len = s.curve.getLength(); s.start = total; total += s.len;
+    var geo = new T.TubeGeometry(s.curve, 72, s.r, 10, false), uv = geo.attributes.uv, col = new Float32Array(uv.count * 3), c = new T.Color();
+    for(var k = 0; k < uv.count; k++){ c.copy(s.c[0]).lerp(s.c[1], sstep(.15, .85, uv.getX(k))); col[k * 3] = c.r; col[k * 3 + 1] = c.g; col[k * 3 + 2] = c.b; }
+    geo.setAttribute("color", new T.BufferAttribute(col, 3));
+    s.mat = pm(0xffffff, {vertexColors:true, roughness:.3, clearcoat:.8, emissive:new T.Color(0x334466), emissiveIntensity:0});
+    s.mesh = new T.Mesh(geo, s.mat); g.add(s.mesh); s.w = 1;
+    P.add(s.id, [s.mat], s.curve.getPointAt(.5), [s.mesh]);
+  });
+  var NP = Math.round(70 * q), parts = new T.InstancedMesh(sph(.06, 10), pm(0xffffff, {emissiveIntensity:.35}), NP), d = new T.Object3D(), pc = new T.Color(), pt = V(0, 0, 0);
+  for(i = 0; i < NP; i++) parts.setColorAt(i, DEO);
+  g.add(parts);
+  return {group:g, parts:P, SEG:SEG,
+    update:function(t, dt, stage, labMode){
+      var beat = Math.pow(Math.max(0, Math.sin(t * Math.PI * 2 * 1.05)), 6), beat2 = Math.pow(Math.max(0, Math.sin(t * Math.PI * 2 * 1.05 - .9)), 6);
+      chambers.forEach(function(c){ c.scale.copy(c.userData.b).multiplyScalar(1 + .06 * (c.userData.v ? beat2 : beat)); });
+      if(labMode) P.update(t, dt);
+      else SEG.forEach(function(s){ var tg = stage == null ? 1 : 1 - .78 * Math.min(1, Math.abs(s.st - stage)); s.w += (tg - s.w) * Math.min(1, dt * 4); s.mat.color.copy(s.mat.userData.c0).lerp(DIM, (1 - s.w) * .8); s.mat.emissiveIntensity = Math.max(0, s.w - .7) * .8 * (.6 + .4 * Math.sin(t * 4)); });
+      for(i = 0; i < NP; i++){
+        var u = ((i / NP) + t * .04) % 1 * total, s = SEG[0];
+        for(var k = 0; k < SEG.length; k++){ if(u >= SEG[k].start && u < SEG[k].start + SEG[k].len){ s = SEG[k]; break; } }
+        var lu = clamp((u - s.start) / s.len, 0, 1); s.curve.getPointAt(lu, pt);
+        pc.copy(s.c[0]).lerp(s.c[1], sstep(.15, .85, lu)); if(!labMode) pc.lerp(DIM, (1 - s.w) * .75);
+        d.position.copy(pt); d.scale.setScalar(labMode ? 1 : .65 + .35 * s.w); d.updateMatrix(); parts.setMatrixAt(i, d.matrix); parts.setColorAt(i, pc);
+      }
+      parts.instanceMatrix.needsUpdate = true; parts.instanceColor.needsUpdate = true;
+    },
+    pick:function(ray){ var h = ray.intersectObjects(P.pick, false).find(function(x){ return /^(ra|rv|la|lv|ao|pa|pv|vc|lungs|body)$/.test(x.object.userData.part); }); return h ? h.object.userData.part : null; }};
+}
+
+/* ---------- MODEL: mitosis ---------- */
+function buildMitosis(q){
+  var g = new T.Group(), i;
+  var memM = fres(0x245BDB, 0x438CFF, .5, .04), mA = new T.Mesh(sph(2.05, 64), memM), mB = new T.Mesh(sph(2.05, 64), memM); g.add(mA, mB);
+  [mA, mB].forEach(function(m){ m.add(cloud(Math.round(1300 * q), function(p){ randDir(p, Math.random).multiplyScalar(2.05); }, .02, .04, 0x245BDB, 0x68D9EA, .9, {max:6})); });
+  g.add(cloud(Math.round(500 * q), function(p){ inBall(p, 1.85, Math.random); }, .012, .025, 0x438CFF, 0x9FD8FF, .5, {max:4}));
+  var nucM = fres(0x245BDB, 0x245BDB, .85, .1), nucl = new T.Mesh(sph(1.1, 48), nucM); g.add(nucl);
+  var chrom = cloud(Math.round(700 * q), function(p){ inBall(p, 1.0, Math.random); }, .014, .03, 0x245BDB, 0x68D9EA, .8, {max:5}); g.add(chrom);
+  var dM = fres(0x245BDB, 0x68D9EA, .8, .08), dA = new T.Mesh(sph(.62, 40), dM), dB = new T.Mesh(sph(.62, 40), dM); dA.position.x = -1.42; dB.position.x = 1.42; g.add(dA, dB);
+  var cenM = pm(0xFFB547, {emissiveIntensity:.3}), poles = [];
+  [-1, 1].forEach(function(sg){ var pg = new T.Group(); pg.position.x = sg * 1.85; var c1 = new T.Mesh(new T.CylinderGeometry(.05, .05, .24, 12), cenM), c2 = c1.clone(); c2.rotation.z = Math.PI / 2; c2.position.y = .12; pg.add(c1, c2); g.add(pg); poles.push(pg); });
+  var NF = 8 + 12, fpos = new Float32Array(NF * 6), fg = new T.BufferGeometry(); fg.setAttribute("position", new T.BufferAttribute(fpos, 3));
+  var fM = new T.LineBasicMaterial({color:0x438CFF, transparent:true, opacity:0}); g.add(new T.LineSegments(fg, fM));
+  var CH = [
+    {L:.5, col:0x245BDB, P:V(-.38, .32, .15), pd:V(.6, .8, .1), M:V(0, .62, .26)},
+    {L:.5, col:0x68D9EA, P:V(.32, .3, -.2), pd:V(-.5, .7, .5), M:V(0, -.58, -.2)},
+    {L:.3, col:0x245BDB, P:V(-.24, -.4, -.12), pd:V(.9, .3, -.3), M:V(0, .12, -.48)},
+    {L:.3, col:0x68D9EA, P:V(.36, -.3, .22), pd:V(-.8, .5, .3), M:V(0, -.06, .52)}
+  ];
+  var arms = [];
+  CH.forEach(function(c, ci){
+    var geo = capsule(.085, c.L / 2, 12); geo.translate(0, c.L / 2 + .02, 0);
+    var mat = pm(c.col, {roughness:.3, clearcoat:.8, emissiveIntensity:.25});
+    [-1, 1].forEach(function(sg){ [1, -1].forEach(function(arm){ var m = new T.Mesh(geo, mat); g.add(m); arms.push({m:m, c:c, sg:sg, arm:arm}); }); });
+  });
+  var tmp = V(0, 0, 0), dir = V(0, 0, 0), cpos = V(0, 0, 0), qq = new T.Quaternion();
+  function key(a, st){
+    var c = a.c, sg = a.sg, arm = a.arm, pos = V(0, 0, 0), D = V(0, 0, 0), s = 1, rad;
+    if(st <= 1){ pos.copy(c.P).add(V(sg * .07, 0, 0)); D.copy(c.pd).normalize().multiplyScalar(arm).add(V(sg * .16, 0, 0)); s = st === 0 ? 0 : 1; }
+    else if(st === 2){ pos.copy(c.M).add(V(sg * .07, 0, 0)); rad = V(0, c.M.y, c.M.z).normalize(); D.copy(rad).multiplyScalar(arm).add(V(sg * .16, 0, 0)); }
+    else if(st === 3){ pos.set(sg * 1.15, c.M.y * .5, c.M.z * .5); rad = V(0, c.M.y, c.M.z).normalize(); D.set(-sg * .82, 0, 0).add(rad.multiplyScalar(arm * .57)); }
+    else { pos.set(sg * 1.42, c.M.y * .32, c.M.z * .32); rad = V(0, c.M.y, c.M.z).normalize(); D.set(-sg * .3, 0, 0).add(rad.multiplyScalar(arm * .95)); s = .8; }
+    return {p:pos, d:D.normalize(), s:s};
+  }
+  return {group:g, update:function(t, dt, f){
+    var k = Math.min(3, Math.floor(f)), u = ease(clamp(f - k, 0, 1)), fi = 0;
+    arms.forEach(function(a, ai){
+      var A = key(a, k), B = key(a, k + 1);
+      cpos.lerpVectors(A.p, B.p, u); dir.lerpVectors(A.d, B.d, u).normalize(); var s = lerp(A.s, B.s, u);
+      a.m.position.copy(cpos); qq.setFromUnitVectors(UP, dir); a.m.quaternion.copy(qq); a.m.scale.set(Math.max(.001, s), Math.max(.001, s), Math.max(.001, s)); a.m.visible = s > .02;
+      if(a.arm === 1){ var pole = a.sg * 1.85, o = fi * 6; fpos[o] = pole; fpos[o + 1] = 0; fpos[o + 2] = 0; fpos[o + 3] = cpos.x; fpos[o + 4] = cpos.y; fpos[o + 5] = cpos.z; fi++; }
+    });
+    for(i = 0; i < 6; i++){ var ang = i / 6 * Math.PI * 2, oy = Math.cos(ang) * 1.1, oz = Math.sin(ang) * 1.1, o2 = (8 + i * 2) * 6;
+      fpos[o2] = -1.85; fpos[o2 + 1] = 0; fpos[o2 + 2] = 0; fpos[o2 + 3] = 0; fpos[o2 + 4] = oy; fpos[o2 + 5] = oz;
+      fpos[o2 + 6] = 0; fpos[o2 + 7] = oy; fpos[o2 + 8] = oz; fpos[o2 + 9] = 1.85; fpos[o2 + 10] = 0; fpos[o2 + 11] = 0; }
+    fg.attributes.position.needsUpdate = true;
+    fM.opacity = .7 * sstep(1.2, 2, f) * (1 - sstep(3.55, 4, f));
+    var env = 1 - sstep(.7, 1.5, f); nucM.uniforms.op.value = .85 * env; chrom.material.uniforms.uOp.value = .8 * env; nucl.visible = chrom.visible = env > .01;
+    dM.uniforms.op.value = .8 * sstep(3.45, 4, f); dA.visible = dB.visible = f > 3.4;
+    poles.forEach(function(p){ var s = sstep(.6, 1.3, f) * (1 - sstep(3.7, 4, f) * .6); p.scale.setScalar(Math.max(.001, s)); p.rotation.x = t; });
+    var dv = 1.2 * sstep(3.15, 4, f), sc = 1 - .2 * sstep(3.15, 4, f); mA.position.x = -dv; mB.position.x = dv; mA.scale.setScalar(sc); mB.scale.setScalar(sc);
+  }};
+}
+
+/* ---------- MODEL: plant cell ---------- */
+function buildPlant(q){
+  var g = new T.Group(), P = new Parts(), r = rng(21), v = V(0, 0, 0), i, W2 = 2.1, H2 = 1.5, D2 = 1.2;
+  var wallM = pm(0x3FBF7F, {transparent:true, opacity:.12, depthWrite:false, side:T.DoubleSide, emissiveIntensity:.3}), wall = new T.Mesh(new T.BoxGeometry(W2 * 2, H2 * 2, D2 * 2), wallM); g.add(wall);
+  var edgeM = new T.LineBasicMaterial({color:0x7FE0A8, transparent:true, opacity:.9}); edgeM.userData.op0 = .9; g.add(new T.LineSegments(new T.EdgesGeometry(wall.geometry), edgeM));
+  function onBox(p, w, h, dd){ var f = Math.floor(r() * 6), a = r() * 2 - 1, b = r() * 2 - 1; if(f < 2) p.set((f ? 1 : -1) * w, a * h, b * dd); else if(f < 4) p.set(a * w, (f === 2 ? 1 : -1) * h, b * dd); else p.set(a * w, b * h, (f === 4 ? 1 : -1) * dd); return p; }
+  var wallPts = cloud(Math.round(2600 * q), function(p){ onBox(p, W2, H2, D2); }, .02, .04, 0x2E9E62, 0xCFF5DD, .9, {max:6}); g.add(wallPts);
+  var memPts = cloud(Math.round(1600 * q), function(p){ onBox(p, W2 - .1, H2 - .1, D2 - .1); }, .015, .03, 0x438CFF, 0xEAF5FF, .8, {max:5}); g.add(memPts);
+  P.add("wall", [wallM, edgeM, wallPts.material], V(W2, H2, D2 * .5), [wall]);
+  P.add("membrane", [memPts.material], V(-W2 + .1, -H2 + .1, D2 - .1));
+  var VC = V(.32, -.1, 0), vac = new T.Group(); vac.position.copy(VC); g.add(vac);
+  var vShM = fres(0x68D9EA, 0xEAF5FF, .8, .08), vInM = pm(0x9FE6F2, {transparent:true, opacity:.2, depthWrite:false});
+  var vg = new T.SphereGeometry(1, 48, 32); vg.scale(1.5, 1.0, .82); var vIn = new T.Mesh(vg, vInM); vac.add(vIn, new T.Mesh(vg, vShM));
+  P.add("vacuole", [vShM, vInM], VC.clone().add(V(.2, 1.0, .3)), [vIn]);
+  var N0 = V(-1.55, .72, .45), nShM = fres(0x245BDB, 0x68D9EA, .95, .1), nInM = pm(0x1F4FC9, {transparent:true, opacity:.6, depthWrite:false}), nlM = pm(0x0A2550, {emissive:new T.Color(0x245BDB), emissiveIntensity:.4});
+  var nIn = new T.Mesh(sph(.48, 32), nInM); nIn.position.copy(N0); var nSh = new T.Mesh(sph(.5, 32), nShM); nSh.position.copy(N0); var nl = new T.Mesh(sph(.17, 20), nlM); nl.position.copy(N0).add(V(.1, .08, .14)); g.add(nl, nIn, nSh);
+  P.add("nucleus", [nShM, nInM, nlM], N0.clone().add(V(0, .55, 0)), [nIn]);
+  var chM = pm(0x2E9E62, {emissive:new T.Color(0x1E7F4F), emissiveIntensity:.3, clearcoat:.8}), grM = pm(0x14603A), cg = new T.SphereGeometry(1, 28, 18); cg.scale(.36, .16, .22);
+  var chl = [], tries = 0;
+  while(chl.length < 10 && tries++ < 600){
+    v.set((r() * 2 - 1) * (W2 - .4), (r() * 2 - 1) * (H2 - .3), (r() * 2 - 1) * (D2 - .3));
+    var e = Math.pow((v.x - VC.x) / 1.65, 2) + Math.pow((v.y - VC.y) / 1.15, 2) + Math.pow((v.z - VC.z) / .95, 2); if(e < 1) continue;
+    if(v.distanceTo(N0) < .85 || chl.some(function(c){ return c.position.distanceTo(v) < .62; })) continue;
+    var cm = new T.Group(); cm.position.copy(v); cm.rotation.set(r() * 3, r() * 3, r() * 3); var body = new T.Mesh(cg, chM); cm.add(body);
+    for(var k = -1; k <= 1; k++){ var gr = new T.Mesh(new T.CylinderGeometry(.06, .06, .05, 12), grM); gr.position.set(k * .18, .12, 0); cm.add(gr); }
+    g.add(cm); chl.push(cm);
+  }
+  P.add("chloro", [chM, grM], chl[0].position.clone().add(V(0, .25, 0)), chl.map(function(c){ return c.children[0]; }));
+  var mOut = pm(0xF5A524, {emissive:new T.Color(0xC77700), emissiveIntensity:.3}), mg = new T.SphereGeometry(1, 24, 16), mitos = []; mg.scale(.24, .1, .1);
+  [V(1.7, 1.1, .7), V(-1.2, -1.1, -.6), V(1.6, -1.15, -.5)].forEach(function(p){ var m = new T.Mesh(mg, mOut); m.position.copy(p); m.rotation.set(p.x, p.y, p.z); g.add(m); mitos.push(m); });
+  P.add("mito", [mOut], mitos[0].position.clone().add(V(0, .2, 0)), mitos);
+  var cyto = cloud(Math.round(900 * q), function(p){ do { p.set((r() * 2 - 1) * (W2 - .15), (r() * 2 - 1) * (H2 - .15), (r() * 2 - 1) * (D2 - .15)); } while(Math.pow((p.x - VC.x) / 1.55, 2) + Math.pow((p.y - VC.y) / 1.05, 2) + Math.pow((p.z - VC.z) / .87, 2) < 1); }, .012, .024, 0x68D9EA, 0xFFFFFF, .5, {max:4});
+  g.add(cyto); P.add("cyto", [cyto.material], V(-1.6, -1.0, .8));
+  var order = ["nucleus", "chloro", "mito", "vacuole"];
+  return {group:g, parts:P, update:function(t, dt){ P.update(t, dt); },
+    pick:function(ray){ var hits = ray.intersectObjects(P.pick, false); if(!hits.length) return null; for(var j = 0; j < order.length; j++){ var h = hits.find(function(x){ return x.object.userData.part === order[j]; }); if(h && (order[j] !== "vacuole" || !hits.some(function(x){ return order.indexOf(x.object.userData.part) >= 0 && order.indexOf(x.object.userData.part) < 3 && x.distance < h.distance + .5; }))) return order[j]; } return "wall"; }};
+}
+
+/* ---------- small specimens ---------- */
+function buildSpec(kind, q){
+  var g = new T.Group(), i, r = rng(3);
+  if(kind === "cells"){
+    var pos = [[0, 0, 0], [1.2, .05, -.2], [-1.2, -.05, .1], [.6, 1.05, .1], [-.62, 1.02, -.15], [.6, -1.05, -.1], [-.6, -1.02, .2]];
+    var shM = fres(0x245BDB, 0x68D9EA, .8, .06), nM = pm(0x245BDB, {emissiveIntensity:.3});
+    pos.forEach(function(p, j){ var sg = new T.SphereGeometry(.62, 40, 28), sp = sg.attributes.position, vv = V(0, 0, 0); for(var k = 0; k < sp.count; k++){ vv.fromBufferAttribute(sp, k); vv.multiplyScalar(1 + .07 * Math.sin(vv.x * 5 + j) * Math.cos(vv.y * 4 + j)); sp.setXYZ(k, vv.x, vv.y, vv.z); } sg.computeVertexNormals();
+      var c = new T.Group(); c.position.set(p[0], p[1], p[2]); c.add(new T.Mesh(sg, shM)); var n = new T.Mesh(sph(.2, 24), nM); n.position.set(.08, .06, .1); c.add(n);
+      c.add(cloud(Math.round(120 * q), function(pp){ inBall(pp, .55, r); }, .012, .02, 0x438CFF, 0x9FD8FF, .7, {max:4})); g.add(c); });
+    g.scale.setScalar(.95);
+  } else if(kind === "rbc"){
+    var pts = [], c0 = .207, c1 = 2.003, c2 = -1.123, N = 30;
+    function h(x){ return .5 * Math.sqrt(Math.max(0, 1 - x * x)) * (c0 + c1 * x * x + c2 * x * x * x * x); }
+    for(i = 0; i <= N; i++){ var x = Math.sin(i / N * Math.PI / 2); pts.push(new T.Vector2(Math.max(1e-4, x * 1.25), h(x) * 1.25 + .001)); }
+    for(i = N; i >= 0; i--){ var x2 = Math.sin(i / N * Math.PI / 2); pts.push(new T.Vector2(Math.max(1e-4, x2 * 1.25), -h(x2) * 1.25 - .001)); }
+    var geo = new T.LatheGeometry(pts, 64), mat = pm(0xD7263D, {side:T.DoubleSide, roughness:.32, clearcoat:.8, emissive:new T.Color(0x8a0f1f), emissiveIntensity:.3});
+    var a = new T.Mesh(geo, mat); a.rotation.x = 1.0; g.add(a);
+    var b = new T.Mesh(geo, mat); b.scale.setScalar(.55); b.position.set(-1.25, -.85, -1.2); b.rotation.set(.4, 0, .9); g.add(b);
+    var c = new T.Mesh(geo, mat); c.scale.setScalar(.45); c.position.set(1.3, .95, -1.4); c.rotation.set(1.6, 0, -.4); g.add(c);
+  } else if(kind === "chloro"){
+    var og = new T.SphereGeometry(1, 48, 32); og.scale(1.3, .62, .78);
+    g.add(new T.Mesh(og, pm(0x3FBF7F, {transparent:true, opacity:.32, depthWrite:false, emissiveIntensity:.25})), new T.Mesh(og, fres(0x2E9E62, 0xBFF5D5, .75, .05)));
+    var grM = pm(0x167A45, {emissive:new T.Color(0x2E9E62), emissiveIntensity:.25, clearcoat:.8}), disc = new T.CylinderGeometry(.17, .17, .04, 24);
+    var stacks = [[-.82, .05, .12], [-.45, -.12, -.2], [-.1, .1, .2], [.28, -.08, -.18], [.62, .08, .14], [.9, -.04, -.1], [.05, -.22, -.05]];
+    stacks.forEach(function(s){ for(var k = 0; k < 5; k++){ var d = new T.Mesh(disc, grM); d.position.set(s[0], s[1] + k * .055 - .11, s[2]); g.add(d); } });
+    var lam = pm(0x5FD38F, {emissiveIntensity:.3});
+    for(i = 0; i < stacks.length - 2; i++){ var p1 = V(stacks[i][0], stacks[i][1], stacks[i][2]), p2 = V(stacks[i + 1][0], stacks[i + 1][1], stacks[i + 1][2]), cyl = new T.Mesh(new T.CylinderGeometry(.015, .015, p1.distanceTo(p2), 6), lam); cyl.position.lerpVectors(p1, p2, .5); cyl.quaternion.setFromUnitVectors(UP, p2.clone().sub(p1).normalize()); g.add(cyl); }
+    g.rotation.z = .25;
+  } else if(kind === "bact"){
+    var bg = capsule(.42, .72, 32), bm = pm(0x4FC3B0, {clearcoat:.9, roughness:.3, emissive:new T.Color(0x1d7f72), emissiveIntensity:.3}), bd = new T.Mesh(bg, bm); bd.rotation.z = Math.PI / 2; g.add(bd);
+    var fl = [], k2; for(k2 = 0; k2 <= 40; k2++){ var xx = 1.1 + k2 / 40 * 2.0; fl.push(V(xx, .14 * Math.sin(k2 * .7), .14 * Math.cos(k2 * .7))); }
+    var flag = new T.Mesh(new T.TubeGeometry(new T.CatmullRomCurve3(fl), 120, .025, 6, false), pm(0x9FE6D9, {emissiveIntensity:.3})); g.add(flag); g.userData.flag = flag;
+    var pil = pm(0x9FE6D9, {emissiveIntensity:.3});
+    for(i = 0; i < 18; i++){ var ang = r() * Math.PI * 2, xr = (r() - .5) * 1.4, dirp = V(0, Math.cos(ang), Math.sin(ang)), pc = new T.Mesh(new T.CylinderGeometry(.012, .012, .26, 5), pil); pc.position.set(xr, 0, 0).addScaledVector(dirp, .52); pc.quaternion.setFromUnitVectors(UP, dirp); g.add(pc); }
+    g.add(cloud(Math.round(160 * q), function(pp){ pp.set((r() - .5) * 1.5, (r() - .5) * .5, (r() - .5) * .5); }, .015, .03, 0x0A2550, 0x245BDB, .8, {max:4}));
+    g.position.x = -.55; g.scale.setScalar(.92);
+  } else {
+    var cm = pm(0x245BDB, {roughness:.3, clearcoat:.85, emissiveIntensity:.3}), bandM = pm(0x0A2550), armG = capsule(.2, .5, 24); armG.translate(0, .72, 0);
+    var band = new T.TorusGeometry(.205, .03, 8, 28);
+    [[-1, 1], [-1, -1], [1, 1], [1, -1]].forEach(function(a){ var arm = new T.Group(); arm.position.x = a[0] * .17; arm.rotation.z = (a[1] === 1 ? 0 : Math.PI) + a[0] * a[1] * -.26; var m = new T.Mesh(armG, cm); arm.add(m);
+      [.45, .78, 1.05].forEach(function(y){ var b = new T.Mesh(band, bandM); b.rotation.x = Math.PI / 2; b.position.y = y; arm.add(b); }); g.add(arm); });
+    var cen = new T.Mesh(sph(.2, 24), pm(0x68D9EA, {emissiveIntensity:.4})); g.add(cen);
+  }
+  return g;
+}
+
+/* ---------- views ---------- */
+var views = [], mouse = {x:0, y:0, tx:0, ty:0};
+if(fine) addEventListener("pointermove", function(e){ mouse.tx = e.clientX / innerWidth * 2 - 1; mouse.ty = e.clientY / innerHeight * 2 - 1; }, {passive:true});
+var ray = new T.Raycaster(), _v = V(0, 0, 0), _a = V(0, 0, 0);
+function placeLabel(el, wp, cam, r, on){
+  _v.copy(wp).project(cam);
+  var vis = on && _v.z < 1 && _v.z > -1 && Math.abs(_v.x) < 1.05 && Math.abs(_v.y) < 1.05;
+  el.classList.toggle("show", !!vis); if(!vis) return;
+  var x = (_v.x + 1) / 2 * r.width, y = (1 - _v.y) / 2 * r.height;
+  el.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px,0)";
+  el.classList.toggle("flip", x > r.width - 170);
+}
+function pointer(v, o){
+  var el = v.el, down = null, moved = false, lx = 0, ly = 0;
+  el.addEventListener("pointerdown", function(e){ down = {x:e.clientX, y:e.clientY}; moved = false; lx = e.clientX; ly = e.clientY; o.press && o.press(); });
+  el.addEventListener("pointermove", function(e){ if(!down) return; var dx = e.clientX - lx, dy = e.clientY - ly; lx = e.clientX; ly = e.clientY; if(Math.hypot(e.clientX - down.x, e.clientY - down.y) > 7){ if(!moved && o.drag){ try { el.setPointerCapture(e.pointerId); } catch(_){} } moved = true; } if(moved && o.drag) o.drag(dx, dy, e.pointerType); });
+  el.addEventListener("pointerup", function(e){ if(!down) return; if(!moved && o.pick && v.ready){ var r = el.getBoundingClientRect(); ray.setFromCamera(new T.Vector2((e.clientX - r.left) / r.width * 2 - 1, -(e.clientY - r.top) / r.height * 2 + 1), v.camera); o.pick(ray); } down = null; });
+  el.addEventListener("pointercancel", function(){ down = null; });
+  if(o.hover){ el.addEventListener("pointerenter", function(){ o.hover(true); }); el.addEventListener("pointerleave", function(){ o.hover(false); down = null; }); }
+}
+function layerOf(el){ return el.parentElement.querySelector(".layer"); }
+
+var BUILDERS = {
+  hero: function(v){
+    var s = v.scene, cam = v.camera; lights(s);
+    var cell = buildAnimal({q:small ? .5 : .85, seed:5}); s.add(cell.group); cell.group.rotation.x = .32;
+    var stars = cloud(small ? 240 : 620, function(p){ randDir(p, Math.random).multiplyScalar(10 + Math.random() * 16); }, .04, .09, 0x438CFF, 0xEAF5FF, .7, {max:5}); s.add(stars);
+    var fl = [], ico = new T.IcosahedronGeometry(.16, 2);
+    for(var i = 0; i < (small ? 4 : 7); i++){ var m = new T.Mesh(ico, pm(i % 2 ? 0x68D9EA : 0x9FD8FF, {transparent:true, opacity:.55, emissiveIntensity:.45})); m.position.set(1.2 + Math.random() * 4, (Math.random() - .5) * 5, 2 + Math.random() * 3); m.scale.setScalar(.35 + Math.random() * .5); m.userData.b = m.position.clone(); m.userData.k = Math.random() * 6; s.add(m); fl.push(m); }
+    var L = $$(".lbl", layerOf(v.el)), labelsOn = false; setTimeout(function(){ labelsOn = true; }, 1500);
+    return {
+      update:function(t, dt, r){
+        var asp = r.width / r.height, sc = clamp(-r.top / r.height, 0, 1), gp = cell.group.position;
+        if(asp < .9){ gp.set(1.5, -3.05 + sc * 2.2, 0); cell.group.scale.setScalar(.9 + sc * .3); }
+        else { gp.set(asp > 1.9 ? 3.9 : 3.35, -.1 + sc * 1.8, 0); cell.group.scale.setScalar(.84 + sc * .22); }
+        cell.group.rotation.y = t * .14; cell.group.rotation.x = .32 + Math.sin(t * .25) * .06; cell.update(t, dt);
+        cam.position.set(mouse.x * .8, -mouse.y * .5, 12.5); cam.lookAt(0, 0, 0);
+        stars.rotation.y = t * .01;
+        fl.forEach(function(m, i){ var b = m.userData.b; m.position.set(b.x + Math.sin(t * .3 + m.userData.k) * .4, b.y + Math.cos(t * .25 + m.userData.k) * .35, b.z); m.rotation.x = t * .3 + i; });
+      },
+      labels:function(r){ var mob = r.width < 700; L.forEach(function(el){ var p = cell.parts.map[el.dataset.part]; placeLabel(el, cell.group.localToWorld(_a.copy(p.anchor)), cam, r, labelsOn && !mob); }); }
+    };
+  },
+  cell: function(v){
+    var s = v.scene, cam = v.camera; lights(s);
+    var cell = buildAnimal({q:small ? .6 : 1}); s.add(cell.group);
+    s.add(cloud(small ? 200 : 500, function(p){ randDir(p, Math.random).multiplyScalar(12 + Math.random() * 14); }, .04, .08, 0x438CFF, 0xEAF5FF, .6, {max:5}));
+    var track = v.el.closest(".track"), lbl = $("[data-sel]", layerOf(v.el)), tgt = V(0, 0, 0);
+    // pick the final inside-the-cell viewpoint that keeps the camera clear of organelles
+    var endT = cell.N0.clone().multiplyScalar(.6), azEnd = 2, bestD = -1, probe = V(0, 0, 0);
+    for(var a = 0; a < Math.PI * 2; a += .05){ probe.set(endT.x + 2.8 * Math.cos(.1) * Math.sin(a), endT.y + 2.8 * Math.sin(.1), endT.z + 2.8 * Math.cos(.1) * Math.cos(a)); var md = Math.min.apply(null, cell.obstacles.map(function(o){ return o.distanceTo(probe); })); if(md > bestD){ bestD = md; azEnd = a; } }
+    while(azEnd < 1.2) azEnd += Math.PI * 2;
+    pointer(v, {pick:function(rr){ var id = cell.pick(rr); if(id) Explorer.animal.select(id, true); }});
+    return {
+      update:function(t, dt, r){
+        var p = prog(track), asp = r.width / r.height, far = fitDist(3.6, 3.6, cam.fov, asp) * (asp < .9 ? 1.02 : 1.12);
+        var a1 = ease(sstep(0, .55, p)), a2 = ease(sstep(.55, 1, p));
+        var dist = lerp(lerp(far, 4.6, a1), asp < .9 ? 2.9 : 2.7, a2);
+        tgt.set(0, 0, 0).lerp(cell.N0, a2 * .6);
+        var az = lerp(.5, azEnd, ease(p)) + mouse.x * .12, el2 = lerp(.32, .1, ease(p)) - mouse.y * .08;
+        cam.position.set(tgt.x + dist * Math.cos(el2) * Math.sin(az), tgt.y + dist * Math.sin(el2), tgt.z + dist * Math.cos(el2) * Math.cos(az));
+        cam.lookAt(tgt.x, tgt.y + (asp < .9 ? .1 * dist * (1 - a2) : 0), tgt.z);
+        cell.group.rotation.y = Math.sin(t * .2) * .08 * (1 - a2); cell.update(t, dt, animalFocus);
+      },
+      labels:function(r){ var f = animalFocus; if(!f){ lbl.classList.remove("show"); return; } var d = ANIMAL.find(function(x){ return x.id === f; }); $("b", lbl).textContent = d.short || d.name; placeLabel(lbl, cell.group.localToWorld(_a.copy(cell.parts.map[f].anchor)), cam, r, true); }
+    };
+  },
+  dna: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {p:1.6});
+    var n = small ? 20 : 26, D = buildDNA({n:n}); s.add(D.group);
+    s.add(cloud(small ? 300 : 700, function(p){ p.set((Math.random() - .5) * 34, (Math.random() - .5) * 24, -3 - Math.random() * 18); }, .04, .1, 0x245BDB, 0x68D9EA, .6, {max:5}));
+    var track = v.el.closest(".track"), L = $$("[data-pair]", layerOf(v.el)), camY = 0, best = -1, m1 = V(0, 0, 0), uz = 0, kk = 0;
+    return {
+      update:function(t, dt, r){
+        var p = prog(track), asp = r.width / r.height, half = n * .34 / 2, wide = asp > 1.15;
+        var far = fitDist(wide ? 4.4 : 2.2, half + .6, cam.fov, asp), near = fitDist(wide ? 4.6 : 2.6, 3.2, cam.fov, asp), zoom = ease(sstep(.05, .5, p));
+        var q = sstep(.42, .86, p), k = q * (n + 6); uz = q; kk = k;
+        D.layout(t * .32 + p * 2.2, function(i){ return clamp((k - (n - 1 - i)) / 6, 0, 1); }, asp < .9 ? .7 : 1.1);
+        D.group.position.x = wide ? 2.3 : 0;
+        D.group.rotation.z = lerp(.42, .08, sstep(0, .5, p)); D.group.rotation.x = .08;
+        var front = (n - 1 - k + 3) - (n - 1) / 2, ty = lerp(0, clamp(front * .34 + 1.0, -half + 2.2, half - 2.2), sstep(.3, .6, p));
+        camY += (ty - camY) * Math.min(1, dt * 3);
+        cam.position.set(mouse.x * .6, camY - mouse.y * .4, lerp(far, near, zoom)); cam.lookAt(0, camY, 0);
+      },
+      labels:function(r){
+        best = -1; var bz = -1e9;
+        if(uz > .12) for(var i = 0; i < n; i++){ if(clamp((kk - (n - 1 - i)) / 6, 0, 1) < .9) continue; m1.addVectors(D.P1[i], D.P2[i]).multiplyScalar(.5); D.group.localToWorld(m1); var wz = m1.z; m1.project(cam); var fy = (1 - m1.y) / 2, fx = (m1.x + 1) / 2; if(fy < .4 || fy > .74 || fx < .2 || fx > .85) continue; if(wz > bz){ bz = wz; best = i; } }
+        L.forEach(function(el, h){ if(best < 0){ el.classList.remove("show"); return; } var b = D.base(best, h); $("b", el).textContent = b + " · " + BASENAME[b]; placeLabel(el, D.group.localToWorld(_a.copy(h ? D.T2[best] : D.T1[best])), cam, r, true); }); }
+    };
+  },
+  photo: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {h:1, p:.7});
+    var P = buildPhoto(small ? .6 : 1); s.add(P.group); var L = $$(".lbl", layerOf(v.el));
+    return {
+      update:function(t, dt, r){ var sf = MOM.photo.tick(dt); P.update(t, dt, sf); var asp = r.width / r.height; cam.position.set(mouse.x * .5, -.3 - mouse.y * .3, fitDist(4.0, 4.4, cam.fov, asp)); cam.lookAt(0, -.3, 0); },
+      labels:function(r){ var st = Math.round(MOM.photo.sf), wideV = r.width > 560; L.forEach(function(el){ var k = +el.dataset.k, w = P.w[Math.min(3, k)]; if(!wideV && Math.min(3, k) !== st) w = 0; var a = k === 0 ? _a.copy(P.anchors[0]) : P.leaf.localToWorld(_a.copy(P.anchors[k])); if(k === 0) P.group.localToWorld(a); placeLabel(el, a, cam, r, w > .6); }); }
+    };
+  },
+  circ: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {p:.9});
+    var C = buildCirc(small ? .6 : 1); s.add(C.group); C.group.rotation.y = -.25;
+    var L = $$(".lbl", layerOf(v.el)), dyn = $('[data-k="dyn"]', layerOf(v.el)), sf = 0;
+    var DYN = [["Right ventricle", "rv"], ["Gas exchange", "lungs"], ["Left ventricle → aorta", "lv"], ["Vena cava → right atrium", "vc"]];
+    return {
+      update:function(t, dt, r){ sf = MOM.circ.tick(dt); C.update(t, dt, sf, false); C.group.rotation.y = -.25 + Math.sin(t * .2) * .25 + mouse.x * .2; var asp = r.width / r.height; cam.position.set(0, 0, fitDist(2.6, 3.7, cam.fov, asp)); cam.lookAt(0, 0, 0); },
+      labels:function(r){ var st = Math.round(sf); L.forEach(function(el){ var k = el.dataset.k; if(k === "dyn") return; placeLabel(el, C.group.localToWorld(_a.copy(C.parts.map[k].anchor)), cam, r, true); });
+        var dd = DYN[clamp(st, 0, 3)]; $("b", dyn).textContent = dd[0]; placeLabel(dyn, C.group.localToWorld(_a.copy(C.parts.map[dd[1]].anchor)), cam, r, dd[1] !== "lungs"); }
+    };
+  },
+  mito: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {h:1});
+    var M = buildMitosis(small ? .6 : 1); s.add(M.group);
+    return {update:function(t, dt, r){ var f = MOM.mito.tick(dt); M.update(t, dt, f); M.group.rotation.y = Math.sin(t * .25) * .35 + mouse.x * .2; M.group.rotation.x = .12; var asp = r.width / r.height; cam.position.set(0, 0, fitDist(3.4, 2.4, cam.fov, asp)); cam.lookAt(0, 0, 0); }};
+  },
+  spec: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {h:1.1}); var kind = v.el.dataset.kind, g = buildSpec(kind, small ? .6 : 1); s.add(g);
+    var boost = 0, want = 0; pointer(v, {hover:function(on){ want = on ? 1 : 0; }, press:function(){ want = 1; setTimeout(function(){ want = 0; }, 1600); }});
+    var rot = 0;
+    return {update:function(t, dt, r){ boost += (want - boost) * Math.min(1, dt * 4); rot += dt * (.35 + boost * 1.4); g.rotation.y = rot; g.rotation.x = Math.sin(t * .4) * .15; var sc = 1 + boost * .06; g.scale.setScalar((kind === "bact" ? .92 : kind === "cells" ? .95 : 1) * sc);
+      if(g.userData.flag) g.userData.flag.rotation.x = t * 6; var asp = r.width / r.height; cam.position.set(0, 0, fitDist(kind === "bact" ? 2.4 : 1.9, 1.9, cam.fov, asp)); cam.lookAt(0, 0, 0); }};
+  },
+  lab: function(v){
+    var s = v.scene, cam = v.camera; lights(s);
+    var holder = new T.Group(); s.add(holder);
+    var models = {}, cur = null, rotY = .4, rotX = .2, velY = 0, idle = 0, sel = null, selPoint = null, lbl = $("[data-sel]", layerOf(v.el));
+    var DIMS = {animal:[3.4, 3.4], plant:[2.5, 1.9], heart:[2.4, 3.6], dna:[1.9, 3.1]};
+    function get(name){
+      if(models[name]) return models[name]; BUILD = v; var m;
+      if(name === "animal") m = buildAnimal({q:small ? .55 : .9, seed:17});
+      else if(name === "plant") m = buildPlant(small ? .6 : 1);
+      else if(name === "heart") m = buildCirc(small ? .6 : 1);
+      else { m = buildDNA({n:16}); m.group.rotation.z = .25; }
+      BUILD = null; models[name] = m; return m;
+    }
+    function show(name){ if(cur) holder.remove(cur.group); cur = get(name); holder.add(cur.group); sel = null; selPoint = null; if(cur.parts) cur.parts.focus = null; }
+    labState.onModel = show;
+    labState.onPart = function(id, point){ sel = id; selPoint = point ? cur.group.worldToLocal(point.clone()) : null; if(cur.parts) cur.parts.focus = id; idle = 0; };
+    show(labState.model);
+    pointer(v, {
+      drag:function(dx, dy, type){ velY = dx * .008; rotY += dx * .008; if(type === "mouse") rotX = clamp(rotX + dy * .006, -.8, .8); idle = 0; },
+      pick:function(rr){ var res = cur.pick(rr); if(!res){ return; } if(typeof res === "string") labSelect(res); else labSelect(res.id, res.point); }
+    });
+    v.el.addEventListener("keydown", function(e){ if(e.key === "ArrowLeft"){ rotY -= .25; idle = 0; e.preventDefault(); } else if(e.key === "ArrowRight"){ rotY += .25; idle = 0; e.preventDefault(); } });
+    return {
+      update:function(t, dt, r){
+        idle += dt; if(idle > 3 && !reduce) rotY += dt * .18; else { rotY += velY; velY *= .92; }
+        holder.rotation.y = rotY; holder.rotation.x = rotX;
+        if(labState.model === "dna"){ cur.layout(t * .1, null); }
+        else if(labState.model === "heart") cur.update(t, dt, null, true);
+        else cur.update(t, dt);
+        var dm = DIMS[labState.model], asp = r.width / r.height; cam.position.set(0, 0, fitDist(dm[0], dm[1], cam.fov, asp) * 1.08); cam.lookAt(0, 0, 0);
+      },
+      labels:function(r){
+        if(!sel){ lbl.classList.remove("show"); return; }
+        var d = LAB[labState.model].data.find(function(x){ return x.id === sel; }); $("b", lbl).textContent = d ? (d.short || d.name) : sel;
+        var a;
+        if(selPoint) a = cur.group.localToWorld(_a.copy(selPoint));
+        else if(cur.parts && cur.parts.map[sel]) a = cur.group.localToWorld(_a.copy(cur.parts.map[sel].anchor));
+        else if(labState.model === "dna"){ var idx = -1; for(var i = 0; i < cur.n; i++){ if(cur.base(i, 0) === sel){ idx = i * 2; break; } if(cur.base(i, 1) === sel){ idx = i * 2 + 1; break; } } a = idx < 0 ? cur.group.localToWorld(_a.copy(cur.P1[Math.floor(cur.n / 2)])) : cur.group.localToWorld(_a.copy(idx % 2 ? cur.T2[idx >> 1] : cur.T1[idx >> 1])); }
+        if(a) placeLabel(lbl, a, cam, r, true);
+      }
+    };
+  },
+  final: function(v){
+    var s = v.scene, cam = v.camera; lights(s, {p:1.5});
+    var D = buildDNA({n:small ? 16 : 22}); s.add(D.group);
+    s.add(cloud(small ? 200 : 500, function(p){ p.set((Math.random() - .5) * 30, (Math.random() - .5) * 20, -4 - Math.random() * 14); }, .04, .09, 0x245BDB, 0x68D9EA, .6, {max:5}));
+    return {update:function(t, dt, r){ var asp = r.width / r.height; D.layout(t * .25, null); D.group.rotation.z = -.55; D.group.position.x = asp < .9 ? 1.2 : 3.2; cam.position.set(mouse.x * .5, -mouse.y * .3, 12); cam.lookAt(0, 0, 0); }};
+  }
+};
+
+$$("[data-view]").forEach(function(el){ views.push({el:el, kind:el.dataset.view, fov:+(el.dataset.fov || 35), ready:false, pm:[]}); });
+function initView(v){
+  v.scene = new T.Scene(); v.camera = new T.PerspectiveCamera(v.fov, 1, .05, 200); v.camera.position.set(0, 0, 10);
+  BUILD = v; v.api = BUILDERS[v.kind](v); BUILD = null; v.ready = true;
+}
+
+var last = performance.now(), shown = false, tFrozen = 1.5;
+function frame(now){
+  var dt = Math.min(.05, (now - last) / 1000); last = now; var t = reduce ? tFrozen : now / 1000;
+  mouse.x += (mouse.tx - mouse.x) * Math.min(1, dt * 3); mouse.y += (mouse.ty - mouse.y) * Math.min(1, dt * 3);
+  size();
+  renderer.setScissorTest(false); renderer.clear(); renderer.setScissorTest(true);
+  for(var i = 0; i < views.length; i++){
+    var v = views[i], r = v.el.getBoundingClientRect();
+    if(!v.ready){ if(r.width > 0 && r.bottom > -innerHeight && r.top < innerHeight * 2.2) initView(v); else continue; }
+    if(r.bottom <= 0 || r.top >= H || r.right <= 0 || r.left >= W || r.width < 2 || r.height < 2){ var ly = layerOf(v.el); if(ly) $$(".lbl.show", ly).forEach(function(l){ l.classList.remove("show"); }); continue; }
+    var asp = r.width / r.height; if(Math.abs(v.camera.aspect - asp) > 1e-3){ v.camera.aspect = asp; v.camera.updateProjectionMatrix(); }
+    var sc = r.height * .5 / Math.tan(v.fov * Math.PI / 360) * DPR; for(var j = 0; j < v.pm.length; j++) v.pm[j].uniforms.uScale.value = sc;
+    v.api.update && v.api.update(t, dt, r);
+    var bottom = H - r.bottom; renderer.setViewport(r.left, bottom, r.width, r.height);
+    var sx = Math.max(0, r.left), sy = Math.max(0, bottom), sw = Math.min(W, r.right) - sx, sh = Math.min(H, bottom + r.height) - sy;
+    if(sw <= 0 || sh <= 0) continue;
+    renderer.setScissor(sx, sy, sw, sh); renderer.render(v.scene, v.camera);
+    v.api.labels && v.api.labels(r);
+  }
+  if(!shown){ shown = true; canvas.classList.add("on"); }
+  requestAnimationFrame(frame);
+}
+size(); requestAnimationFrame(frame);
+}
+})();
+</script>
+</body>
+</html>
